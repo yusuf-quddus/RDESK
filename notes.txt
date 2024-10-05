@@ -1,0 +1,14 @@
+Edits:
+- To add:
+    - About us:
+        - Who we are, what we do, our background
+
+- To reorganize:
+    - About us clickable menu moved to services
+    - Testimonials
+    - Contact
+        - Highlight the button at header
+        - form include more relevant and specific information we might want
+
+- to research <meta>
+    - link to part of same page html

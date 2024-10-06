@@ -647,7 +647,9 @@ section {
 	width: 100%;
 	position: fixed;
 	z-index: 99999;
-	transition: background 0.25s ease-in-out;
+	transition: background 0.25s ease-in-out, border-bottom 0.25s ease-in-out;
+
+	
 }
 
 #main-menu {
@@ -656,11 +658,12 @@ section {
 }
 
 .menu-bg {
-	background:#202020;
+	background:#ffffff;
+	border-bottom: 2px solid #b9b9b9; 
 }
 
 .menu-bg-transparent {
-	background: rgba(32, 32, 32, 0.5);
+	background: rgba(255, 255, 255, 0.5);
 }
 
 
@@ -679,7 +682,7 @@ section {
 	display: inline-block;
 	padding:6px 10px;
 	line-height: 60px;
-	color: #FFF;
+	color: #191919;
 	font-weight: 600;
 	font-size: 15px;
 	text-transform: uppercase;
@@ -687,7 +690,7 @@ section {
 }
 
 #main-menu ul li a:hover {
-	color:#FFF;
+	color: #666464
 }
 
 #main-menu ul.nav>li>a:hover, #main-menu ul.nav>li>a:focus {
@@ -695,8 +698,8 @@ section {
 }
 
 #main-menu ul li.active > a, #main-menu ul li.active.has-child > a {
-	color: #FFF;
-	box-shadow: inset 0 -2px 0 #FFF;
+	color: #272727;
+	box-shadow: inset 0 -2px 0 #272727;
 }
 
 .clear-toggle {

@@ -368,11 +368,41 @@ jQuery(document).on('appear', '.pie-chart',  function()  {
 /*------------------------------*/
 /*  dropdown on hover
 /*------------------------------*/
-	$(function(){
-		$('.dropdown').hover(function() {
-			$(this).addClass('open');
-		},
-		function() {
-				$(this).removeClass('open');
+$(function() {
+	// Step 1: Fetch JSON file to dynamically populate the dropdown menu
+	fetch('compliancy.json')  // Adjust path if needed (since this script runs in the root)
+	  .then(response => response.json())  // Convert the response to JSON
+	  .then(data => {
+		// Get the dropdown menu container by its ID
+		const dropdownMenu = $('#compliancy-dropdown');
+  
+		// Clear any existing content (optional)
+		dropdownMenu.empty();
+  
+		// Step 2: Create and inject a dropdown item for each element in the JSON file
+		data.forEach(item => {
+		  const menuItem = $('<a></a>')       // Create a new <a> element
+			.addClass('dropdown-item')        // Add Bootstrap dropdown item class
+			.attr('href', '#')                // Use '#' as the link placeholder
+			.text(item.name);                 // Set the display text using the "name" property
+  
+		  // Append each generated menu item to the dropdown menu container
+		  dropdownMenu.append(menuItem);
 		});
-	});
+	  })
+	  .catch(error => console.error('Error loading the JSON file:', error));
+  
+	// Step 3: Add hover functionality for dropdown menu
+	$('.dropdown').hover(
+	  function() {
+		$(this).addClass('open');  // Show dropdown menu on hover
+		$(this).find('.arrow').css('transform', 'rotate(180deg)');  // Rotate arrow on hover
+		$(this).find('.dropdown-menu').addClass('show');  // Add 'show' class to display the menu
+	  },
+	  function() {
+		$(this).removeClass('open');  // Hide dropdown menu when not hovered
+		$(this).find('.arrow').css('transform', 'rotate(0deg)');  // Reset arrow rotation
+		$(this).find('.dropdown-menu').removeClass('show');  // Remove 'show' class to hide menu
+	  }
+	);
+  });

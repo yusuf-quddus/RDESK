@@ -733,7 +733,37 @@ section {
 	float: left;
 	line-height: 60px;
 }
+.arrow {
+  display: inline-block;
+  margin-left: 5px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #000;  /* Default color of the arrow */
+  transition: transform 0.3s ease-in-out;
+}
 
+/* Rotate the arrow upwards */
+.open .arrow {
+  transform: rotate(180deg);
+}
+
+  /* Ensure dropdown items are displayed as a vertical list */
+  .dropdown-menu {
+	display: none; /* Ensure it's hidden by default */
+  }
+  
+  /* Show the dropdown menu only when the parent has the 'show' class */
+  .dropdown.show .dropdown-menu {
+	display: block; /* Show the dropdown only when triggered */
+  }
+  
+  /* Ensure dropdown items are stacked vertically */
+  .dropdown-menu .dropdown-item {
+	display: block;
+	width: 100%; /* Make items take full width of the container */
+  }
 
 /*-----------------------------------------------------------------*/
 /* Slider

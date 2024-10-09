@@ -366,7 +366,7 @@ jQuery(document).on('appear', '.pie-chart',  function()  {
                 });
    
 /*------------------------------*/
-/*  autodropdown to top
+/*  dropdown on hover
 /*------------------------------*/
 	$(function(){
 		$('.dropdown').hover(function() {

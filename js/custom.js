@@ -365,3 +365,14 @@ jQuery(document).on('appear', '.pie-chart',  function()  {
                     return false;
                 });
    
+/*------------------------------*/
+/*  autodropdown to top
+/*------------------------------*/
+	$(function(){
+		$('.dropdown').hover(function() {
+			$(this).addClass('open');
+		},
+		function() {
+				$(this).removeClass('open');
+		});
+	});

@@ -370,7 +370,7 @@ jQuery(document).on('appear', '.pie-chart',  function()  {
 /*------------------------------*/
 /*  dropdown on hover
 /*------------------------------*/
-$(document).ready(function() {
+$(function() {
 	// Step 1: Use the global `compliancyData` variable defined in `compliancy.js`
 	const jsonData = compliancyData;  // Reference the global variable instead of fetching
   
@@ -429,7 +429,10 @@ $(document).ready(function() {
 			<div class="panel-body">
 			  ${item.description}  <!-- Use the 'description' property for the panel content -->
 			  <br>
-			  <a href="${item.href}" class="btn btn-primary">Learn More</a>  <!-- "Learn More" button without target="_blank" -->
+			  <div class="text-center"> <!-- Center the buttons using Bootstrap's text-center class -->
+				<a href="#" class="middle btn btn-white-accordion hover-btn-blue mr-2">Request Service</a>  <!-- Dummy "Request Service" button -->
+				<a href="${item.href}" class="middle btn btn-white-accordion hover-btn-blue">Learn More</a>  <!-- "Learn More" button -->
+			  </div>
 			</div>
 		  </div>
 		</div>
@@ -440,7 +443,7 @@ $(document).ready(function() {
 	});
   
 	// Use delegated event handling for "Learn More" buttons
-	$(document).on('click', '#accordion .btn-primary', function(e) {
+	$(document).on('click', '#accordion .btn-white', function(e) {
 	  e.preventDefault(); // Prevent default link behavior
 	  const targetHref = $(this).attr('href'); // Get the href value of the clicked item
 	  window.location.href = targetHref; // Redirect to the specified href in the same window
@@ -462,3 +465,4 @@ $(document).ready(function() {
 	  }
 	);
   });
+  

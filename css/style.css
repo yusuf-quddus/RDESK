@@ -294,9 +294,15 @@ section {
 
 .btn-white {
 	background:#FFF;
-	border-color: FFFF;
+	border-color: #FFFF;
 	color:#5F5A5A;
 }
+.btn-white-accordion {
+	background:#FFF;
+	border-color: #3fa1c19a;
+	color:#5F5A5A;
+}
+
 
 .btn-white:hover, .btn-white:focus {
 	color: #FFF;

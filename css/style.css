@@ -763,6 +763,9 @@ section {
   .dropdown-menu .dropdown-item {
 	display: block;
 	width: 100%; /* Make items take full width of the container */
+	padding-top: 5px;    /* Adjust the top padding */
+	padding-bottom: 5px; /* Adjust the bottom padding */
+	line-height: 1.2;  
   }
 
 /*-----------------------------------------------------------------*/

@@ -364,32 +364,91 @@ jQuery(document).on('appear', '.pie-chart',  function()  {
                     $("html, body").animate({ scrollTop: 0 }, 2000);
                     return false;
                 });
-   
+  
+				
+				
 /*------------------------------*/
 /*  dropdown on hover
 /*------------------------------*/
-$(function() {
+$(document).ready(function() {
 	// Step 1: Use the global `compliancyData` variable defined in `compliancy.js`
 	const jsonData = compliancyData;  // Reference the global variable instead of fetching
   
-	// Step 2: Get the dropdown menu container by its ID
+	// ===============================
+	// Part 1: Populate the Navbar Dropdown
+	// ===============================
 	const dropdownMenu = $('#compliancy-dropdown');
   
-	// Step 3: Clear any existing content (optional)
+	// Clear any existing content in the dropdown menu
 	dropdownMenu.empty();
   
-	// Step 4: Loop through the data and create dropdown items
+	// Populate the dropdown menu with items from the JSON data
 	jsonData.forEach(item => {
 	  const menuItem = $('<a></a>')       // Create a new <a> element
 		.addClass('dropdown-item')        // Add Bootstrap dropdown item class
-		.attr('href', '#')                // Use '#' as the link placeholder
+		.attr('href', item.href)          // Use the generated href value
 		.text(item.name);                 // Set the display text using the "name" property
   
 	  // Append each generated menu item to the dropdown menu container
 	  dropdownMenu.append(menuItem);
 	});
   
-	// Step 5: Add hover functionality for the dropdown menu
+	// Use delegated event handling to handle clicks on dynamically created elements
+	$(document).on('click', '#compliancy-dropdown a', function(e) {
+	  e.preventDefault(); // Prevent default link behavior
+	  const targetHref = $(this).attr('href'); // Get the href value of the clicked item
+	  window.location.href = targetHref; // Redirect to the specified href in the same window
+	});
+  
+	// ===============================
+	// Part 2: Populate the Main Page Accordion
+	// ===============================
+	const accordionContainer = $('#accordion');  // Select the accordion container
+  
+	// Clear any existing content inside the accordion
+	accordionContainer.empty();
+  
+	// Create dynamic accordion panels for each item in the JSON data
+	jsonData.forEach((item, index) => {
+	  // Generate unique IDs for each accordion panel and its heading
+	  const panelId = `collapse${index + 1}`;
+	  const panelHeaderId = `heading${index + 1}`;
+  
+	  // Create the HTML structure for each accordion panel using the item's `name` and `description`
+	  const panel = $(`
+		<div class="panel panel-default">
+		  <div class="services-info"></div>
+		  <a data-toggle="collapse" data-parent="#accordion" href="#${panelId}">
+			<div class="panel-heading" id="${panelHeaderId}">
+			  <h4 class="panel-title">
+				${item.name}  <!-- Use the 'name' property for the panel title -->
+			  </h4>
+			</div>
+		  </a>
+		  <div id="${panelId}" class="panel-collapse collapse">
+			<div class="panel-body">
+			  ${item.description}  <!-- Use the 'description' property for the panel content -->
+			  <br>
+			  <a href="${item.href}" class="btn btn-primary">Learn More</a>  <!-- "Learn More" button without target="_blank" -->
+			</div>
+		  </div>
+		</div>
+	  `);
+  
+	  // Append each generated panel to the accordion container
+	  accordionContainer.append(panel);
+	});
+  
+	// Use delegated event handling for "Learn More" buttons
+	$(document).on('click', '#accordion .btn-primary', function(e) {
+	  e.preventDefault(); // Prevent default link behavior
+	  const targetHref = $(this).attr('href'); // Get the href value of the clicked item
+	  window.location.href = targetHref; // Redirect to the specified href in the same window
+	});
+  
+	// ===============================
+	// Part 3: Dropdown Hover Functionality
+	// ===============================
 	$('.dropdown').hover(
 	  function() {
 		$(this).addClass('open');  // Show dropdown menu on hover

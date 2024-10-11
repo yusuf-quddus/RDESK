@@ -1,0 +1,25 @@
+{
+    "compliance": [
+        {
+            "name": "ISO 9000",
+            "description": "a description",
+            "page-link": ""
+        },
+        {
+            "name": "ISO 8000",
+            "description": "another description",
+            "page-link": ""
+        }
+    ],
+    "services": [
+        {
+            "name": "IT Services"
+        },
+        {
+            "name": "Compliance Services"
+        },
+        {
+            "name": "Office / Other Services"
+        }
+    ]
+}

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Header from './components/Header'
 import Home from './components/Home'
 import About from './components/About'
@@ -12,10 +11,17 @@ import './css/bootstrap.min.css'
 
 
 const App = () => {
+  const scrollToSection = (id) => {
+		const section = document.getElementById(id);
+		if (section) {
+		  section.scrollIntoView({ behavior: 'smooth' }); 
+		}
+	}
+
   return (
     <div>
-      <Header />
-      <Home />
+      <Header scrollToSection = {scrollToSection}/>
+      <Home scrollToSection = {scrollToSection}/>
       <About />
       <CompliancyInfo />
       <ITServices />

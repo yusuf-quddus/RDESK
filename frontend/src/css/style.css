@@ -749,6 +749,10 @@ section {
   transform: rotate(180deg);
 }
 
+	.dropdown:hover .dropdown-menu {
+	display: block;
+  }
+
   /* Ensure dropdown items are displayed as a vertical list */
   .dropdown-menu {
 	display: none; /* Ensure it's hidden by default */

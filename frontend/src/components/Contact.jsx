@@ -4,7 +4,8 @@ import data from '../data.json'
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
-const Contact = () => {
+
+const Contact = ({handleDisplay}) => {
     const [name, setName] = useState("Your Name")
     const [email, setEmail] = useState("Your Email")
     const [subject, setSubject] = useState("Select Service")
@@ -14,6 +15,7 @@ const Contact = () => {
         /* submit data */
         event.preventDefault()
         console.log(name, email, subject, message)
+        handleDisplay()
     }
 
     return (
@@ -63,7 +65,7 @@ const Contact = () => {
                                   <button type="submit" className="btn btn-blue">SEND MESSAGE</button>
                               </div>
                           </div>
-                      </form>
+                        </form>
                  </div>
          </div>
      </section>

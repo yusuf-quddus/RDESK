@@ -50,25 +50,21 @@ a {
 	outline: none;
 }
 
-select {
-	color:#FFF !important;
- 	font-weight: 600;
- 	letter-spacing:1px;
-}
+
 
 a:hover, a:active, a:focus {
-	color:#F5514B;
+	color:#3fa1c1;
 	text-decoration: none;
 	outline: none;
 }
 
 ::selection {
- background:#F5514B;
+ background:#3fa1c1;
  color:#FFF;
 }
 
 ::-moz-selection {
- background:#F5514B;
+ background:#00AAB3;
  color:#FFF;
 }
 
@@ -77,20 +73,45 @@ img {
 }
 
 select, option, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .form-control {
-	display: inline-block;
-	margin-bottom: 20px;
-	font-size: 15px;
-	line-height: 25px;
-	color: #ffffff;
-	height: 46px;
-	width: 100%;
-	vertical-align: middle;
-	box-shadow: none;
-	border-radius: 0px;
-	transition: all 200ms ease-in 0s;
-	background: rgba(255, 255, 255, 0) none repeat scroll 0% 0%;
-	border: 2px solid rgba(236, 240, 241, 0.58);
+    display: inline-block;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 25px;
+    color: #ffffff; /* General white text for inputs */
+    height: 46px;
+    width: 100%;
+    vertical-align: middle;
+    box-shadow: none;
+    border-radius: 0px;
+    transition: all 200ms ease-in 0s;
+    background: rgba(255, 255, 255, 0); /* Transparent background */
+    border: 2px solid rgba(236, 240, 241, 0.58);
 }
+
+/* More specific styles for select elements */
+select {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Specific styling for select elements with the .form-control class */
+select.form-control {
+    color: #fff !important; /* White text for visibility */
+    background-color: rgba(255, 255, 255, 0) !important; /* Transparent background */
+    font-weight: 600;
+    letter-spacing: 1px;
+    border: 2px solid rgba(236, 240, 241, 0.58); /* Border to match other inputs */
+    height: 46px;
+    width: 100%;
+    transition: all 200ms ease-in 0s;
+}
+
+/* Style for dropdown options */
+select.form-control option {
+    color: #000; /* Black text for options */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for dropdown options */
+}
+
 
 textarea:focus, select:focus, option:focus, input[type="text"]:focus, input[type="password"]:focus, input[type="datetime"]:focus, input[type="datetime-local"]:focus, input[type="date"]:focus, input[type="month"]:focus, input[type="time"]:focus, input[type="week"]:focus, input[type="number"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="search"]:focus, input[type="tel"]:focus, input[type="color"]:focus, .form-control:focus {
 	-webkit-box-shadow: none;
@@ -288,17 +309,17 @@ section {
 }
 .btn-red:hover, .btn-red:focus {
 	background:#FFF;
-	border-color: FFFF;
+	border-color: #FFF;
 	color:#000;
 }
 
 .btn-white {
 	background:#FFF;
-	border-color: FFFF;
-	color:#5F5A5A;
+	border-color: #FFF;
+	color:#ffffff;
 }
 
-.btn-white:hover, .btn-white:focus {
+.btn-white:hover {
 	color: #FFF;
 	background: #3fa1c1;
 	border-color:#3fa1c1;

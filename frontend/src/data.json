@@ -21,5 +21,22 @@
         {
             "name": "Office / Other Services"
         }
+    ], 
+    "ITServices": [
+        {
+            "name": "Server Cloud"
+        },
+        {
+            "name": "Network Services"
+        },
+        {
+            "name": "Professional Wiring"
+        },
+        {
+            "name": "Cloud Engineering \\ DevOps"
+        },
+        {
+            "name": "IT solution"
+        }
     ]
 }

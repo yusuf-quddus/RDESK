@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import data from '../data.json'
+import Dropdown from './Dropdown'
 
 import '../css/style.css'
 import '../css/bootstrap.min.css'
@@ -37,9 +38,6 @@ const Header = ({scrollToSection}) => {
 						<div className="col-sm-12">
 							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu">
 								<span className="sr-only">Toggle navigation</span>
-								<span className="fa fa-bars"></span>
-								<span className="icon-bar"></span>
-								<span className="icon-bar"></span>
 							</button>
 							<div className="logo-nav">
 								<a href="#">
@@ -53,20 +51,12 @@ const Header = ({scrollToSection}) => {
 									
 									<li className={activeMenu == "about" ? "active" : ""}> <a onClick = {() => menuClick("about")}>About</a> </li>
 
-                                    <li className={activeMenu == "compliancy" ? "dropdown active" : "dropdown"}> 
-                                        <a className="nav-link dropdown-toggle" onClick = {() => menuClick("compliancy")} id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          Compliancy <span className="arrow"></span>
-                                        </a>
-                                        <div className="dropdown-menu" aria-labelledby="navbarDropdown" id="compliancy-dropdown">
-											<ul>
-												{data.compliance.map(iso => (
-													<li key={iso.name}><a href="">{iso.name}</a></li>
-												))}
-											</ul>
-                                        </div>
-                                      </li>
-                                   
-								    <li className={activeMenu == "services" ? "active" : ""}> <a onClick = {() => menuClick("services")}> IT Solutions</a> </li>
+                                    <li className={activeMenu == "compliance" ? "dropdown active" : "dropdown"}> 
+                                        <Dropdown name="compliance" data={data.compliance} onClick={() => menuClick("compliancy")}/>
+                                    </li>
+								    <li className={activeMenu == "services" ? "dropdown active" : "dropdown"}> 
+										<Dropdown name="IT Services" data={data.ITServices} onClick={() => menuClick("services")}/>
+									</li>
 									<li className={activeMenu == "contact" ? "active" : ""}> <a onClick = {() => menuClick("contact")}>Contact</a> </li>	
 								</ul>
 							</div>

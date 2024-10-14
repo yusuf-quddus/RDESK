@@ -716,10 +716,21 @@ section {
 	font-size: 15px;
 	text-transform: uppercase;
 	transition: all 0.25s ease 0s;
+	text-decoration: none;
+}
+#main-menu .dropdown-menu ul li a {
+    font-size: 14px;
+    padding: 5px 15px;
+    line-height: 30px;
+	white-space: nowrap;
+    color: #333;
+	text-decoration: none;
+	
 }
 
 #main-menu ul li a:hover {
-	color: #666464
+	color: #666464;
+	text-decoration: none;
 }
 
 #main-menu ul.nav>li>a:hover, #main-menu ul.nav>li>a:focus {
@@ -770,6 +781,10 @@ section {
 /* Rotate the arrow upwards */
 .open .arrow {
   transform: rotate(180deg);
+}
+
+.up-arrow {
+	transform: rotate(180deg);
 }
 
  .dropdown:hover .dropdown-menu {

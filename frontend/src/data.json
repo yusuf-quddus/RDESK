@@ -3,12 +3,12 @@
         {
             "name": "ISO 9000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "page-link": ""
+            "page-link": "/compliance/ISO9000"
         },
         {
             "name": "ISO 8000",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-            "page-link": ""
+            "page-link": "/compliance/ISO8000"
         }
     ],
     "services": [
@@ -24,19 +24,24 @@
     ], 
     "ITServices": [
         {
-            "name": "Server Cloud"
+            "name": "Server Cloud",
+            "page-link": ""
         },
         {
-            "name": "Network Services"
+            "name": "Network Services",
+            "page-link": ""
         },
         {
-            "name": "Professional Wiring"
+            "name": "Professional Wiring",
+            "page-link": ""
         },
         {
-            "name": "Cloud Engineering \\ DevOps"
+            "name": "Cloud Engineering \\ DevOps",
+            "page-link": ""
         },
         {
-            "name": "IT solution"
+            "name": "IT solution",
+            "page-link": ""
         }
     ]
 }

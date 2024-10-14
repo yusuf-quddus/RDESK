@@ -13,9 +13,13 @@ const Dropdown = ({name, data, onClick}) => {
             </a>
             <div className="dropdown-menu" aria-labelledby="navbarDropdown" id="compliancy-dropdown">
                 <ul>
+                    
                     {data.map(d => (
-                        <li key={d.name}><a href="">{d.name}</a></li>
-                    ))}
+                            <li key={d.name}>
+                              <a href={d['page-link']}>{d.name}</a>
+                            </li>
+                          ))}
+
                 </ul>
             </div>
         </div>

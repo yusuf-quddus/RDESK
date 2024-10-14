@@ -6,6 +6,14 @@ import CompliancyInfo from './components/Compliancy-Info'
 import ITServices from './components/IT-Services'
 import Contact from './components/Contact'
 import Notification from './components/Notification'
+import CompliancePage from './components/Compliance-Page'
+import MainPage from './components/MainPage'
+import data from './data.json'
+
+import {
+  BrowserRouter as Router,
+  Routes, Route, Link
+} from 'react-router-dom'
 
 import './css/style.css'
 import './css/bootstrap.min.css'
@@ -13,32 +21,21 @@ import './css/bootstrap.min.css'
 
 
 const App = () => {
-  const [displayMessage, setDisplayMessage] = useState(false)
-
-  const scrollToSection = (id) => {
-		const section = document.getElementById(id);
-		if (section) {
-		  section.scrollIntoView({ behavior: 'smooth' }); 
-		}
-	}
-
-  const displaySuccessfulSubmit = () => {
-    setDisplayMessage(true)
-    setTimeout(() => {
-      setDisplayMessage(false)
-    }, 5000)
-  }
 
   return (
-    <div>
-      <Header scrollToSection = {scrollToSection}/>
-      <Home scrollToSection = {scrollToSection}/>
-      <About />
-      <CompliancyInfo />
-      <ITServices />
-      {/* {displayMessage ? <Notification /> : null} */}
-      <Contact handleDisplay={displaySuccessfulSubmit}/>
-    </div>
+    <Router>
+      {/* <MainPage /> */}
+      <div> 
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+          {data.compliance.map(iso => (
+            // console.log(`${iso['page-link']}`);
+            <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso}/>} />
+))}
+          
+        </Routes>
+      </div>
+    </Router>
   )
 }
 

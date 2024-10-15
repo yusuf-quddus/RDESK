@@ -3,7 +3,7 @@ import Header from './Header'
 import Home from './Home'
 import About from './About'
 import CompliancyInfo from './Compliancy-Info'
-import ITServices from './IT-Services'
+import ITServices from './ITServices'
 import Contact from './Contact'
 import Notification from './Notification'
 import CompliancePage from './Compliance-Page'
@@ -37,7 +37,7 @@ const MainPage = () => {
         <Home scrollToSection = {scrollToSection}/>
         <About />
         <CompliancyInfo />
-        <ITServices />
+        <ITServices scrollToSection={scrollToSection}/>
         <Contact handleDisplay={displaySuccessfulSubmit}/>
       </div>
   )

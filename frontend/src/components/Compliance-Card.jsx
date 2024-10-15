@@ -2,23 +2,41 @@ import { useState } from 'react'
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
-const ComplianceCard = ({name, description}) => {
-    const [expanded, changeExpanded] = useState(false)
-    const toggleCard = () => changeExpanded(!expanded)
+const ComplianceCard = ({ info }) => {
+    const [expanded, changeExpanded] = useState(false);
+    const toggleCard = () => changeExpanded(!expanded);
+
     return (
-        <div className="card panel panel-default" onClick={() => toggleCard()}>
+        <div className="card panel panel-default" onClick={toggleCard}>
             <div className="panel-heading">
                 <h4 className="panel-title">
-                    {name}
+                    {info.name}
                 </h4>
             </div>
-            <div id="collapseOne" className= {expanded ? "panel-collapse show" : "panel-collapse collapse"}>
+            <div id="collapseOne" className={expanded ? "panel-collapse show" : "panel-collapse collapse"}>
                 <div className="panel-body">
-                    {description}
-                </div>
-            </div> 
-        </div>
-    )
-}
+                    {/* Display the description */}
+                    {info.description}
 
-export default ComplianceCard
+                    {/* Buttons */}
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center', /* Center horizontally */
+                        marginTop: '20px'
+                    }}>                        {/* Learn More button */}
+                        <a href={info['page-link']} className="middle btn-gray-border hover-btn-blue" style={{ marginRight: '10px' }}>
+                            Learn More
+                        </a>
+
+                        {/* Request Service button */}
+                        <a href="#" className="middle btn-gray-border hover-btn-blue">
+                            Request Service
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default ComplianceCard;

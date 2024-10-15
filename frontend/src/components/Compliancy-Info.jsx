@@ -15,7 +15,7 @@ const CompliancyInfo = () => {
                     <div className="panel-group" id="accordion">
                         {data.compliance.map(iso => 
                             <div className="card" key = {iso.name}> 
-                                <ComplianceCard name={iso.name} description={iso.description} />
+                                <ComplianceCard info={iso}/>
                             </div>)}
                     </div>
                 </div>

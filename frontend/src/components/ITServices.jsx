@@ -9,7 +9,7 @@ const ITServices = ({scrollToSection}) => {
             <div className="container">
                 <div className="row"> 
                     <div className="title-box text-center">
-                        <h2 className="title">services</h2>
+                        <h2 className="title">IT Services</h2>
                     </div>
                     <div className="col-md-12">
                        <ITServicesPanel scrollToSection={scrollToSection}/>

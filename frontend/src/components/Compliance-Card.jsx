@@ -2,7 +2,7 @@ import { useState } from 'react'
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
-const ComplianceCard = ({ info }) => {
+const ComplianceCard = ({ info, scrollToSection }) => {
     const [expanded, changeExpanded] = useState(false);
     const toggleCard = () => changeExpanded(!expanded);
 
@@ -29,7 +29,7 @@ const ComplianceCard = ({ info }) => {
                         </a>
 
                         {/* Request Service button */}
-                        <a href="#" className="middle btn-gray-border hover-btn-blue">
+                        <a onClick={() => scrollToSection("contact")} className="middle btn-gray-border hover-btn-blue">
                             Request Service
                         </a>
                     </div>

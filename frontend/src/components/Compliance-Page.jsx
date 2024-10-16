@@ -2,10 +2,10 @@ import React from 'react';
 import Header from './Header'; 
 import '../css/style.css'; 
 
-const CompliancePage = ({ iso }) => {
+const CompliancePage = ({ iso, scrollToSection }) => {
   return (
     <div>
-      <Header scrollToSection={() => {}} />
+      <Header scrollToSection={scrollToSection} />
 
       <div
         className="compliance-page"

@@ -21,11 +21,11 @@ const Contact = ({handleDisplay}) => {
     }
 
     const changeSubject = (sub) => {
-        if (sub == "Compliance Services" || sub == "IT Services") {
-            setInputSize("col-md-3")
-        } else {
-            setInputSize("col-md-4")
-        }
+        // if (sub == "Compliance Services" || sub == "IT Services") {
+        //     setInputSize("col-md-3")
+        // } else {
+        //     setInputSize("col-md-4")
+        // }
         setSubject(sub)
     }
 

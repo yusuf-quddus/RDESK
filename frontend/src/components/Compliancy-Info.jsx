@@ -6,7 +6,7 @@ import '../css/bootstrap.min.css'
 
 const CompliancyInfo = ({scrollToSection}) => {
     return (
-        <section id="compliancy" className="section">
+        <section id="compliance" className="section">
             <div className="container">
                 <div className="row"> 
                     <div className="title-box text-center">

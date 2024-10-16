@@ -4,25 +4,16 @@ import Home from './Home'
 import About from './About'
 import CompliancyInfo from './Compliancy-Info'
 import ITServices from './ITServices'
+import OtherServices from './OtherServices'
 import Contact from './Contact'
-import Notification from './Notification'
-import CompliancePage from './Compliance-Page'
-import data from '../data.json'
 
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 
 
-const MainPage = () => {
+const MainPage = ({scrollToSection}) => {
   const [displayMessage, setDisplayMessage] = useState(false)
-
-  const scrollToSection = (id) => {
-		const section = document.getElementById(id);
-		if (section) {
-		  section.scrollIntoView({ behavior: 'smooth' }); 
-		}
-	}
 
   const displaySuccessfulSubmit = () => {
     setDisplayMessage(true)
@@ -38,6 +29,7 @@ const MainPage = () => {
         <About />
         <CompliancyInfo scrollToSection = {scrollToSection} />
         <ITServices scrollToSection={scrollToSection}/>
+        <OtherServices />
         <Contact handleDisplay={displaySuccessfulSubmit}/>
       </div>
   )

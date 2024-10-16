@@ -14,14 +14,20 @@ import './css/bootstrap.min.css'
 
 
 const App = () => {
+  const scrollToSection = (id) => {
+		const section = document.getElementById(id);
+		if (section) {
+		  section.scrollIntoView({ behavior: 'smooth' }); 
+		}
+	}
 
   return (
     <Router>
       <div> 
         <Routes>
-          <Route path="/" element={<MainPage />} />
+          <Route path="/" element={<MainPage scrollToSection={scrollToSection}/>} />
           {data.compliance.map(iso => (
-            <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso}/>} />
+            <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso} scrollToSection={scrollToSection}/>} />
           ))}
         </Routes>
       </div>

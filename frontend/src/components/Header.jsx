@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom'; // Import useNavigate and useLocation
+import { useNavigate, useLocation } from 'react-router-dom';
 import data from '../data.json';
 import Dropdown from './Dropdown';
 import '../css/style.css';
@@ -8,8 +8,8 @@ import '../css/bootstrap.min.css';
 const Header = ({ scrollToSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActive] = useState('home');
-  const navigate = useNavigate(); // React Router navigation hook
-  const location = useLocation(); // To get the current path
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -100,8 +100,12 @@ const Header = ({ scrollToSection }) => {
                   <Dropdown name="IT Services" data={data.ITServices} onClick={() => menuClick('services')} />
                 </li>
 
+                <li className={activeMenu === 'other' ? 'active' : ''}>
+                  <a onClick={() => menuClick('other')}>Other Services</a>
+                </li>
+
                 <li className={activeMenu === 'contact' ? 'active' : ''}>
-                  <a onClick={() => menuClick('contact')}>Contact</a>
+                  <a onClick={() => menuClick('contact')}>Request Service</a>
                 </li>
               </ul>
             </div>

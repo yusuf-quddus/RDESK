@@ -10,7 +10,7 @@ const CompliancyInfo = ({scrollToSection}) => {
             <div className="container">
                 <div className="row"> 
                     <div className="title-box text-center">
-                        <h2 className="title">Compliancy</h2>
+                        <h2 className="title">Compliancy Services</h2>
                     </div>
                     <div className="panel-group" id="accordion">
                         {data.compliance.map(iso => 

@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import data from '../data.json';
 import Dropdown from './Dropdown';
 import '../css/style.css';
@@ -52,13 +52,11 @@ const Header = ({ scrollToSection }) => {
 
   const menuClick = (item) => {
     setActive(item);
-
-   
     if (location.pathname === '/') {
       scrollToSection(item);
     } else {
-      if (item === 'home' || item === 'about' || item === 'contact') {
-        navigate('/');
+      if (item === 'home' || item === 'about' || item === 'contact' || item === 'other' || item == 'services') {
+        navigate("/", { state: { targetId: item } })
       }
     }
   };

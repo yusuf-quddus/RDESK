@@ -3006,6 +3006,46 @@ footer {
 .social-icons ul li a:hover {
 	color:#FFF;
 }
+.compliance-page {
+	position: relative;
+	width: 100%;
+	height: 100vh; /* Full height of the viewport */
+	background-repeat: no-repeat;
+  }
+  
+  .compliance-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for text readability */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+  
+  .compliance-container {
+	text-align: center;
+	max-width: 800px;
+	padding: 20px;
+	background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for content */
+	border-radius: 8px;
+  }
+  
+  .compliance-title {
+	font-size: 2.5rem;
+	font-weight: bold;
+	color: #fff;
+	margin-bottom: 20px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Shadow for better contrast */
+  }
+  
+  .compliance-description {
+	font-size: 1.2rem;
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
 
  @media (min-width: 992px) and (max-width: 1024px) {
 	 

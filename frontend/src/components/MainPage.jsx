@@ -36,7 +36,7 @@ const MainPage = () => {
         <Header scrollToSection = {scrollToSection}/>
         <Home scrollToSection = {scrollToSection}/>
         <About />
-        <CompliancyInfo />
+        <CompliancyInfo scrollToSection = {scrollToSection} />
         <ITServices scrollToSection={scrollToSection}/>
         <Contact handleDisplay={displaySuccessfulSubmit}/>
       </div>

@@ -3,7 +3,7 @@ import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 
-const ITServicesCard = ({ITService}) => {
+const ITServicesCard = ({ITService, scrollToSection}) => {
 
   return (
     <div className="tab-content-main">
@@ -15,6 +15,13 @@ const ITServicesCard = ({ITService}) => {
                             <div className="core-features">      
                                 <p>{ITService.description}</p>          
                             </div>
+                            <div>
+                            <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
+                                <a onClick={() => scrollToSection("contact")} className="middle btn-gray-border hover-btn-blue">
+                                    Request Service
+                                </a>
+                            </div>
+                        </div>
                         </div>  
                         <div className="col-md-6">
                             <div className="devices-image">

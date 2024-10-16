@@ -21,7 +21,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<MainPage />} />
           {data.compliance.map(iso => (
-            // console.log(`${iso['page-link']}`);
             <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso}/>} />
           ))}
         </Routes>

@@ -26,15 +26,37 @@ const Header = ({ scrollToSection }) => {
     };
   }, []);
 
-  // Handle menu click behavior based on the current page
+  useEffect(() => {
+    const sections = document.querySelectorAll('section'); 
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            setActive(sectionId); 
+          }
+        });
+      },
+      { threshold: 0.5 } 
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section); 
+    });
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   const menuClick = (item) => {
     setActive(item);
 
-    // If on the main page, allow scroll to section behavior
+   
     if (location.pathname === '/') {
       scrollToSection(item);
     } else {
-      // If on ISO pages, just navigate to the main page for Home, About, and Contact
       if (item === 'home' || item === 'about' || item === 'contact') {
         navigate('/');
       }

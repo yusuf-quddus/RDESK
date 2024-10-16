@@ -38,11 +38,11 @@ const Header = ({ scrollToSection }) => {
           }
         });
       },
-      { threshold: 0.5 } 
+      { threshold: 0.5 }
     );
 
     sections.forEach((section) => {
-      observer.observe(section); 
+      observer.observe(section);
     });
 
     return () => {
@@ -53,7 +53,6 @@ const Header = ({ scrollToSection }) => {
   const menuClick = (item) => {
     setActive(item);
 
-   
     if (location.pathname === '/') {
       scrollToSection(item);
     } else {

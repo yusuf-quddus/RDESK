@@ -1,19 +1,16 @@
 import React from 'react';
-import Header from './Header'; // Import the Header component
-import '../css/style.css'; // Your main CSS file
+import Header from './Header'; 
+import '../css/style.css'; 
 
 const CompliancePage = ({ iso }) => {
   return (
     <div>
-      {/* Include the Header */}
-      {/* Pass an empty function for scrollToSection, as scrolling is not needed here */}
       <Header scrollToSection={() => {}} />
 
-      {/* The rest of the compliance page content */}
       <div
         className="compliance-page"
         style={{
-          backgroundImage: `url(${iso.image})`, // Set the image from the data as background
+          backgroundImage: `url(${iso.image})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

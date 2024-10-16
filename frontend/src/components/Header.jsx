@@ -26,6 +26,31 @@ const Header = ({ scrollToSection }) => {
     };
   }, []);
 
+  // Use IntersectionObserver to track which section is in view and update activeMenu
+  useEffect(() => {
+    const sections = document.querySelectorAll('section'); // Get all sections
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const sectionId = entry.target.id;
+            setActive(sectionId); // Update activeMenu when a section is in view
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is in view
+    );
+
+    sections.forEach((section) => {
+      observer.observe(section); // Observe each section
+    });
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section)); // Cleanup observer
+    };
+  }, []);
+
   // Handle menu click behavior based on the current page
   const menuClick = (item) => {
     setActive(item);

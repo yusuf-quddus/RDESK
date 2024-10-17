@@ -7,7 +7,7 @@ const OtherServices = () => {
     const other = data.services.find(service => service.name == "Office / Other Services")
     
     return (
-        <section  id="other" className="section">
+        <section id="other" className="section">
         <div className="container">
          <div className="title-box text-center">
              <h2 className="title">{other.name}</h2>

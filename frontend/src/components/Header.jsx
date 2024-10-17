@@ -52,12 +52,11 @@ const Header = ({ scrollToSection }) => {
 
   const menuClick = (item) => {
     setActive(item);
-
     if (location.pathname === '/') {
       scrollToSection(item);
     } else {
-      if (item === 'home' || item === 'about' || item === 'contact') {
-        navigate('/');
+      if (item === 'home' || item === 'about' || item === 'contact' || item === 'other' || item == 'services') {
+        navigate("/", { state: { targetId: item } })
       }
     }
   };

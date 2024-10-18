@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import MainPage from './components/MainPage'
 import CompliancePage from './components/Compliance-Page'
+import ComplianceLanding from './components/ComplianceLanding'
+import ITLanding from './components/ITLanding'
+import ContactPage from './components/ContactPage'
 import data from './data.json'
 
 import {
@@ -10,6 +13,10 @@ import {
 
 import './css/style.css'
 import './css/bootstrap.min.css'
+import ComplianceLanding from './components/ComplianceLanding'
+import ITLanding from './components/ITLanding'
+import OtherLanding from './components/OtherLanding'
+import ContactPage from './components/ContactPage'
 
 
 
@@ -25,10 +32,14 @@ const App = () => {
     <Router>
       <div> 
         <Routes>
-          <Route path="/" element={<MainPage scrollToSection={scrollToSection}/>} />
+          <Route path='/' element={<MainPage scrollToSection={scrollToSection}/>} />
           {data.compliance.map(iso => (
             <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso} scrollToSection={scrollToSection}/>} />
           ))}
+          <Route path='/compliance' element={<ComplianceLanding />} />
+          <Route path='/IT_Services' element={<ITLanding />} />
+          <Route path='/home_services' element={<OtherLanding />} />
+          <Route path='/contact' element={<ContactPage />} />
         </Routes>
       </div>
     </Router>

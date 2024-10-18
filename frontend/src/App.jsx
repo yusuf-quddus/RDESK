@@ -3,6 +3,7 @@ import MainPage from './components/MainPage'
 import CompliancePage from './components/Compliance-Page'
 import ComplianceLanding from './components/ComplianceLanding'
 import ITLanding from './components/ITLanding'
+import OtherLanding from './components/OtherLanding'
 import ContactPage from './components/ContactPage'
 import data from './data.json'
 
@@ -13,10 +14,6 @@ import {
 
 import './css/style.css'
 import './css/bootstrap.min.css'
-import ComplianceLanding from './components/ComplianceLanding'
-import ITLanding from './components/ITLanding'
-import OtherLanding from './components/OtherLanding'
-import ContactPage from './components/ContactPage'
 
 
 
@@ -24,7 +21,7 @@ const App = () => {
   const scrollToSection = (id) => {
 		const section = document.getElementById(id);
 		if (section) {
-		  section.scrollIntoView({ behavior: 'smooth' }); 
+		  section.scrollIntoView(); 
 		}
 	}
 

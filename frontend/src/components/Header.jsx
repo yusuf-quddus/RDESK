@@ -52,12 +52,25 @@ const Header = ({ scrollToSection }) => {
 
   const menuClick = (item) => {
     setActive(item);
-    if (location.pathname === '/') {
-      scrollToSection(item);
-    } else {
-      if (item === 'home' || item === 'about' || item === 'contact' || item === 'other' || item == 'services') {
-        navigate("/", { state: { targetId: item } })
-      }
+    switch(item) {
+      case 'home':
+        navigate('/')
+        break;
+      case 'about':
+        navigate('/', { state: { targetId: item } })
+        break;
+      case 'compliance':
+        navigate('/compliance')
+        break;
+      case 'services':
+        navigate('/IT_Services')
+        break;
+      case 'other':
+        navigate('/home_services')
+        break;
+      case 'contact':
+        navigate('/contact')
+        break;
     }
   };
 

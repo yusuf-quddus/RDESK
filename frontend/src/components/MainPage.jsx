@@ -1,12 +1,13 @@
 import { useState, useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom';
 import Header from './Header'
 import Home from './Home'
 import About from './About'
 import CompliancyInfo from './Compliancy-Info'
 import ITServices from './ITServices'
+import CallAction from './CallAction'
 import OtherServices from './OtherServices'
-import Contact from './Contact'
-import { useLocation } from 'react-router-dom';
+import Footer from './Footer';
 
 import '../css/style.css'
 import '../css/bootstrap.min.css'
@@ -39,7 +40,8 @@ const MainPage = ({scrollToSection}) => {
         <CompliancyInfo scrollToSection = {scrollToSection} />
         <ITServices scrollToSection={scrollToSection}/>
         <OtherServices />
-        <Contact handleDisplay={displaySuccessfulSubmit}/>
+        <CallAction />
+        <Footer />
       </div>
   )
 }

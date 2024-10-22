@@ -7,8 +7,8 @@ const Home = ({scrollToSection}) => {
             <div className="text-wrapper">  
                 <div className="container scroll">
                     <div className="big">Help Desk Solutions </div>          
-                    <div className="small">Making Technology Accessible</div>
-                    <a onClick={() => scrollToSection("contact")} className="middle btn btn-white hover-btn-blue">Request a Service</a>
+                    <div className="medium">Making Technology Accessible</div>
+                    <a onClick={() => scrollToSection("contact")} className="middle btn btn-white hover-btn-blue">Get a Free Quote</a>
                 </div>       
             </div>
             <img src="../public/images/slider/1.jpg" alt=""/>

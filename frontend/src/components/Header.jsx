@@ -54,7 +54,7 @@ const Header = ({ scrollToSection }) => {
     setActive(item);
     switch(item) {
       case 'home':
-        navigate('/')
+        navigate('/', { state: { targetId: item } })
         break;
       case 'about':
         navigate('/', { state: { targetId: item } })
@@ -116,7 +116,7 @@ const Header = ({ scrollToSection }) => {
                 </li>
 
                 <li className={activeMenu === 'contact' ? 'active' : ''}>
-                  <a onClick={() => menuClick('contact')}>Request Service</a>
+                  <a onClick={() => menuClick('contact')}>Contact Us</a>
                 </li>
               </ul>
             </div>

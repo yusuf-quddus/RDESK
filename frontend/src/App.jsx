@@ -5,6 +5,7 @@ import ComplianceLanding from './components/ComplianceLanding'
 import ITLanding from './components/ITLanding'
 import OtherLanding from './components/OtherLanding'
 import ContactPage from './components/ContactPage'
+import Contact from './components/Contact'
 import data from './data.json'
 
 import {
@@ -14,7 +15,6 @@ import {
 
 import './css/style.css'
 import './css/bootstrap.min.css'
-
 
 
 const App = () => {
@@ -36,7 +36,7 @@ const App = () => {
           <Route path='/compliance' element={<ComplianceLanding />} />
           <Route path='/IT_Services' element={<ITLanding />} />
           <Route path='/home_services' element={<OtherLanding />} />
-          <Route path='/contact' element={<ContactPage />} />
+          <Route path='/contact' element={<Contact />} />
         </Routes>
       </div>
     </Router>

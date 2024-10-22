@@ -1,45 +1,46 @@
 import { useState } from 'react'
 import data from '../data.json'
+import Header from './Header'
+import Footer from './Footer'
+import Notification from './Notification'
 
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 
-const Contact = ({handleDisplay}) => {
+const Contact = () => {
     const [name, setName] = useState("Your Name")
     const [email, setEmail] = useState("Your Email")
-    const [subject, setSubject] = useState("Select Service")
+    const [subject, setSubject] = useState("Subject")
+    const [serv, setService] = useState("Select Service")
     const [ITService, setITService] = useState("Desired IT Service")
     const [compliance, setCompliance] = useState("Select Compliance")
-    const [inputSize, setInputSize] = useState("col-md-4")
     const [message, setMessage] = useState("")
+    const [show, showNotification] = useState(false) 
+    const inputSize = "col-md-4"
 
     const handleSubmit = (event) => {
         event.preventDefault()
         console.log(name, email, subject, message, compliance)
-        handleDisplay()
-    }
-
-    const changeSubject = (sub) => {
-        // if (sub == "Compliance Services" || sub == "IT Services") {
-        //     setInputSize("col-md-3")
-        // } else {
-        //     setInputSize("col-md-4")
-        // }
-        setSubject(sub)
+        showNotification(true)
+        setTimeout(() => {
+            showNotification(false);
+        }, 3000);
     }
 
     return (
-        <section id="contact" className="section parallax">
-            <div className="overlay"></div>
+        <div>
+            <Header />
+             <section id="contact" className="section parallax full-screen-image">
+                <div className="overlay"></div>
                 <div className="container">
                     <div className="row">
-                    
+                    {show ? (<Notification />) : null}
+
                         <div className="title-box text-center white">
-                            <h2 className="title">Request a Service</h2>
+                            <h2 className="title">Contact Us</h2>
                         </div>
                     </div>
-            
                         <div className="col-md-8 col-md-offset-2 contact-form">      
                             <form method="post" onSubmit={handleSubmit}>
                                 <div className="row">
@@ -51,17 +52,27 @@ const Contact = ({handleDisplay}) => {
                                             onChange = {(event) => setEmail(event.target.value)}/>
                                     </div>
                                     <div className={inputSize}>
-                                        <select name="services" defaultValue="Select Service" className="form-control" id="options" 
-                                            placeholder="Subject" onChange = {(event) => changeSubject(event.target.value)}>
-                                            <option value={subject} disabled>Select Service</option>
-                                                {data.services.map(service => 
+                                        <select name="Subject" defaultValue="Subject" className="form-control" id="options" 
+                                            placeholder="Subject" onChange = {(event) => setSubject(event.target.value)}>
+                                            <option value={subject} disabled>Subject</option>
+                                                {data.contact_purpose.map(service => 
                                                 (<option key={service.name} value={service.name}> 
                                                 {service.name} 
                                                 </option>))}
-                                            <option value="option3">General Inquiry</option>
                                         </select>
                                     </div>
-                                    {subject == "IT Services" ? (
+                                    {(subject == "Request a Service" || subject == "Get a Quote") ? (
+                                        <div className={inputSize}>
+                                            <select name="services" defaultValue="Select Service" className="form-control" id="options" 
+                                                placeholder="service" onChange = {(event) => setService(event.target.value)}>
+                                                <option value={serv} disabled>Select Service</option>
+                                                    {data.services.map(service => 
+                                                    (<option key={service.name} value={service.name}> 
+                                                    {service.name} 
+                                                    </option>))}
+                                            </select>
+                                        </div> ) : null}
+                                    {serv == "IT Services" ? (
                                         <div className={inputSize}>
                                         <select name="services" defaultValue="Desired IT Service" className="form-control" id="options" 
                                             placeholder="Subject" onChange = {(event) => setITService(event.target.value)}>
@@ -74,7 +85,7 @@ const Contact = ({handleDisplay}) => {
                                         </select>
                                     </div>
                                     ) : null}
-                                    {subject == "Compliance Services" ? (
+                                    {serv == "Compliance Services" ? (
                                         <div className={inputSize}>
                                         <select name="services" defaultValue="Select Compliance" className="form-control" id="options" 
                                             placeholder="Subject" onChange = {(event) => setCompliance(event.target.value)}>
@@ -98,7 +109,9 @@ const Contact = ({handleDisplay}) => {
                                 </form>
                         </div>
                 </div>
-     </section>
+            </section>
+            <Footer />
+        </div>
     )
 }
 

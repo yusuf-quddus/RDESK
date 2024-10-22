@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import data from '../data.json'
+import data from '../../data.json'
 import ITServicesCard from './ITServicesCard'
-import '../css/style.css'
-import '../css/bootstrap.min.css'
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 
 const ITServicesPanel = ({scrollToSection}) => {

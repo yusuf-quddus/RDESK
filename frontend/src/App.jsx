@@ -1,11 +1,10 @@
 import { useState } from 'react'
 import MainPage from './components/MainPage'
-import CompliancePage from './components/Compliance-Page'
-import ComplianceLanding from './components/ComplianceLanding'
-import ITLanding from './components/ITLanding'
-import OtherLanding from './components/OtherLanding'
-import ContactPage from './components/ContactPage'
-import Contact from './components/Contact'
+import CompliancePage from './components/compliance/Compliance-Page'
+import ComplianceLanding from './components/compliance/ComplianceLanding'
+import ITLanding from './components/ITServices/ITLanding'
+import OtherLanding from './components/other-services/OtherLanding'
+import Contact from './components/contact/Contact'
 import data from './data.json'
 
 import {

@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import '../css/style.css'
-import '../css/bootstrap.min.css'
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 const ComplianceCard = ({ info, scrollToSection }) => {
     const [expanded, changeExpanded] = useState(false);

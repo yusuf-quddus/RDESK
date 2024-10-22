@@ -1,8 +1,8 @@
 import ComplianceCard from './Compliance-Card'
-import data from '../data.json'
+import data from '../../data.json'
 
-import '../css/style.css'
-import '../css/bootstrap.min.css'
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 const CompliancyInfo = ({scrollToSection}) => {
     return (

@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import data from '../data.json';
-import Dropdown from './Dropdown';
-import '../css/style.css';
-import '../css/bootstrap.min.css';
+import data from '../../data.json';
+import Dropdown from '../Dropdown';
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 const Header = ({ scrollToSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);

@@ -1,7 +1,7 @@
 import ITServicesPanel from './ITServicesPanel'
 
-import '../css/style.css'
-import '../css/bootstrap.min.css'
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 const ITServices = ({scrollToSection}) => {
     return (

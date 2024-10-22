@@ -1,11 +1,11 @@
 import { useState } from 'react'
-import data from '../data.json'
-import Header from './Header'
-import Footer from './Footer'
-import Notification from './Notification'
+import data from '../../data.json'
+import Header from '../assets/Header'
+import Footer from '../assets/Footer'
+import Notification from '../Notification'
 
-import '../css/style.css'
-import '../css/bootstrap.min.css'
+import '../../css/style.css'
+import '../../css/bootstrap.min.css'
 
 
 const Contact = () => {

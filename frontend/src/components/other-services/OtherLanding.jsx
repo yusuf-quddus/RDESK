@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header'; 
+import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
-import '../css/style.css'; 
+import '../../css/style.css'; 
 
 const OtherLanding = () => {
   const navigate = useNavigate()

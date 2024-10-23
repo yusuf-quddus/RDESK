@@ -116,7 +116,7 @@ const Header = ({ scrollToSection }) => {
                 </li>
 
                 <li className={activeMenu === 'contact' ? 'active' : ''}>
-                  <a onClick={() => menuClick('contact')}>Contact Us</a>
+                  <Dropdown name="Contact Us" data={data.contact_purpose} scrollToSection={scrollToSection} onClick={() => menuClick('contact')} />
                 </li>
               </ul>
             </div>

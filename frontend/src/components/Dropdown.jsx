@@ -23,8 +23,10 @@ const Dropdown = ({name, data, onClick, scrollToSection=null}) => {
             <ul>
               {data.map((d) => (
                 <li key={d.name}>
-                  <a onClick={() => scrollToSection("services")}>{d.name}</a>
-                </li>
+                <a onClick={() => scrollToSection ? scrollToSection(d.name.toLowerCase()) : null}>
+                  {d.name}
+                </a>
+              </li>
               ))}
             </ul>
           </div>

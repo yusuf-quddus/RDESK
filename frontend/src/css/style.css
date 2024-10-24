@@ -2110,6 +2110,8 @@ ul.timeline {
 	border: none;
 }
 
+
+
 #accordion .accordion-toggle:after {
 	/* symbol for "opening" panels */
 	font-family:'FontAwesome';
@@ -2123,6 +2125,64 @@ ul.timeline {
 	/* symbol for "collapsed" panels */
     content:"\f067";
 }
+/* General styling for the description box */
+.description-box {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Reduce the left-side description box height */
+.smaller-description {
+    min-height: 300px; /* Smaller height */
+}
+
+/* Scrollable accordion menu with smaller height */
+.scrollable-accordion {
+    max-height: 300px;  /* Smaller fixed height for the accordion container */
+    overflow-y: auto;   /* Enable vertical scrolling */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Ensure the accordion menu doesn't expand beyond its fixed height */
+.scrollable-accordion .panel-group {
+    max-height: 100%;
+}
+
+/* Prevent accordion elements from expanding the container */
+.smaller-height .collapse.show {
+    overflow: hidden; /* Prevent expansion from breaking container size */
+}
+
+/* Accordion card spacing */
+.card {
+    margin-bottom: 10px;
+}
+
+/* Main title styling */
+.title-box {
+    margin-bottom: 30px; /* Space below the title */
+}
+
+/* Spacing for the content below the header */
+.content-spacing {
+    margin-top: 40px; /* Control the gap below the header */
+}
+
+/* Subtitle in the description box */
+.subtitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+
 
 /*-----------------------------------------------------------------*/
 /*  Video

@@ -19,11 +19,11 @@ const ComplianceLanding = () => {
         <section id="page-header" className="parallax">
              <div className="overlay"></div>
               <div className="container">
-                <h1>IT Service</h1>
+                <h1>Compliance Services</h1>
                   <div className='landing-links'>
                       <p className="btn" onClick={()=>navigate('/')}>Home</p>
                       <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
-                      <p className="btn" onClick={()=>navigate('/IT_Services')}><strong>IT Services</strong></p>
+                      <p className="btn" onClick={()=>navigate('/IT_Services')}><strong>Compliance</strong></p>
 				        </div>
 			        </div>
 		    </section>

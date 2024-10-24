@@ -785,6 +785,23 @@ section {
 #main-menu ul li:hover .dropdown-menu {
     display: block;
 }
+/* Add this CSS rule in your stylesheet */
+/* Updated CSS rule for a smaller border */
+/* Adjust padding for the dropdown border */
+.dropdown-border {
+    border: 2px solid #00000041;  /* Keep the border */
+    border-radius: 2px;      /* Optional: keep rounded corners */
+}
+.vertical-divider {
+    width: 2px; /* Increased width for better visibility */
+    background-color: rgba(0, 0, 0, 0.3); /* Darker grey color for more contrast */
+    height: 80%; /* Adjusted height to be a bit shorter than the full height */
+    margin: 0 auto; /* Center the divider */
+    display: inline-block; /* Ensures it behaves like a block element */
+}
+
+
+
 
 /* Active State for Main Menu and Dropdown Items */
 #main-menu ul li.active > a,
@@ -2166,7 +2183,7 @@ ul.timeline {
 
 /* Main title styling */
 .title-box {
-    margin-bottom: 30px; /* Space below the title */
+    margin-bottom: 60px; /* Space below the title */
 }
 
 /* Spacing for the content below the header */

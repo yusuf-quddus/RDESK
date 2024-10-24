@@ -17,7 +17,7 @@
         }
     ], 
         "contact_purpose": [
-        { "name": "Request a Service", "page-link": "/contact" },
+        { "name": "Request a Service", "page-link": "/contact#request-service" },
         { "name": "Get a Quote", "page-link": "/contact#get-quote" },
         { "name": "General Inquiry", "page-link": "/contact#general-inquiry" }
         ],

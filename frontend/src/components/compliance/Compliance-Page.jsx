@@ -25,20 +25,20 @@ const CompliancePage = ({ iso, scrollToSection }) => {
 				        </div>
 			        </div>
 		    </section>
-            <section id="single-work" class="section">
-			<div class="container">
-				<div class="row">					
-					<div class="col-md-6">						
+            <section id="single-work" className="section">
+			<div className="container">
+				<div className="row">					
+					<div className="col-md-6">						
 						<h1>What is {iso.name}</h1>
                         <p>{iso.description}</p>
                         <p>{iso.description}</p>
                         <p>{iso.description}</p>
 					</div>
-					<div class="col-md-5 work-detail">
-                            <h3 class="margin-bottom-15">Description </h3>	
+					<div className="col-md-5 work-detail">
+                            <h3 className="margin-bottom-15">Description </h3>	
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. </p>					
 						 
-						<ul class="work-detail-list">
+						<ul className="work-detail-list">
 							<li><span>Category :</span>text</li>
 							<li><span>Client :</span>text</li>
 							<li><span>Technoligies used :</span>text</li>
@@ -46,7 +46,7 @@ const CompliancePage = ({ iso, scrollToSection }) => {
 							<li><span>Date released :</span>{iso.year}</li>
 						</ul>
                         
-                        <a onClick={() => navigate('/contact#request-service')} class="btn btn-blue">Request Service</a>
+                        <a onClick={() => navigate('/contact#request-service')} className="btn btn-blue">Request Service</a>
                         
 					</div>
 				</div> 

@@ -17,8 +17,12 @@
         }
     ], 
         "contact_purpose": [
-        { "name": "Request a Service", "page-link": "/contact#request-service" },
-        { "name": "Get a Quote", "page-link": "/contact#get-quote" },
+        { 
+            "name": "Request Service", 
+            "page-link": "/contact#request-service" },
+        
+            { "name": "Get Quote", "page-link": "/contact#get-quote" },
+
         { "name": "General Inquiry", "page-link": "/contact#general-inquiry" }
     ],
     "compliance": [
@@ -57,31 +61,31 @@
             "name": "Server Cloud",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "server-cloud",
-            "page-link": ""
+            "page-link": "/IT_Services"
         },
         {
             "name": "Network Services",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "network-services",
-            "page-link": ""
+            "page-link": "/IT_Services"
         },
         {
             "name": "Professional Wiring",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "professional-wiring",
-            "page-link": ""
+            "page-link": "/IT_Services"
         },
         {
             "name": "Cloud Engineering \\ DevOps",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "cloud-engineering",
-            "page-link": ""
+            "page-link": "/IT_Services"
         },
         {
             "name": "IT solution",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "it-sols",
-            "page-link": ""
+            "page-link": "/IT_Services"
         }
     ]
 }

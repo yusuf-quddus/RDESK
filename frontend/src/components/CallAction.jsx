@@ -6,16 +6,16 @@ import data from '../data.json'; // Adjust the import path as necessary
 const CallAction = () => {
     const navigate = useNavigate();
 
-    // Function to handle navigation based on the 'page-link'
     const handleItemClick = (pageLink) => {
         if (pageLink) {
             navigate(pageLink);
         } else {
-            console.log('No page-link found for this item.'); // Handle no page link (optional)
+            console.log('No page-link found for this item.');
         }
     };
 
-    // Find the "General Inquiry" button's page link
+    // Find the "Request Service" and "General Inquiry" links using .find()
+    const requestServiceLink = data.contact_purpose.find(item => item.name === "Request Service")?.['page-link'];
     const generalInquiryLink = data.contact_purpose.find(item => item.name === "General Inquiry")?.['page-link'];
 
     return (
@@ -23,30 +23,24 @@ const CallAction = () => {
             <div className="overlay"></div>
             <div className="container">
                 <div className="row text-center align-items-center">
-                    {/* Left Side: Request a Service */}
                     <div className="col-md-5">
                         <h2>Requesting a Service?</h2>
-                        {data.contact_purpose.slice(0, 1).map((item) => (
-                            <a 
-                                key={item.name} 
-                                onClick={() => handleItemClick(item['page-link'])} // Use the existing handler
-                                className="btn btn-blue mb-2" // Added margin bottom for spacing
-                            >
-                                {item.name}
-                            </a>
-                        ))}
+                        <a 
+                            onClick={() => handleItemClick(requestServiceLink)} // Access through .find()
+                            className="btn btn-blue mb-2"
+                        >
+                            Request Service
+                        </a>
                     </div>
 
-                    {/* Vertical Divider */}
-                    <div className="col-md-2"> {/* Adjusting width to accommodate the divider */}
+                    <div className="col-md-2">
                         <div className="vertical-divider"></div>
                     </div>
 
-                    {/* Right Side: General Inquiry */}
                     <div className="col-md-5">
                         <h2>Any General Inquiries?</h2>
                         <a 
-                            onClick={() => handleItemClick(generalInquiryLink)} // Use the handler for General Inquiry
+                            onClick={() => handleItemClick(generalInquiryLink)} // Access through .find()
                             className="btn btn-blue"
                         >
                             General Inquiry
@@ -57,5 +51,4 @@ const CallAction = () => {
         </section>
     );
 };
-
 export default CallAction;

@@ -1,16 +1,31 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
 const ComplianceCard = ({ info, scrollToSection }) => {
     const [expanded, setExpanded] = useState(false);
+    const navigate = useNavigate(); // Initialize useNavigate for page navigation
 
     // Toggle the expanded state
     const toggleCard = () => setExpanded(!expanded);
 
+    // Function to handle navigation based on the 'page-link' attribute
+    const handleItemClick = (pageLink) => {
+        if (pageLink) {
+            navigate(pageLink); // Navigate to the page link if it exists
+        } else {
+            console.log('No page-link found for this item.');
+        }
+    };
+
     return (
         <div className="card panel panel-default">
-            <div className="panel-heading" onClick={toggleCard} style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div 
+                className="panel-heading" 
+                onClick={toggleCard} 
+                style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+            >
                 <h4 className="panel-title">
                     {info.name}
                 </h4>
@@ -19,11 +34,11 @@ const ComplianceCard = ({ info, scrollToSection }) => {
             <div
                 id="collapseOne"
                 style={{
-                    maxHeight: expanded ? '200px' : '0', // Change '200px' to whatever fits your content
+                    maxHeight: expanded ? '200px' : '0',
                     overflow: 'hidden',
-                    transition: 'max-height 0.25s ease', // Adjust duration and easing as desired
+                    transition: 'max-height 0.25s ease',
                 }}
-                className={`panel-collapse ${expanded ? 'show' : ''}`} // Toggle the 'show' class
+                className={`panel-collapse ${expanded ? 'show' : ''}`}
             >
                 <div className="panel-body">
                     {/* Display the description */}
@@ -32,13 +47,20 @@ const ComplianceCard = ({ info, scrollToSection }) => {
                     {/* Buttons */}
                     <div style={{
                         display: 'flex',
-                        justifyContent: 'center', /* Center horizontally */
+                        justifyContent: 'center',
                         marginTop: '20px'
                     }}>
-                        <a href={info['page-link']} className="middle btn-gray-border hover-btn-blue" style={{ marginRight: '10px' }}>
+                        <a 
+                            onClick={() => handleItemClick(info['page-link'])} // Use navigate instead of href
+                            className="middle btn-gray-border hover-btn-blue" 
+                            style={{ marginRight: '10px' }}
+                        >
                             Learn More
                         </a>
-                        <a onClick={() => scrollToSection("contact")} className="middle btn-gray-border hover-btn-blue">
+                        <a 
+                            onClick={() => scrollToSection("contact")} 
+                            className="middle btn-gray-border hover-btn-blue"
+                        >
                             Request Service
                         </a>
                     </div>

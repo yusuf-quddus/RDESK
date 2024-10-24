@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
 import data from '../../data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 

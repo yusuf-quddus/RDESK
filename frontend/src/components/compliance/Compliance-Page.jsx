@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from '../assets/Header'; 
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
@@ -10,7 +13,19 @@ const CompliancePage = ({ iso, scrollToSection }) => {
   return (
     <div>
       <Header scrollToSection={scrollToSection} />
-
+      <section id="page-header" className="parallax">
+             <div className="overlay"></div>
+              <div className="container">
+                <h1>Compliance Services</h1>
+                  <div className='landing-links'>
+                      <p className="btn" onClick={()=>navigate('/')}>Home</p>
+                      <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
+                      <p className="btn" onClick={()=>navigate('/compliance')}>Compliance</p>
+                      <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
+                      <p className="btn" onClick={()=>navigate(iso["page-link"])}><strong>{iso.name}</strong></p>
+				        </div>
+			        </div>
+		    </section>
       <div className="tab-content-main">
         <div className="container">
                     <div className="big compliance-title text-center">

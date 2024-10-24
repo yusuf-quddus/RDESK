@@ -177,7 +177,7 @@ textarea:focus, select:focus, option:focus, input[type="text"]:focus, input[type
 }
 
 .section {
-	padding:100px 0 70px;
+	padding:30px 0 70px;
 	position:relative;
 }
 
@@ -229,8 +229,64 @@ textarea:focus, select:focus, option:focus, input[type="text"]:focus, input[type
 	margin: -22px auto;
 	position: absolute;
 	width: 40px;
-	background: #575051;
+	background: #1d191a;
 }
+
+.sub-title-box.text-center h2:before {
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0;
+	right:0;
+	margin: -22px auto;
+	position: absolute;
+	width: 40px;
+	background: #ffffff;
+}
+
+.sub-title-box {
+	border-bottom-width: 0px;
+	margin-bottom: 75px;
+	margin-top: 100px;
+	position: relative;
+}
+
+.sub-title-box h2.title {
+	font-weight: 700;
+	font-size: 29px;
+	line-height: 32px;
+	text-transform: uppercase;
+}
+
+.sub-title-box h2:before {
+	bottom: 0;
+	content: "";
+	display: block;
+	height: 2px;
+	left: 0;
+	margin: -22px auto;
+	position: absolute;
+	width: 40px;
+	background: #00AAB3;
+}
+
+.sub-title-box.white h2.title:before {
+	background:#FFF;
+}
+
+.sub-title-box.white h2.title {
+	color:#FFF;
+}
+
+
+.center {
+	display: flex;
+  	justify-content: center; 
+  	align-items: center; 
+  	height: 100vh;
+}
+
 
 .title-box.text-right:before {
 	left: auto;
@@ -322,6 +378,12 @@ section {
 	color:#ffffff;
 }
 
+.btn-gray {
+	background:#f0eeee;
+	border-color: #000000;
+	color:#000000;
+}
+
 .btn-white:hover {
 	color: #FFF;
 	background: #3fa1c1;
@@ -330,7 +392,7 @@ section {
 
 
 .btn-gray-border:hover, .btn-gray-border:focus {
-	color: #FFF;
+	color: #c3c2c2;
 	background: rgb(243, 88, 91);
 	border-color: rgb(243, 88, 91);
 }
@@ -357,7 +419,7 @@ section {
 }
 
 .btn-gray-border:hover, .btn-gray-border:focus {
-	color: #FFF;
+	color: #c3c2c2;
 	background:#3fa1c1;
 	border-color:#3fa1c1;
 }
@@ -1995,6 +2057,7 @@ ul.timeline {
 	margin-bottom: 50px;
 	border: 1px solid #EAE7E7;
 	padding: 29px 10px 20px;
+	background:#ffffff;
 }
 
 .services-box .services-icon {
@@ -2462,10 +2525,22 @@ ul.timeline {
 	font-weight: 600;
 }
 
-.breadcrumb {
-	background: none;
-	padding-top: 35px;
-}
+.landing-links {
+	display: flex;               
+	justify-content: flex-start;
+	justify-content: center;
+  	gap: 10px;                                            
+  }
+  
+  .landing-links p {
+	margin: 0;                    
+	padding: 5px;                
+	color: white
+  }
+
+  .landing-links p:hover {
+	color: #3fa1c1;                 /* Color when hovering */
+  }
 
 .breadcrumb ul {
 	list-style: none;

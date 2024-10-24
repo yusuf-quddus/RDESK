@@ -61,7 +61,7 @@ const Contact = () => {
                                                 </option>))}
                                         </select>
                                     </div>
-                                    {(subject == "Request a Service" || subject == "Get a Quote") ? (
+                                    {((subject == "Request Service" || subject == "Get Quote") & (subject != "General Inquiry")) ? (
                                         <div className={inputSize}>
                                             <select name="services" defaultValue="Select Service" className="form-control" id="options" 
                                                 placeholder="service" onChange = {(event) => setService(event.target.value)}>

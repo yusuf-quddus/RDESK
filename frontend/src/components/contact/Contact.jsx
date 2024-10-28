@@ -28,6 +28,13 @@ const Contact = () => {
         }, 3000);
     }
 
+    const handleSubject = (sub) => {
+        setCompliance("Select Compliance")
+        setITService("Desired IT Service")
+        setService("Select Service")
+        setSubject(sub)
+    }
+
     return (
         <div>
             <Header />
@@ -53,7 +60,7 @@ const Contact = () => {
                                     </div>
                                     <div className={inputSize}>
                                         <select name="Subject" defaultValue="Subject" className="form-control" id="options" 
-                                            placeholder="Subject" onChange = {(event) => setSubject(event.target.value)}>
+                                            placeholder="Subject" onChange = {(event) => handleSubject(event.target.value)}>
                                             <option value={subject} disabled>Subject</option>
                                                 {data.contact_purpose.map(service => 
                                                 (<option key={service.name} value={service.name}> 
@@ -61,6 +68,7 @@ const Contact = () => {
                                                 </option>))}
                                         </select>
                                     </div>
+                                    
                                     {((subject == "Request Service" || subject == "Get Quote") & (subject != "General Inquiry")) ? (
                                         <div className={inputSize}>
                                             <select name="services" defaultValue="Select Service" className="form-control" id="options" 

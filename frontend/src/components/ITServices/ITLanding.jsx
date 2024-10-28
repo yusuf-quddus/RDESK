@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
 import data from '../../data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons'
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
@@ -14,6 +14,21 @@ const ITLanding = () => {
   useEffect(() => {
     window.scrollTo(0, 0); 
   }, []);
+
+  const icon = (service) => {
+    switch(service) {
+      case "Server Cloud":
+        return <FontAwesomeIcon icon={faServer} size="sm" />
+      case "Network Services":
+        return <FontAwesomeIcon icon={faDiagramProject} size="sm" />
+      case "Professional Wiring":
+        return <FontAwesomeIcon icon={faNetworkWired} size="sm" />
+      case "Cloud Engineering \\ DevOps":
+        return <FontAwesomeIcon icon={faCloud} size="sm" />
+      case "IT solution":
+        return <FontAwesomeIcon icon={faWifi} size="sm" />
+    }
+  }
 
   return (
     <div>
@@ -34,7 +49,7 @@ const ITLanding = () => {
               <div className="row">
                   <div>
                   {data.ITServices.map((service, index) => <ITServiceBox key={service.name} 
-                    service = {service} style={{width: '100px'}} left={true}/>)}
+                    service = {service} icon = {icon(service.name)} style={{width: '100px'}} />)}
                   </div>
               </div>
           </div> 

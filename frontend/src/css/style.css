@@ -424,6 +424,10 @@ section {
 	border-color:#3fa1c1;
 }
 
+.clickable:hover {
+	cursor: pointer;
+}
+
 /*-----------------------------------------------------------------*/
 /* spacing & margin
 /*-----------------------------------------------------------------*/
@@ -931,6 +935,10 @@ section {
 	position: absolute;
 	right: 0px;
 	padding-right: 0;
+}
+
+.shadow-box {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .logo {

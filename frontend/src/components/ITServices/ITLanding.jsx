@@ -5,7 +5,8 @@ import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
 import data from '../../data.json'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight, faNetworkWired, faCloud, 
+         faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons'
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
@@ -18,17 +19,18 @@ const ITLanding = () => {
   const icon = (service) => {
     switch(service) {
       case "Server Cloud":
-        return <FontAwesomeIcon icon={faServer} size="sm" />
+        return faServer
       case "Network Services":
-        return <FontAwesomeIcon icon={faDiagramProject} size="sm" />
+        return faDiagramProject
       case "Professional Wiring":
-        return <FontAwesomeIcon icon={faNetworkWired} size="sm" />
+        return faNetworkWired
       case "Cloud Engineering \\ DevOps":
-        return <FontAwesomeIcon icon={faCloud} size="sm" />
+        return faCloud
       case "IT solution":
-        return <FontAwesomeIcon icon={faWifi} size="sm" />
+        return faWifi
     }
   }
+
 
   return (
     <div>
@@ -48,7 +50,7 @@ const ITLanding = () => {
           <div className="container">
               <div className="row">
                   <div>
-                  {data.ITServices.map((service, index) => <ITServiceBox key={service.name} 
+                  {data.ITServices.map((service) => <ITServiceBox key={service.name} 
                     service = {service} icon = {icon(service.name)} style={{width: '100px'}} />)}
                   </div>
               </div>

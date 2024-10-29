@@ -5,6 +5,7 @@ import ComplianceLanding from './components/compliance/ComplianceLanding'
 import ITLanding from './components/ITServices/ITLanding'
 import OtherLanding from './components/other-services/OtherLanding'
 import Contact from './components/contact/Contact'
+import ITPage from './components/ITServices/ITPage'
 import data from './data.json'
 
 import {
@@ -29,13 +30,16 @@ const App = () => {
       <div> 
         <Routes>
           <Route path='/' element={<MainPage scrollToSection={scrollToSection}/>} />
-          {data.compliance.map(iso => (
-            <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso} scrollToSection={scrollToSection}/>} />
-          ))}
           <Route path='/compliance' element={<ComplianceLanding />} />
           <Route path='/IT_Services' element={<ITLanding />} />
           <Route path='/home_services' element={<OtherLanding />} />
           <Route path='/contact' element={<Contact />} />
+          {data.compliance.map(iso => (
+            <Route key={iso['name']} path={`${iso['page-link']}`} element={<CompliancePage iso={iso} scrollToSection={scrollToSection}/>} />
+          ))}
+          {data.ITServices.map(service => (
+              <Route key={service.name} path={service['page-link']} element={<ITPage service={service}/>} />
+          ))}
         </Routes>
       </div>
     </Router>

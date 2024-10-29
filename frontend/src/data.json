@@ -61,31 +61,31 @@
             "name": "Server Cloud",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "server-cloud",
-            "page-link": "/IT_Services"
+            "page-link": "/IT_Services/server-cloud"
         },
         {
             "name": "Network Services",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "network-services",
-            "page-link": "/IT_Services"
+            "page-link": "/IT_Services/network-services"
         },
         {
             "name": "Professional Wiring",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "professional-wiring",
-            "page-link": "/IT_Services"
+            "page-link": "/IT_Services/professional-wiring"
         },
         {
             "name": "Cloud Engineering \\ DevOps",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "cloud-engineering",
-            "page-link": "/IT_Services"
+            "page-link": "/IT_Services/cloud-engineering"
         },
         {
             "name": "IT solution",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "it-sols",
-            "page-link": "/IT_Services"
+            "page-link": "/IT_Services/IT-solution"
         }
     ]
 }

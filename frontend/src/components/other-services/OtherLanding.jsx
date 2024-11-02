@@ -22,7 +22,31 @@ const OtherLanding = () => {
 				        </div>
 			        </div>
 		    </section>
-        <h1>Other Landing</h1>
+        <section>
+                    <div className="container">
+                        <div className="row">					
+                            <div className="col-md-7" style={{marginTop: '20px'}}>	
+                                    <div className="item"><img src="../../public/images/works/img4.jpg" alt=""/></div>					 
+                            </div>
+                            <div className="col-md-5 work-detail">
+                                    <h3 className="margin-bottom-15">Home/Other Services </h3>	
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. </p>					
+                                
+                                <ul className="work-detail-list">
+                                    <li><span>Category :</span>Business</li>
+                                    <li><span>Client :</span>Newtheme</li>
+                                    <li><span>Technoligies used :</span>HTML 5,CSS 3</li>
+                                    <li><span>Tags :</span>Photography, Branding, Wordpress</li>
+                                    <li><span>Date released :</span>January 22, 2015</li>
+                                </ul>
+                                
+                                <a onClick={() => navigate(`/contact#home_services`)} className="btn btn-blue">Request Service</a>
+                                
+                            </div>
+                           
+                        </div> 
+                    </div> 	
+		        </section>
     </div>
     )
 };

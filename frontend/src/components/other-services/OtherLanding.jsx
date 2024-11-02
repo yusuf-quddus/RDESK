@@ -3,10 +3,20 @@ import Header from '../assets/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import '../../css/style.css'; 
 
 const OtherLanding = () => {
   const navigate = useNavigate()
+  const [index, setIndex] = useState(0)
+  const images = ["../../public/images/works/img4.jpg", "../../public/images/works/img5.jpg", "../../public/images/works/img6.jpg"]
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prevIndex) => (prevIndex + 1) % images.length)
+    }, 3000);
+    return () => clearInterval(interval)
+  }, [images.length])
 
   return (
     <div>
@@ -26,7 +36,7 @@ const OtherLanding = () => {
                     <div className="container">
                         <div className="row">					
                             <div className="col-md-7" style={{marginTop: '20px'}}>	
-                                    <div className="item"><img src="../../public/images/works/img4.jpg" alt=""/></div>					 
+                                    <div className="item"><img src={images[index]} alt=""/></div>					 
                             </div>
                             <div className="col-md-5 work-detail">
                                     <h3 className="margin-bottom-15">Home/Other Services </h3>	

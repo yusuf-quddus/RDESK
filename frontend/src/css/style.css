@@ -3295,7 +3295,17 @@ footer {
 	color: #fff;
 	text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
   }
-
+  .item img {
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: opacity 3s ease-in-out; /* Smooth fade transition */
+  }
+  
+  .item img.active {
+	opacity: 1; /* Fully visible */
+  }
+  
  @media (min-width: 992px) and (max-width: 1024px) {
 	 
 .navbar-right {

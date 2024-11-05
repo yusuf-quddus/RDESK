@@ -47,7 +47,7 @@ const OtherLanding = () => {
                     key={i}
                     src={src}
                     alt=""
-                    className={i === index ? 'active' : ''}
+                    className={`slideshow-image ${i === index ? 'active' : ''}`}
                     style={{ position: 'absolute', top: 0, left: 0 }}
                   />
                 ))}

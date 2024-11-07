@@ -42,7 +42,7 @@ const ITPage = ({service}) => {
                                     <li><span>Date released :</span>January 22, 2015</li>
                                 </ul>
                                 
-                                <a onClick={() => navigate(`/contact#${service.id}`)} className="btn btn-blue">Request Service</a>
+                                <a onClick={() => navigate(`/contact#request-service#${service.id}`)} className="btn btn-blue">Request Service</a>
                                 
                             </div>
                            

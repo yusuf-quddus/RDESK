@@ -3305,6 +3305,27 @@ footer {
   .item .slideshow-image.active {
 	opacity: 1; /* Fully visible */
   }
+  .bg-light-blue {
+	background-color: #e3f2fd; /* Light blue */
+  }
+  .bg-light-green {
+	background-color: #e8f5e9; /* Light green */
+  }
+  .bg-light-orange {
+	background-color: #fff3e0; /* Light orange */
+  }
+  .bg-light-gray {
+	background-color: #f5f5f5; /* Light gray for unspecified categories */
+  }
+  .accordion-item {
+	border-radius: 5px;
+	margin-bottom: 1rem;
+	overflow: hidden;
+  }
+  .accordion-button {
+	color: #333;
+	font-weight: bold;
+  }
   
   
  @media (min-width: 992px) and (max-width: 1024px) {

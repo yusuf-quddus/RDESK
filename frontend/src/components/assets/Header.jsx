@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import data from '../../data.json';
+import data from '../../data.json';  // Keep using data.json for contact_purpose
+import services from '../../services.json';  // Use services.json for IT and Compliance Services
 import Dropdown from '../Dropdown';
-import '../../css/style.css'
-import '../../css/bootstrap.min.css'
+import '../../css/style.css';
+import '../../css/bootstrap.min.css';
 
 const Header = ({ scrollToSection }) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -13,13 +14,8 @@ const Header = ({ scrollToSection }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
@@ -27,49 +23,42 @@ const Header = ({ scrollToSection }) => {
   }, []);
 
   useEffect(() => {
-    const sections = document.querySelectorAll('section'); 
-
+    const sections = document.querySelectorAll('section');
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const sectionId = entry.target.id;
-            setActive(sectionId); 
+            setActive(entry.target.id);
           }
         });
       },
       { threshold: 0.5 }
     );
 
-    sections.forEach((section) => {
-      observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach((section) => observer.unobserve(section));
-    };
+    sections.forEach((section) => observer.observe(section));
+    return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
   const menuClick = (item) => {
     setActive(item);
     switch(item) {
       case 'home':
-        navigate('/', { state: { targetId: item } })
-        break;
       case 'about':
-        navigate('/', { state: { targetId: item } })
+        navigate('/', { state: { targetId: item } });
         break;
       case 'compliance':
-        navigate('/compliance')
+        navigate('/compliance');
         break;
       case 'services':
-        navigate('/IT_Services')
+        navigate('/IT_Services');
         break;
       case 'other':
-        navigate('/home_services')
+        navigate('/home_services');
         break;
       case 'contact':
-        navigate('/contact')
+        navigate('/contact');
+        break;
+      default:
         break;
     }
   };
@@ -104,11 +93,11 @@ const Header = ({ scrollToSection }) => {
                 </li>
 
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
-                  <Dropdown name="Compliancy Services" data={data.compliance} onClick={() => menuClick('compliance')} />
+                  <Dropdown name="Compliancy Services" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
                 </li>
 
                 <li className={activeMenu === 'services' ? 'dropdown active' : 'dropdown'}>
-                  <Dropdown name="IT Services" data={data.ITServices} scrollToSection={scrollToSection} onClick={() => menuClick('services')} />
+                  <Dropdown name="IT Services" data={services['IT Solutions']} scrollToSection={scrollToSection} onClick={() => menuClick('services')} />
                 </li>
 
                 <li className={activeMenu === 'other' ? 'active' : ''}>
@@ -116,14 +105,13 @@ const Header = ({ scrollToSection }) => {
                 </li>
 
                 <li className={activeMenu === 'contact' ? 'active' : ''}>
-    <Dropdown 
-        name="Contact Us" 
-        data={data.contact_purpose} 
-        scrollToSection={scrollToSection} 
-        onClick={() => menuClick('contact')} 
-    />
-</li>
-
+                  <Dropdown 
+                    name="Contact Us" 
+                    data={data.contact_purpose} 
+                    scrollToSection={scrollToSection} 
+                    onClick={() => menuClick('contact')} 
+                  />
+                </li>
               </ul>
             </div>
           </div>

@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import ComplianceCard from './Compliance-Card';
-import data from '../../data.json';
+// Import services.json instead of data.json
+import servicesData from '../../services.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
@@ -55,7 +56,8 @@ const ComplianceLanding = () => {
             <div className="col-md-6">
               <h3>Our Compliance Services</h3>
               <div className="scrollable-accordion fixed-height">
-                {data.compliance.map((iso) => (
+                {/* Access compliance data from services.json */}
+                {servicesData["Compliance Services"].map((iso) => (
                   <div className="card" key={iso.name}>
                     <ComplianceCard info={iso} />
                   </div>

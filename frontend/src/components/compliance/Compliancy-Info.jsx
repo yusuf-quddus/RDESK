@@ -1,10 +1,12 @@
+import React from 'react';
 import ComplianceCard from './Compliance-Card';
-import data from '../../data.json';
+// Import services.json instead of data.json
+import servicesData from '../../services.json';
 
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-const CompliancyInfo = ({scrollToSection}) => {
+const CompliancyInfo = ({ scrollToSection }) => {
     return (
         <section id="compliance" className="section">
             <div className="container">
@@ -31,7 +33,8 @@ const CompliancyInfo = ({scrollToSection}) => {
                     <div className="col-md-6">
                         <div className="scrollable-accordion fixed-height">
                             <div className="panel-group" id="accordion">
-                                {data.compliance.map(iso => 
+                                {/* Map over compliance data from services.json */}
+                                {servicesData["Compliance Services"].map(iso => 
                                     <div className="card" key={iso.name}> 
                                         <ComplianceCard info={iso} scrollToSection={scrollToSection} />
                                     </div>

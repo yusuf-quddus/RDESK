@@ -1,0 +1,68 @@
+{
+    "IT Solutions":[
+        {
+            "name": "Server Cloud",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
+            "id": "server-cloud",
+            "page-link": "/IT_Services/server-cloud"
+        },
+        {
+            "name": "Network Services",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
+            "id": "network-services",
+            "page-link": "/IT_Services/network-services"
+        },
+        {
+            "name": "Professional Wiring",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
+            "id": "professional-wiring",
+            "page-link": "/IT_Services/professional-wiring"
+        },
+        {
+            "name": "Cloud Engineering \\ DevOps",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
+            "id": "cloud-engineering",
+            "page-link": "/IT_Services/cloud-engineering-devops"
+        },
+        {
+            "name": "IT Solutions",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
+            "id": "it-sols",
+            "page-link": "/IT_Services/it-solutions"
+        }
+    ],
+    "Compliance Services": [
+        {
+            "name": "ISO 9001",
+            "description": "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "page-link": "/compliance/ISO9001",
+            "image": "https://picsum.photos/200",
+            "year": "2015"
+        },
+        {
+            "name": "ISO 27001",
+            "description": " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "page-link": "/compliance/ISO27001",
+            "image": "https://picsum.photos/200",
+            "year": "2022"
+        },
+        {
+            "name": "ISO 14001",
+            "description": " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "page-link": "/compliance/ISO14001",
+            "image": "https://picsum.photos/200",
+            "year": "2015" 
+        },
+        
+        {
+            "name": "ISO 45001",
+            "description": " consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+            "page-link": "/compliance/ISO45001",
+            "image": "https://picsum.photos/200",
+            "year": "2018"
+        }
+    ],
+    "Office / Other Services":{
+
+    }
+}

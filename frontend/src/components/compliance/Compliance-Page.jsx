@@ -46,7 +46,7 @@ const CompliancePage = ({ iso, scrollToSection }) => {
 							<li><span>Date released :</span>{iso.year}</li>
 						</ul>
                         
-                        <a onClick={() => navigate(`/contact#request-service#compliancy-services#${iso.name}`)} className="btn btn-blue">Request Service</a>
+                        <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">Request Service</a>
                         
 					</div>
 				</div> 

@@ -58,7 +58,7 @@ const ComplianceCard = ({ info, scrollToSection }) => {
                             Learn More
                         </a>
                         <a 
-                            onClick={() => navigate(`/contact#request-service#compliancy-services#${info.name}`)} 
+                            onClick={() => navigate(`/contact#request-service#compliance-services#${info.name}`)} 
                             className="middle btn-gray-border hover-btn-blue"
                         >
                             Request Service

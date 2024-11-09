@@ -66,7 +66,7 @@ const OtherLanding = () => {
                 <li><span>Date released :</span>January 22, 2015</li>
               </ul>
 
-              <a onClick={() => navigate(`/contact#home_services`)} className="btn btn-blue">Request Service</a>
+              <a onClick={() => navigate(`/contact#request-service#other-services`)} className="btn btn-blue">Request Service</a>
             </div>
           </div>
         </div>

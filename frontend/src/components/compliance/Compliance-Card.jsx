@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
+import { useNavigate } from 'react-router-dom';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
 const ComplianceCard = ({ info, scrollToSection }) => {
     const [expanded, setExpanded] = useState(false);
-    const navigate = useNavigate(); // Initialize useNavigate for page navigation
+    const navigate = useNavigate();
 
     // Toggle the expanded state
     const toggleCard = () => setExpanded(!expanded);
@@ -13,7 +13,7 @@ const ComplianceCard = ({ info, scrollToSection }) => {
     // Function to handle navigation based on the 'page-link' attribute
     const handleItemClick = (pageLink) => {
         if (pageLink) {
-            navigate(pageLink); // Navigate to the page link if it exists
+            navigate(pageLink);
         } else {
             console.log('No page-link found for this item.');
         }
@@ -58,7 +58,7 @@ const ComplianceCard = ({ info, scrollToSection }) => {
                             Learn More
                         </a>
                         <a 
-                            onClick={() => scrollToSection("contact")} 
+                            onClick={() => navigate(`/contact#request-service#compliancy-services#${info.name}`)} 
                             className="middle btn-gray-border hover-btn-blue"
                         >
                             Request Service
@@ -71,3 +71,4 @@ const ComplianceCard = ({ info, scrollToSection }) => {
 };
 
 export default ComplianceCard;
+

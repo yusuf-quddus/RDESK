@@ -19,26 +19,37 @@ const Contact = () => {
     const [isSubjectChangedManually, setIsSubjectChangedManually] = useState(false); // Flag for manual change
     const inputSize = "col-md-4";
 
+    // New states for tracking highlight effect
+    const [subjectHighlighted, setSubjectHighlighted] = useState(false);
+    const [serviceHighlighted, setServiceHighlighted] = useState(false);
+
     useEffect(() => {
         if (isSubjectChangedManually) return; // If manually changed, don't update the subject from the URL
-
+    
         // Parse URL fragments
         const fragments = window.location.hash.substring(1).split('#');
         console.log(fragments);
-
+    
         // Autofill subject based on URL fragments
         if (fragments[0] === 'request-service' || fragments[0] === 'get-quote' || fragments[0] === 'general-inquiry') {
             setSubject(fragments[0].replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()));  // Properly format the subject
+            setSubjectHighlighted(true); // Trigger highlight effect for subject
+            setTimeout(() => setSubjectHighlighted(false), 500); // Remove highlight after 500ms
         }
-
+    
         // Autofill the second dropdown based on the second fragment
         if (fragments[1]) {
             if (subject === 'Request Service' || subject === 'Get Quote') {
                 // Check if the second fragment matches one of the services and set it accordingly
-                const validServices = ['compliancy-services', 'it-services', 'other-services'];
-                if (validServices.includes(fragments[1])) {
-                    setService(fragments[1].replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase()));
+                if (fragments[1] === 'compliancy-services') {
+                    setService("Compliance Services");
+                } else if (fragments[1] === 'it-services') {
+                    setService("IT Services");
+                } else if (fragments[1] === 'other-services') {
+                    setService("Office / Other Services"); // Set to "Office / Other Services" for #other-services
                 }
+                setServiceHighlighted(true); // Trigger highlight effect for service
+                setTimeout(() => setServiceHighlighted(false), 500); // Remove highlight after 500ms
             }
         }
     }, [subject, isSubjectChangedManually]); // Only re-run if subject or manual flag changes
@@ -58,6 +69,14 @@ const Contact = () => {
         setService("Select Service");
         setSubject(sub);
         setIsSubjectChangedManually(true); // Flag that the subject was manually changed
+        setSubjectHighlighted(true); // Trigger highlight on manual change
+        setTimeout(() => setSubjectHighlighted(false), 500); // Remove highlight after 500ms
+    };
+
+    const handleServiceChange = (newService) => {
+        setService(newService);
+        setServiceHighlighted(true); // Trigger highlight on manual change
+        setTimeout(() => setServiceHighlighted(false), 500); // Remove highlight after 500ms
     };
 
     return (
@@ -83,7 +102,13 @@ const Contact = () => {
                                     <input className="form-control" id="email" placeholder={email} type="email" onChange={(event) => setEmail(event.target.value)} />
                                 </div>
                                 <div className={inputSize}>
-                                    <select name="Subject" value={subject} className="form-control" id="options" onChange={(event) => handleSubject(event.target.value)}>
+                                    <select
+                                        name="Subject"
+                                        value={subject}
+                                        className={`form-control ${subjectHighlighted ? 'highlight' : ''}`} // Apply highlight class
+                                        id="options"
+                                        onChange={(event) => handleSubject(event.target.value)}
+                                    >
                                         <option value="" disabled>Select Subject</option> {/* Default empty option */}
                                         {data.contact_purpose.map(service => 
                                             (<option key={service.name} value={service.name}>{service.name}</option>)
@@ -93,11 +118,16 @@ const Contact = () => {
 
                                 {(subject === "Request Service" || subject === "Get Quote") && subject !== "General Inquiry" ? (
                                     <div className={inputSize}>
-                                        <select name="services" value={serv} className="form-control" onChange={(event) => setService(event.target.value)}>
+                                        <select
+                                            name="services"
+                                            value={serv}
+                                            className={`form-control ${serviceHighlighted ? 'highlight' : ''}`} // Apply highlight class
+                                            onChange={(event) => handleServiceChange(event.target.value)}
+                                        >
                                             <option value="Select Service" disabled>Select Service</option>
-                                            <option value="compliancy-services">Compliance Services</option>
-                                            <option value="it-services">IT Services</option>
-                                            <option value="other-services">Office / Other Services</option>
+                                            <option value="Compliance Services">Compliance Services</option>
+                                            <option value="IT Services">IT Services</option>
+                                            <option value="Office / Other Services">Office / Other Services</option>
                                         </select>
                                     </div>
                                 ) : null}

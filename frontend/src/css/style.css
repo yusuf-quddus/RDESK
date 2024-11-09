@@ -3326,6 +3326,13 @@ footer {
 	color: #333;
 	font-weight: bold;
   }
+
+  .highlight {
+    border-color: #ffcc00;
+    box-shadow: 0 0 5px #ffcc00;
+}
+
+
   
   
  @media (min-width: 992px) and (max-width: 1024px) {

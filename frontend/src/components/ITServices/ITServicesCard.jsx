@@ -23,7 +23,7 @@ const ITServicesCard = ({ITService, scrollToSection}) => {
                                     </a>
                                 </div>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                    <a onClick={() => navigate("contact#request-service")} className="middle btn-gray-border hover-btn-blue">
+                                    <a onClick={() => navigate(`/contact#request-service#it-services#${ITService.id}`)} className="middle btn-gray-border hover-btn-blue">
                                         Request Service
                                     </a>
                                 </div>

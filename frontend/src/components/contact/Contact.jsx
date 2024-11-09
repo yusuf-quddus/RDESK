@@ -22,6 +22,7 @@ const Contact = () => {
     // New states for tracking highlight effect
     const [subjectHighlighted, setSubjectHighlighted] = useState(false);
     const [serviceHighlighted, setServiceHighlighted] = useState(false);
+    const [complianceHighlighted, setComplianceHighlighted] = useState(false); // New state for compliance highlight
 
     useEffect(() => {
         if (isSubjectChangedManually) return; // If manually changed, don't update the subject from the URL
@@ -40,7 +41,6 @@ const Contact = () => {
         // Autofill the second dropdown based on the second fragment
         if (fragments[1]) {
             if (subject === 'Request Service' || subject === 'Get Quote') {
-                // Check if the second fragment matches one of the services and set it accordingly
                 if (fragments[1] === 'compliancy-services') {
                     setService("Compliance Services");
                 } else if (fragments[1] === 'it-services') {
@@ -52,7 +52,25 @@ const Contact = () => {
                 setTimeout(() => setServiceHighlighted(false), 500); // Remove highlight after 500ms
             }
         }
-    }, [subject, isSubjectChangedManually]); // Only re-run if subject or manual flag changes
+
+        // Autofill compliance based on the third fragment if it exists
+        if (fragments[2] && serv === "Compliance Services") {
+            // Decode URI component to handle special characters (e.g., spaces in ISO 45001)
+            const decodedCompliance = decodeURIComponent(fragments[2]);
+
+            // Find the matching compliance option from data.compliance
+            const matchedCompliance = data.compliance.find(
+                (comp) => comp.name.toLowerCase() === decodedCompliance.toLowerCase()
+            );
+
+            // If a match is found, set it in the dropdown
+            if (matchedCompliance) {
+                setCompliance(matchedCompliance.name);
+                setComplianceHighlighted(true); // Trigger highlight effect for compliance
+                setTimeout(() => setComplianceHighlighted(false), 500); // Remove highlight after 500ms
+            }
+        }
+    }, [subject, serv, isSubjectChangedManually]); // Only re-run if subject, service, or manual flag changes
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -146,7 +164,7 @@ const Contact = () => {
                                 
                                 {serv === "Compliance Services" ? (
                                     <div className={inputSize}>
-                                        <select name="Compliance" value={compliance} className="form-control" onChange={(event) => setCompliance(event.target.value)}>
+                                        <select name="Compliance" value={compliance} className={`form-control ${complianceHighlighted ? 'highlight' : ''}`} onChange={(event) => setCompliance(event.target.value)}>
                                             <option value="Select Compliance" disabled>Select Compliance</option>
                                             {data.compliance.map(service => 
                                                 (<option key={service.name} value={service.name}>{service.name}</option>)

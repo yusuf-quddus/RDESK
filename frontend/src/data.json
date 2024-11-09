@@ -82,10 +82,10 @@
             "page-link": "/IT_Services/cloud-engineering"
         },
         {
-            "name": "IT solution",
+            "name": "IT Solutions",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "it-sols",
-            "page-link": "/IT_Services/IT-solution"
+            "page-link": "/IT_Services/it-solutions"
         }
     ]
 }

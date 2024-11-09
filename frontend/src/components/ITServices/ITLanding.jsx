@@ -26,7 +26,7 @@ const ITLanding = () => {
         return faNetworkWired
       case "Cloud Engineering \\ DevOps":
         return faCloud
-      case "IT solution":
+      case "IT Solutions":
         return faWifi
     }
   }

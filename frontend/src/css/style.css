@@ -3209,8 +3209,38 @@ li.comment ol.comment-sub {
 
 footer {
 	padding: 17px 0px 10px;
-	background: #1C1C1C;
+	background: gray;
 }
+.footer-section {
+    background-color: #d0d0d0; /* Dark grey background */
+    padding: 40px 20px;
+}
+
+.footer-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center; /* Centers the content vertically */
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column; /* Stack links vertically */
+    align-items: flex-start; /* Align links to the left */
+    gap: 10px; /* Space between each link */
+}
+
+.footer-link {
+    color: #000000; /* White color for hyperlinks */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-link:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
 
 .copyright {
 	margin-top: 15px;

@@ -43,7 +43,6 @@ const MainPage = ({scrollToSection}) => {
         <ITServices scrollToSection={scrollToSection}/>
         <OtherServices />
         <CallAction />
-        <Footer />
       </div>
   )
 }

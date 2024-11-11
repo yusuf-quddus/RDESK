@@ -4,31 +4,36 @@
             "name": "Server Cloud",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "server-cloud",
-            "page-link": "/IT_Services/server-cloud"
+            "page-link": "/IT_Services/server-cloud",
+            "icon": "faServer"
         },
         {
             "name": "Network Services",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "network-services",
-            "page-link": "/IT_Services/network-services"
+            "page-link": "/IT_Services/network-services",
+            "icon": "faDiagramProject"
         },
         {
             "name": "Professional Wiring",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "professional-wiring",
-            "page-link": "/IT_Services/professional-wiring"
+            "page-link": "/IT_Services/professional-wiring",
+            "icon": "faNetworkWired"
         },
         {
             "name": "Cloud Engineering \\ DevOps",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "cloud-engineering",
-            "page-link": "/IT_Services/cloud-engineering-devops"
+            "page-link": "/IT_Services/cloud-engineering-devops",
+            "icon": "faCloud"
         },
         {
             "name": "IT Solutions",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "it-sols",
-            "page-link": "/IT_Services/it-solutions"
+            "page-link": "/IT_Services/it-solutions",
+            "icon": "faWifi"
         }
     ],
     "Compliance Services": [

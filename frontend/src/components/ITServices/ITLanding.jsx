@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
-import servicesData from '../../services.json';  // Import services.json instead of data.json
+import servicesData from '../../services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons';
 import '../../css/style.css';
@@ -17,15 +17,15 @@ const ITLanding = () => {
 
   const icon = (service) => {
     switch(service) {
-      case "Server Cloud":
+      case "faServer":
         return faServer;
-      case "Network Services":
+      case "faDiagramProject":
         return faDiagramProject;
-      case "Professional Wiring":
+      case "faNetworkWired":
         return faNetworkWired;
-      case "Cloud Engineering \\ DevOps":
+      case "faCloud":
         return faCloud;
-      case "IT Solutions":
+      case "faWifi":
         return faWifi;
       default:
         return null;
@@ -59,7 +59,7 @@ const ITLanding = () => {
                 <ITServiceBox 
                   key={service.name}
                   service={service} 
-                  icon={icon(service.name)} 
+                  icon={icon(service.icon)} 
                   style={{ width: '100px' }} 
                 />
               ))}

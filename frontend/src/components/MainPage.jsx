@@ -5,10 +5,9 @@ import Home from './Home'
 import About from './About'
 import CompliancyInfo from './compliance/Compliancy-Info'
 import ITServices from './ITServices/ITServices'
-import CallAction from './CallAction'
+import Footer from './Footer'
 import OtherServices from './other-services/OtherServices'
 import Divider from './assets/Divider'
-import Footer from './assets/Footer'
 
 import '../css/style.css'
 import '../css/bootstrap.min.css'
@@ -42,7 +41,7 @@ const MainPage = ({scrollToSection}) => {
         <CompliancyInfo scrollToSection = {scrollToSection} />
         <ITServices scrollToSection={scrollToSection}/>
         <OtherServices />
-        <CallAction />
+        <Footer />
       </div>
   )
 }

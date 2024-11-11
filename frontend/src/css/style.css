@@ -1013,6 +1013,10 @@ section {
     opacity: 1;
 }
 
+.footer {
+	margin-top: 40px;
+}
+
 .home {
 	overflow: hidden;
 	font-family: "Raleway", sans-serif;

@@ -2,7 +2,7 @@ import '../css/style.css';
 import { useNavigate } from 'react-router-dom';
 import data from '../data.json';
 
-const CallAction = () => {
+const Footer = () => {
     const navigate = useNavigate();
 
     // Define links in an array for flexibility and future additions
@@ -50,4 +50,4 @@ const CallAction = () => {
     );
 };
 
-export default CallAction;
+export default Footer;

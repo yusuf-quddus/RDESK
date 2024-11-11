@@ -13,7 +13,7 @@ const OtherServices = () => {
              <h2 className="title">{other.name}</h2>
           </div>
             <div className="row">
-            <div className="col-md-6">
+                <div className="col-md-6">
                             <div className="core-features">      
                                 <p>{other.description}</p>          
                             </div>
@@ -29,13 +29,12 @@ const OtherServices = () => {
                                     </a>
                                 </div>
                             </div>  
-                        <div className="col-md-6">
-                            <div className="devices-image">
-                                <img src="../../public/images/device-desktop.png" alt=""/>
-                            </div>
-                        </div>
-    
                </div>
+               <div className="col-md-6">
+                    <div className="devices-image">
+                        <img src="../../public/images/device-desktop.png" alt=""/>
+                    </div>
+                </div>
             </div> 
         </div>
    </section> 

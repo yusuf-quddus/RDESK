@@ -3211,40 +3211,47 @@ footer {
 	padding: 17px 0px 10px;
 	background: gray;
 }
-.footer-section {
-    background-color: #d0d0d0; /* Dark grey background */
-    padding: 40px 20px;
+.call-action-section {
+    background-color: #a4a4a4; /* Dark grey background */
+    padding: 20px 40px;
 }
 
-.footer-container {
-    max-width: 800px;
+.call-action-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
     margin: 0 auto;
-    display: flex;
-    align-items: center; /* Centers the content vertically */
 }
 
-.footer-links {
+
+
+.call-action-nav {
     display: flex;
-    flex-direction: column; /* Stack links vertically */
-    align-items: flex-start; /* Align links to the left */
-    gap: 10px; /* Space between each link */
 }
 
-.footer-link {
-    color: #000000; /* White color for hyperlinks */
+.call-action-links {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.call-action-link-item {
+    margin: 0;
+}
+
+.call-action-link {
+    color: #ffffff; /* White text color */
     text-decoration: none;
-    font-weight: bold;
+    font-size: 14px;
 }
 
-.footer-link:hover {
+.call-action-link:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
-
-
-.copyright {
-	margin-top: 15px;
-}
 
 .copyright p{
 	color:#CCC;

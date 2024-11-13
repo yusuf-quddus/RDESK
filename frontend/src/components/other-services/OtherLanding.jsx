@@ -41,18 +41,19 @@ const OtherLanding = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-7" style={{ marginTop: '20px' }}>
-              <div className="item">
-                {/* Render each image and apply 'active' class to the current one */}
-                {images.map((src, i) => (
-                  <img
-                    key={i}
-                    src={src}
-                    alt=""
-                    className={`slideshow-image ${i === index ? 'active' : ''}`}
-                    style={{ position: 'absolute', top: 0, left: 0 }}
-                  />
-                ))}
-              </div>
+            
+            <div className="slideshow-container">
+              {images.map((src, i) => (
+                <img
+                  key={i}
+                  src={src}
+                  alt=""
+                  className={`slideshow-image ${i === index ? 'active' : ''}`}
+                />
+              ))}
+            </div>
+
+
             </div>
 
             <div className="col-md-5 work-detail">

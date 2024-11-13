@@ -34,9 +34,9 @@ const ComplianceCard = ({ info, scrollToSection }) => {
             <div
                 id="collapseOne"
                 style={{
-                    maxHeight: expanded ? '200px' : '0',
+                    maxHeight: expanded ? '1000px' : '0',  // Use a large max-height for smooth transition
                     overflow: 'hidden',
-                    transition: 'max-height 0.25s ease',
+                    transition: 'max-height 0.25s ease',  // Transition max-height instead of height
                 }}
                 className={`panel-collapse ${expanded ? 'show' : ''}`}
             >

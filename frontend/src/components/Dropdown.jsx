@@ -30,7 +30,10 @@ const Dropdown = ({ name, data, onClick }) => {
                 aria-haspopup="true" 
                 aria-expanded={expanded ? "true" : "false"}
             >
-                {name} <span className={expanded ? "up-arrow arrow" : "arrow"}></span>
+                {name} 
+                <span 
+                    className={`arrow ${expanded ? "up-arrow" : ""} dropdown-arrow`}
+                ></span>
             </a>
             {expanded && (
                 <div className="dropdown-menu" aria-labelledby="navbarDropdown" id="compliancy-dropdown">

@@ -34,7 +34,7 @@ const Footer = () => {
                 <nav aria-label="Call to Action Links" className="call-action-nav">
                     <ul className="call-action-links">
                         {callToActionLinks.map((link, index) => (
-                            <li key={index} className="call-action-link-item">
+                            <li key={index} className="call-action-link-item btn">
                                 <a 
                                     onClick={() => handleNavigation(link.pageLink)} 
                                     className="call-action-link"

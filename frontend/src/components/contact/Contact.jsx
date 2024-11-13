@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import data from '../../data.json';          
 import services from '../../services.json';  
 import Header from '../assets/Header';
-import Footer from '../assets/Footer';
+import Footer from '../Footer'
 import Notification from '../Notification';
 
 import '../../css/style.css';

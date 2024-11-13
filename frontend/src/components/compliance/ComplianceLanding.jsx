@@ -8,6 +8,7 @@ import ComplianceCard from './Compliance-Card';
 import servicesData from '../../services.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
+import Footer from '../Footer';
 
 const ComplianceLanding = () => {
   const navigate = useNavigate();
@@ -67,6 +68,8 @@ const ComplianceLanding = () => {
           </div>
         </div>
       </section>
+      <div className="footer"></div>
+      <Footer />
     </div>
   );
 };

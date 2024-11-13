@@ -72,7 +72,8 @@ const OtherLanding = () => {
           </div>
         </div>
       </section>
-      <Footer className="footer" />
+      <div className="footer"></div>
+      <Footer />
     </div>
   );
 };

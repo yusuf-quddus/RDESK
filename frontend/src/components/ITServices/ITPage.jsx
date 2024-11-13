@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
+import Footer from '../Footer';
+
 
 const ITPage = ({service}) => {
     const navigate = useNavigate()
@@ -49,6 +51,8 @@ const ITPage = ({service}) => {
                         </div> 
                     </div> 	
 		        </section>
+                <div className="footer"></div>
+                <Footer />
             </div>
     )
 };

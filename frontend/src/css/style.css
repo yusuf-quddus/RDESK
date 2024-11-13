@@ -1010,6 +1010,8 @@ section {
     max-width: 600px;
     height: auto;
     overflow: hidden;
+	overflow: hidden;
+    margin: 0 auto;
 }
 
 .slideshow-image {
@@ -1017,6 +1019,7 @@ section {
     height: auto;
     transition: opacity 1s ease-in-out;
     opacity: 0;
+	position: relative;
 }
 
 .fade {
@@ -3352,7 +3355,7 @@ li.comment ol.comment-sub {
   }
   
   .item .slideshow-image.active {
-	opacity: 1; /* Fully visible */
+	opacity: 1;
   }
   .bg-light-blue {
 	background-color: #e3f2fd; /* Light blue */

@@ -74,7 +74,7 @@ const Header = ({ scrollToSection }) => {
           <div className="col-sm-12">
             <div className="logo-nav">
               <a onClick={() => menuClick('home')}>
-                <img src="../public/images/rdesklogo.png" alt="Company logo" />
+                <img className="btn" src="../public/images/rdesklogo.png" alt="Company logo" />
               </a>
             </div>
             <button

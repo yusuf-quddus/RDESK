@@ -18,7 +18,7 @@ const OtherLanding = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 3 seconds
+    }, 5000); 
     return () => clearInterval(interval);
   }, [images.length]);
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import ComplianceCard from './Compliance-Card';
-// Import services.json instead of data.json
-import servicesData from '../../services.json';
+import servicesData from '../../data/services.json';
 
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';

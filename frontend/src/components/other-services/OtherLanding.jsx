@@ -3,7 +3,7 @@ import Header from '../assets/Header';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../Footer'
+import Footer from '../assets/Footer'
 import '../../css/style.css'; 
 
 const OtherLanding = () => {

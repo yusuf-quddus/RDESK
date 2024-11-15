@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
-import Footer from '../Footer';
+import Footer from '../assets/Footer';
 const CompliancePage = ({ iso, scrollToSection }) => {
   const navigate = useNavigate()
 

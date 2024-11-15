@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import data from '../../data.json';
-import services from '../../services.json';
+import data from '../../data/data.json';
+import services from '../../data/services.json';
 import Dropdown from '../Dropdown';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';

@@ -6,7 +6,7 @@ import ITLanding from './components/ITServices/ITLanding';
 import OtherLanding from './components/other-services/OtherLanding';
 import Contact from './components/contact/Contact';
 import ITPage from './components/ITServices/ITPage';
-import servicesData from './services.json';  // Import services.json instead of data.json
+import servicesData from './data/services.json';  
 
 import {
   BrowserRouter as Router,

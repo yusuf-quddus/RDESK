@@ -27,7 +27,7 @@ const ComplianceCard = ({ info, scrollToSection }) => {
                 style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
             >
                 <h4 className="panel-title">
-                    {info.name}
+                    {info.name} - {info.subtitle}
                 </h4>
                 <span className={expanded ? "up-arrow arrow" : "down-arrow arrow"}></span>
             </div>

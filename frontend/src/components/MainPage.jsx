@@ -5,7 +5,7 @@ import Home from './Home'
 import About from './About'
 import CompliancyInfo from './compliance/Compliancy-Info'
 import ITServices from './ITServices/ITServices'
-import Footer from './Footer'
+import Footer from './assets/Footer'
 import OtherServices from './other-services/OtherServices'
 import Divider from './assets/Divider'
 

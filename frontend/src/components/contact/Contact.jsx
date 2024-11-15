@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import data from '../../data.json';          
-import services from '../../services.json';  
+import data from '../../data/data.json';          
+import services from '../../data/services.json';  
 import Header from '../assets/Header';
-import Footer from '../Footer'
+import Footer from '../assets/Footer'
 import Notification from '../Notification';
 
 import '../../css/style.css';

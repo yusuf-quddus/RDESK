@@ -4,11 +4,10 @@ import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import ComplianceCard from './Compliance-Card';
-// Import services.json instead of data.json
-import servicesData from '../../services.json';
+import servicesData from '../../data/services.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
-import Footer from '../Footer';
+import Footer from '../assets/Footer';
 
 const ComplianceLanding = () => {
   const navigate = useNavigate();
@@ -38,7 +37,6 @@ const ComplianceLanding = () => {
       <section className="section">
         <div className="container">
           <div className="text-center">
-            <h2 className="title">Compliancy Services Overview</h2>
             <p>
               Our compliance services support your business in meeting essential standards and regulations.
               With expertise in ISO standards, data protection, and more, we help ensure your compliance 

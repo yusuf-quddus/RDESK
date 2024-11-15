@@ -1,7 +1,7 @@
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
-import data from '../../data.json'
+import data from '../../data/data.json'
 
 const OtherServices = () => {
     const other = data.services.find(service => service.name == "Office / Other Services")

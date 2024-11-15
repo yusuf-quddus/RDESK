@@ -2,12 +2,12 @@ import React, { useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
-import servicesData from '../../services.json';  
+import servicesData from '../../data/services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
-import Footer from '../Footer';
+import Footer from '../assets/Footer';
 
 const ITLanding = () => {
   const navigate = useNavigate();

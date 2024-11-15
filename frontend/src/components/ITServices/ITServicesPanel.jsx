@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import servicesData from '../../services.json';  // Import services.json instead of data.json
+import servicesData from '../../data/services.json';  
 import ITServicesCard from './ITServicesCard';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';

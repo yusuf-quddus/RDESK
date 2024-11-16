@@ -18,6 +18,9 @@ const Contact = () => {
     const [message, setMessage] = useState("");
     const [show, showNotification] = useState(false);
     const [isSubjectChangedManually, setIsSubjectChangedManually] = useState(false); 
+    const [notifMessage, setNotifMessage] = useState("");
+    const [success, setSuccess] = useState(true);
+
     const inputSize = "col-md-4";
 
     const [highlighted, setHighlighted] = useState({
@@ -62,6 +65,7 @@ const Contact = () => {
         } else if (serv === "IT Services" && fragments[2]) {
             matchService(serv, fragments[2], "IT Solutions", setITService, 'ITService');
         }
+
     }, [subject, serv, isSubjectChangedManually]);
 
     const setHighlight = (key) => {
@@ -71,6 +75,14 @@ const Contact = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        window.scrollTo({top: 0})
+        if (name === "Your Name" || email === "Your Email" || subject === "") {
+            setNotifMessage(`Missing${name === "Your Name" || name === "" ? " name,": ""}${email === "Your Email" ? " email,": ""}${subject === "" ? " subject,": ""}`)
+            setSuccess(false)
+        } else {
+            setNotifMessage("Thank you, we recieved your request")
+            setSuccess(true)
+        }
         showNotification(true);
         setTimeout(() => showNotification(false), 3000);
     };
@@ -91,8 +103,8 @@ const Contact = () => {
                 <div className="overlay"></div>
                 <div className="container">
                     <div className="row">
-                        {show && <Notification />}
                         <div className="title-box text-center white">
+                            {show && <Notification message={notifMessage} success={success}/>}
                             <h2 className="title">Contact Us</h2>
                         </div>
                     </div>

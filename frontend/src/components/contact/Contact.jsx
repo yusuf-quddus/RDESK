@@ -5,6 +5,8 @@ import Header from '../assets/Header';
 import Footer from '../assets/Footer'
 import Notification from '../Notification';
 
+import axios from 'axios'
+
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
@@ -73,15 +75,33 @@ const Contact = () => {
         setTimeout(() => setHighlighted(prev => ({ ...prev, [key]: false })), 500);
     };
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         window.scrollTo({top: 0})
         if (name === "Your Name" || email === "Your Email" || subject === "") {
             setNotifMessage(`Missing${name === "Your Name" || name === "" ? " name,": ""}${email === "Your Email" ? " email,": ""}${subject === "" ? " subject,": ""}`)
             setSuccess(false)
         } else {
-            setNotifMessage("Thank you, we recieved your request")
-            setSuccess(true)
+            try {
+                const formData = {
+                    name: name,
+                    email: email,
+                    subject: subject,
+                    service: serv,
+                    compliance: compliance,
+                    it_service: ITService,
+                    message: message
+                }
+                console.log('test')
+                const res = await axios.post("http://localhost:3000/api/request", formData)
+                console.log('test2')
+                setNotifMessage("Thank you, we recieved your request")
+                setSuccess(true)
+            } catch (err) {
+                console.error("Error submitting form:", err)
+                setNotifMessage("Error submitting form")
+                setSuccess(false)
+            }
         }
         showNotification(true);
         setTimeout(() => showNotification(false), 3000);

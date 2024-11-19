@@ -29,7 +29,7 @@ const CompliancePage = ({ iso, scrollToSection }) => {
 			<div className="container">
 				<div className="row">					
 					<div className="col-md-6">						
-						<h1>What is {iso.name}</h1>
+						<h1>What is {iso.name}?</h1>
                         <p>{iso.description}</p>
                         <p>{iso.description}</p>
                         <p>{iso.description}</p>

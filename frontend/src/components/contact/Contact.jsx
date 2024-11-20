@@ -78,7 +78,7 @@ const Contact = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         window.scrollTo({top: 0})
-        if (name === "Your Name" || email === "Your Email" || subject === "") {
+        if (name === "Your Name" || email === "Your Email" || subject === "" || name === "" || email === "") {
             setNotifMessage(`Missing${name === "Your Name" || name === "" ? " name,": ""}${email === "Your Email" ? " email,": ""}${subject === "" ? " subject,": ""}`)
             setSuccess(false)
         } else {

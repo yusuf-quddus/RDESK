@@ -28,16 +28,14 @@ const CompliancePage = ({ iso, scrollToSection }) => {
             <section id="single-work" className="section">
 			<div className="container">
 				<div className="row">					
-					<div className="col-md-6">						
-						<h1>What is {iso.name}?</h1>
-                        <p>{iso.description}</p>
-                        <p>{iso.description}</p>
-                        <p>{iso.description}</p>
-					</div>
-					<div className="col-md-5 work-detail">
-                            <h3 className="margin-bottom-15">Description </h3>	
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. </p>					
-						 
+        <div className="col-md-6">
+    <h1 style={{ marginBottom: "20px" }}>Why {iso.name}?</h1>
+      <p style={{ whiteSpace: "pre-line" }}>{iso.description}</p>
+    
+</div>
+					<div className="col-md-6 work-detail">
+          <h3 className="margin-bottom-15">Summary </h3>	
+                            <p>{iso.summary}</p>						 
 						<ul className="work-detail-list">
 							<li><span>Category :</span>text</li>
 							<li><span>Client :</span>text</li>

@@ -42,7 +42,7 @@ const ComplianceCard = ({ info, scrollToSection }) => {
             >
                 <div className="panel-body">
                     {/* Display the description */}
-                    {info.description}
+                    {info.summary}
 
                     {/* Buttons */}
                     <div style={{

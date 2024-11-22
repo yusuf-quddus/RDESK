@@ -96,7 +96,7 @@ const Header = ({ scrollToSection }) => {
                   <a onClick={() => menuClick('about')}>About</a>
                 </li>
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
-                  <Dropdown name="Compliancy Services" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
+                  <Dropdown name="ISO/Compliance" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
                 </li>
                 <li className={activeMenu === 'services' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="IT Services" data={services['IT Solutions']} scrollToSection={scrollToSection} onClick={() => menuClick('services')} />

@@ -5,40 +5,58 @@
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "server-cloud",
             "page-link": "/IT_Services/server-cloud",
-            "icon": "faServer"
+            "icon": "faServer",
+            "images": [
+                "cloud_solutions.jpg",
+                "cloud-diagram.jpeg"
+            ]
         },
         {
             "name": "Network Services",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "network-services",
             "page-link": "/IT_Services/network-services",
-            "icon": "faDiagramProject"
+            "icon": "faDiagramProject",
+            "images": [
+                "fix-router.jpg",
+                "fix-router-2.webp"
+            ]
         },
         {
             "name": "Professional Wiring",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "professional-wiring",
             "page-link": "/IT_Services/professional-wiring",
-            "icon": "faNetworkWired"
+            "icon": "faNetworkWired",
+            "images": [
+                "wiring.avif"
+            ]
         },
         {
             "name": "Cloud Engineering \\ DevOps",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "cloud-engineering",
             "page-link": "/IT_Services/cloud-engineering-devops",
-            "icon": "faCloud"
+            "icon": "faCloud",
+            "images": [
+                "cloud_solutions_2.jpg"
+            ]
         },
         {
             "name": "IT Solutions",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.",
             "id": "it-sols",
             "page-link": "/IT_Services/it-solutions",
-            "icon": "faWifi"
+            "icon": "faWifi",
+            "images": [
+                "it-solutions.jpg"
+            ]
         }
     ],
     "Compliance Services": [
         {
             "name": "ISO 9001",
+            "subtitle": "Quality Management System",
             "acronym": "QMS",
             "summary": "ISO 9001 is a highly recognized and globally respected standard for enhancing management and operational efficiency. Achieving ISO 9001 certification can propel your business toward success by increasing customer satisfaction, improving market appeal, and maximizing profit opportunities.",
             "description": "Over 1 million organizations across more than 75 countries have adopted ISO 9001. Developed by a diverse international committee, the ISO 9001 framework is designed to help organizations of all types—businesses, government agencies, non-profits, and more—implement effective management practices and promote excellence.",
@@ -48,7 +66,7 @@
                 {"Category":"Quality Management Standard (QMS)",
                 "Technologies Used":"Quality management software, process optimization tools, customer feedback systems, document control systems",
                 "Tags":"Quality Assurance, ISO 9001, Continuous Improvement, Customer Satisfaction, Process Management",
-                "Year": "2015 (latest version)"
+                "Year": "2015"
             }
         
         },
@@ -172,6 +190,11 @@
         }
     ],
     "Office / Other Services":{
-
+        "name": "Office / Other Services",
+        "page-link": "",
+        "description": "ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+        "images": [
+            "installation.jpg"
+        ]
     }
 }

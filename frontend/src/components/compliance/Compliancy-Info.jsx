@@ -5,7 +5,7 @@ import servicesData from '../../data/services.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-const CompliancyInfo = ({ scrollToSection }) => {
+const CompliancyInfo = () => {
     return (
         <section id="compliance" className="section">
             <div className="container">
@@ -35,7 +35,7 @@ const CompliancyInfo = ({ scrollToSection }) => {
                                 {/* Map over compliance data from services.json */}
                                 {servicesData["Compliance Services"].map(iso => 
                                     <div className="card" key={iso.name}> 
-                                        <ComplianceCard info={iso} scrollToSection={scrollToSection} />
+                                        <ComplianceCard info={iso} />
                                     </div>
                                 )}
                             </div>

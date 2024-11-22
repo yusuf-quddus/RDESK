@@ -1321,7 +1321,7 @@ html[xmlns] .slides {
 /*-----------------------------------------------------------------*/
 
 #facts {
-	background:url(../images/parallax/facts.jpg) no-repeat;
+	background:url(../images/facts.jpg) no-repeat;
 	padding: 50px 0px 50px;
 }
 
@@ -1435,6 +1435,7 @@ html[xmlns] .slides {
 	background:#3fa1c1;
 	border-color: #3fa1c1;
 	color:#FFF;
+	cursor: pointer;
 }
 
 .tab1-features:hover .icon {
@@ -3201,7 +3202,7 @@ li.comment ol.comment-sub {
 /*-----------------------------------------------------------------*/
 
 #contact {
-	background:url(../images/parallax/contact.jpg) no-repeat;
+	background:url(../images/contact.jpg) no-repeat;
 }
 
 .contact-form {

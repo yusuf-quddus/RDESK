@@ -17,18 +17,12 @@ import './css/style.css';
 import './css/bootstrap.min.css';
 
 const App = () => {
-  const scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView();
-    }
-  };
 
   return (
     <Router>
       <div> 
         <Routes>
-          <Route path='/' element={<MainPage scrollToSection={scrollToSection}/>} />
+          <Route path='/' element={<MainPage />} />
           <Route path='/compliance' element={<ComplianceLanding />} />
           <Route path='/IT_Services' element={<ITLanding />} />
           <Route path='/home_services' element={<OtherLanding />} />
@@ -39,7 +33,7 @@ const App = () => {
             <Route 
               key={iso.name} 
               path={iso["page-link"]} 
-              element={<CompliancePage iso={iso} scrollToSection={scrollToSection}/>} 
+              element={<CompliancePage iso={iso} />} 
             />
           ))}
 

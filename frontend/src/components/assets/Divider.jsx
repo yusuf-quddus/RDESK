@@ -8,23 +8,23 @@ const Divider = ({img}) => {
                 <div className="container">
                 <div className="row">
                         <div className="col-md-3 col-sm-6 facts-box margin-bottom-30">
-                            <h3>841</h3>
-                            <span>Happy Clients</span>
+                            <h3></h3>
+                            <span></span>
                         </div>
                         
                         <div className="col-md-3 col-sm-6 facts-box margin-bottom-30">
-                            <h3>800</h3>
-                            <span>Projects</span>
+                            <h3></h3>
+                            <span></span>
                         </div>
                         
                         <div className="col-md-3 col-sm-6 facts-box margin-bottom-30">
-                            <h3>1232</h3>
-                            <span>Lines of Code</span>
+                            <h3></h3>
+                            <span></span>
                         </div>
                         
                         <div className="col-md-3 col-sm-6 facts-box margin-bottom-30">
-                            <h3>300</h3>
-                            <span>Awards Won</span>
+                            <h3></h3>
+                            <span></span>
                         </div>
                     </div> 
             </div>

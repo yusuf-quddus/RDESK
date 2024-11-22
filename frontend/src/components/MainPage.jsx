@@ -14,32 +14,17 @@ import '../css/bootstrap.min.css'
 
 
 
-const MainPage = ({scrollToSection}) => {
-  const [displayMessage, setDisplayMessage] = useState(false)
+const MainPage = () => {
   const location = useLocation();
-  const { targetId } = location.state || {};
-
-  useEffect(() => {
-    setTimeout(() => {
-      scrollToSection(targetId);
-    }, 200);
-  }, [targetId]);
-
-  const displaySuccessfulSubmit = () => {
-    setDisplayMessage(true)
-    setTimeout(() => {
-      setDisplayMessage(false)
-    }, 5000)
-  }
 
   return (
       <div>
-        <Header scrollToSection = {scrollToSection}/>
-        <Home scrollToSection = {scrollToSection}/>
+        <Header />
+        <Home />
         <About />
         <Divider />
-        <CompliancyInfo scrollToSection = {scrollToSection} />
-        <ITServices scrollToSection={scrollToSection}/>
+        <ITServices />
+        <CompliancyInfo />
         <OtherServices />
         <Footer />
       </div>

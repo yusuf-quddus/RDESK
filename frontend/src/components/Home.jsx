@@ -3,7 +3,7 @@ import '../css/bootstrap.min.css'
 
 import { useNavigate } from 'react-router-dom';
 
-const Home = ({scrollToSection}) => {
+const Home = () => {
     const navigate = useNavigate()
 
     return (
@@ -16,7 +16,7 @@ const Home = ({scrollToSection}) => {
                         className="middle btn btn-white hover-btn-blue">GET A FREE QUOTE</a>
                 </div>       
             </div>
-            <img src="../public/images/slider/1.jpg" alt=""/>
+            <img src="../public/images/1.jpg" />
         </section>
     )
 }

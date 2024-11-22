@@ -1,11 +1,14 @@
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
-import data from '../../data/data.json'
+import data from '../../data/services.json'
+import { useNavigate } from 'react-router-dom';
 
 const OtherServices = () => {
-    const other = data.services.find(service => service.name == "Office / Other Services")
-    
+    const other = data["Office / Other Services"]
+
+    const navigate = useNavigate()
+
     return (
         <section id="other" className="section">
         <div className="container">
@@ -19,7 +22,7 @@ const OtherServices = () => {
                             </div>
                             <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                    <a onClick={() => navigate("/IT_Services")} className="middle btn-gray-border hover-btn-blue">
+                                    <a onClick={() => navigate("/home_services")} className="middle btn-gray-border hover-btn-blue">
                                         Learn More
                                     </a>
                                 </div>
@@ -32,7 +35,7 @@ const OtherServices = () => {
                </div>
                <div className="col-md-6">
                     <div className="devices-image">
-                        <img src="../../public/images/device-desktop.png" alt=""/>
+                        <img src={`../../public/images/${other.images[0]}`} alt=""/>
                     </div>
                 </div>
             </div> 

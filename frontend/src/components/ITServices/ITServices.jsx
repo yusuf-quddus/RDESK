@@ -3,7 +3,7 @@ import ITServicesPanel from './ITServicesPanel'
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
-const ITServices = ({scrollToSection}) => {
+const ITServices = () => {
     return (
         <section id="services" className="section">
             <div className="container">
@@ -12,7 +12,7 @@ const ITServices = ({scrollToSection}) => {
                         <h2 className="title">IT Services</h2>
                     </div>
                     <div className="col-md-12">
-                       <ITServicesPanel scrollToSection={scrollToSection}/>
+                       <ITServicesPanel />
                     </div>          
                 </div>  
             </div> 

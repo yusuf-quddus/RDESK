@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-const ComplianceCard = ({ info, scrollToSection }) => {
+const ComplianceCard = ({ info }) => {
     const [expanded, setExpanded] = useState(false);
     const navigate = useNavigate();
 

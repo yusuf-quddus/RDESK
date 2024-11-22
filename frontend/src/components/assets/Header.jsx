@@ -6,12 +6,19 @@ import Dropdown from '../Dropdown';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-const Header = ({ scrollToSection }) => {
+const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActive] = useState('home');
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView();
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,6 +52,8 @@ const Header = ({ scrollToSection }) => {
     setMobileMenuOpen(false); // Close the mobile menu when an item is clicked
     switch(item) {
       case 'home':
+        navigate('/');
+        break;
       case 'about':
         navigate('/', { state: { targetId: item } });
         break;
@@ -68,7 +77,7 @@ const Header = ({ scrollToSection }) => {
   const toggleMobileMenu = () => setMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header id="header" className={isScrolled ? 'menu-bg' : 'menu-bg-transparent'}>
+    <header id="header" className={isScrolled ? 'menu-bg btn' : 'menu-bg-transparent btn'}>
       <div className="container">
         <div className="row">
           <div className="col-sm-12">
@@ -95,11 +104,11 @@ const Header = ({ scrollToSection }) => {
                 <li className={activeMenu === 'about' ? 'active' : ''}>
                   <a onClick={() => menuClick('about')}>About</a>
                 </li>
+                <li className={activeMenu === 'services' ? 'dropdown active' : 'dropdown'}>
+                  <Dropdown name="IT Services" data={services['IT Solutions']} onClick={() => menuClick('services')} />
+                </li>
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="ISO/Compliance" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
-                </li>
-                <li className={activeMenu === 'services' ? 'dropdown active' : 'dropdown'}>
-                  <Dropdown name="IT Services" data={services['IT Solutions']} scrollToSection={scrollToSection} onClick={() => menuClick('services')} />
                 </li>
                 <li className={activeMenu === 'other' ? 'active' : ''}>
                   <a onClick={() => menuClick('other')}>Other Services</a>

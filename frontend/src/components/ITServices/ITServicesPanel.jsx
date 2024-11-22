@@ -4,17 +4,16 @@ import ITServicesCard from './ITServicesCard';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-const ITServicesPanel = ({ scrollToSection }) => {
+const ITServicesPanel = () => {
   const [active, setActive] = useState("server-cloud");
 
   const click = (id) => {
     setActive(id);
-    scrollToSection("services");
   };
 
   return (
     <section>
-      <div className="content-tab-1">
+      <div className="content-tab-1 btn">
         <ul className="nav" id="service-content">
           {/* Map over IT Solutions data from services.json */}
           {servicesData["IT Solutions"].map(s => (
@@ -35,7 +34,7 @@ const ITServicesPanel = ({ scrollToSection }) => {
       {servicesData["IT Solutions"].map(s => (
         <div key={s.id}>
           {active === s.id ? (
-            <ITServicesCard ITService={s} scrollToSection={scrollToSection} />
+            <ITServicesCard ITService={s} />
           ) : null}
         </div>
       ))}

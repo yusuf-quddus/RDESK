@@ -4,11 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import Footer from '../assets/Footer'
+import data from '../../data/services.json'
 import '../../css/style.css'; 
 
 const OtherLanding = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
+  const other = data["Office / Other Services"]
   const images = [
     "../../public/images/works/img4.jpg", 
     "../../public/images/works/img5.jpg", 
@@ -43,14 +45,15 @@ const OtherLanding = () => {
             <div className="col-md-7" style={{ marginTop: '20px' }}>
             
             <div className="slideshow-container">
-              {images.map((src, i) => (
+              {/* {images.map((src, i) => (
                 <img
                   key={i}
                   src={src}
                   alt=""
                   className={`slideshow-image ${i === index ? 'active' : ''}`}
                 />
-              ))}
+              ))} */}
+               <img src={`../../public/images/${other.images[0]}`} alt=""/>
             </div>
 
 

@@ -33,6 +33,7 @@ const Contact = () => {
     });
 
     useEffect(() => {
+        window.scrollTo({top: 0})
         if (isSubjectChangedManually) return;
 
         const fragments = window.location.hash.substring(1).split('#').map(f => decodeURIComponent(f).replace(/-/g, ' '));

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -6,16 +6,21 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 import Footer from '../assets/Footer';
-const CompliancePage = ({ iso, scrollToSection }) => {
+const CompliancePage = ({ iso }) => {
   const navigate = useNavigate()
+
+  useEffect(() => {
+    window.scrollTo({top: 0})
+  }, []);
+
 
   return (
     <div>
-      <Header scrollToSection={scrollToSection} />
+      <Header />
       <section id="page-header" className="parallax">
              <div className="overlay"></div>
               <div className="container">
-                <h1>{`${iso.name}:${iso.year}`}</h1>
+                <h1>{`${iso.name}:${iso.facts.Year}`}</h1>
                   <div className='landing-links'>
                       <p className="btn" onClick={()=>navigate('/')}>Home</p>
                       <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>

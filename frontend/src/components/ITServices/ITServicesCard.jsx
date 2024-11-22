@@ -3,7 +3,7 @@ import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
 
-const ITServicesCard = ({ITService, scrollToSection}) => {
+const ITServicesCard = ({ITService}) => {
   const navigate = useNavigate()
   return (
     <div className="tab-content-main">
@@ -30,7 +30,7 @@ const ITServicesCard = ({ITService, scrollToSection}) => {
                         </div>  
                         <div className="col-md-6">
                             <div className="devices-image">
-                                <img src="images/device-desktop.png" alt=""/>
+                                <img src={`images/${ITService.images[0]}`} alt=""/>
                             </div>
                         </div>
                     </div>

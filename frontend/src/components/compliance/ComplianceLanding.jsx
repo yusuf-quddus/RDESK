@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
 import ComplianceCard from './Compliance-Card';
 import servicesData from '../../data/services.json';
+import data from '../../data/data.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 import Footer from '../assets/Footer';
@@ -37,18 +38,18 @@ const ComplianceLanding = () => {
       <section className="section">
         <div className="container">
           <div className="text-center">
-            <p>
+            <strong>
               Our compliance services support your business in meeting essential standards and regulations.
               With expertise in ISO standards, data protection, and more, we help ensure your compliance 
               across key areas. Explore our services below.
-            </p>
+            </strong>
           </div>
 
           {/* Image and Service Overview */}
           <div className="row content-spacing">
             {/* Left side: Overview image */}
             <div className="col-md-6">
-              <img src="path/to/your/image.jpg" alt="Compliance Overview" className="img-fluid rounded shadow" />
+              <img src={`../public/images/${data["compliance-images"][0]}`} alt="Compliance Overview" className="img-fluid rounded shadow" />
             </div>
 
             {/* Right side: List of Services */}

@@ -37,11 +37,10 @@ const CompliancePage = ({ iso, scrollToSection }) => {
           <h3 className="margin-bottom-15">Summary </h3>	
                             <p>{iso.summary}</p>						 
 						<ul className="work-detail-list">
-							<li><span>Category :</span>text</li>
-							<li><span>Client :</span>text</li>
-							<li><span>Technoligies used :</span>text</li>
-                            <li><span>Tags :</span>text, text, text</li>
-							<li><span>Date released :</span>{iso.year}</li>
+                <li><span>Category :</span> {iso.facts.Category}</li>
+                <li><span>Technologies used :</span> {iso.facts["Technologies Used"]}</li>
+                <li><span>Tags :</span> {iso.facts.Tags}</li>
+                <li><span>Year :</span> {iso.facts.Year}</li>
 						</ul>
                         
                         <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">Request Service</a>

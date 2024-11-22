@@ -39,13 +39,18 @@
     "Compliance Services": [
         {
             "name": "ISO 9001",
-            "subtitle": "Quality Management Standard",
             "acronym": "QMS",
             "summary": "ISO 9001 is a highly recognized and globally respected standard for enhancing management and operational efficiency. Achieving ISO 9001 certification can propel your business toward success by increasing customer satisfaction, improving market appeal, and maximizing profit opportunities.",
             "description": "Over 1 million organizations across more than 75 countries have adopted ISO 9001. Developed by a diverse international committee, the ISO 9001 framework is designed to help organizations of all types—businesses, government agencies, non-profits, and more—implement effective management practices and promote excellence.",
             "page-link": "/compliance/ISO9001",
             "image": "https://picsum.photos/200",
-            "year": "2015"
+            "facts": 
+                {"Category":"Quality Management Standard (QMS)",
+                "Technologies Used":"Quality management software, process optimization tools, customer feedback systems, document control systems",
+                "Tags":"Quality Assurance, ISO 9001, Continuous Improvement, Customer Satisfaction, Process Management",
+                "Year": "2015 (latest version)"
+            }
+        
         },
         {
             "name": "ISO 27001",
@@ -55,7 +60,14 @@
             "description":"Organizations should choose ISO 27001 because it serves as the gold standard for information security, showcasing their dedication to protecting sensitive data and building trust with customers and business partners. By adopting this standard, companies create a robust framework to shield against threats like cyberattacks, data breaches, and information misuse. This certification not only demonstrates compliance with international security practices but also positions organizations as reliable partners in a competitive market.\n\nISO 27001 supports organizations of any size by providing a systematic approach to managing all forms of information—digital, physical, or cloud-based. Additionally, it helps reduce costs through effective risk management and prevention measures. The certification ensures preparedness for potential security incidents and strengthens an organization’s ability to recover quickly, giving it a significant edge over competitors.",
             "page-link": "/compliance/ISO27001",
             "image": "https://picsum.photos/200",
-            "year": "2022"
+            "facts":
+                {
+                    "Category": "Information Security Management System (ISMS)",
+                    "Technologies Used": "Risk assessment tools, incident management systems, encryption software, access control mechanisms, audit and compliance software",
+                    "Tags": "Information Security, ISO 27001, Risk Management, Data Protection, Cybersecurity",
+                    "Year": "2022"
+                }
+            
         },
         {
             "name": "ISO 14001",
@@ -65,7 +77,15 @@
             "description":"Organizations adopt ISO 14001 to demonstrate their commitment to sustainability and ethical environmental practices. This certification builds trust with customers and stakeholders by showing proactive measures to minimize environmental impact and comply with regulations. It enhances operational efficiency through systematic monitoring and controls while encouraging innovation in reducing waste and pollution.\n\nISO 14001 also supports long-term business stability by addressing potential environmental risks, reassuring employees and management of a forward-thinking approach. Overall, it positions businesses as leaders in environmental responsibility, creating a competitive advantage in a sustainability-focused market.",
             "page-link": "/compliance/ISO14001",
             "image": "https://picsum.photos/200",
-            "year": "2015" 
+            "year": "2015",
+            "facts":{
+                
+                    "Category": "Environmental Management Systems (EMS)",
+                    "Technologies Used": "Environmental monitoring tools, waste management systems, energy efficiency software, sustainability reporting tools, compliance management platforms",
+                    "Tags": "Environmental Management, ISO 14001, Sustainability, Pollution Reduction, Compliance",
+                    "Year": "2015"
+                
+            }
         },
         {
             "name": "ISO 45001",
@@ -75,7 +95,14 @@
             "description": "Organizations should adopt ISO 45001 to prioritize the safety and welfare of employees, reducing workplace risks and fostering a culture of proactive health and safety management. Certification demonstrates compliance with global safety standards, building trust with stakeholders and enhancing organizational reputation. By identifying and addressing potential hazards, ISO 45001 helps minimize risks and prevent incidents, supporting a safer work environment.\n\nThe standard’s structured approach ensures continuous monitoring, reporting, and improvement, providing long-term benefits for both employees and the organization. With ISO 45001, businesses demonstrate a commitment to safety that aligns with modern expectations of workplace responsibility and care.",
             "page-link": "/compliance/ISO45001",
             "image": "https://picsum.photos/200",
-            "year": "2018"
+            "year": "2018",
+            "facts":
+            {
+                "Category": "Occupational Health & Safety Management Systems (OHSMS)",
+                "Technologies Used": "Safety management software, hazard assessment tools, incident reporting systems, employee training platforms, compliance tracking tools",
+                "Tags": "Health & Safety, ISO 45001, Workplace Safety, Risk Management, Employee Well-being",
+                "Year": "2018"
+            }
         },
         {
             "name": "ISO 17025",
@@ -85,7 +112,14 @@
             "description":"ISO 17025 accreditation demonstrates a laboratory's competence in delivering precise and consistent testing and calibration results, building confidence among clients and stakeholders.\n\nAs industries increasingly require this accreditation, complying with ISO 17025 ensures you remain competitive and retain valuable customers. Beyond external benefits, the standard promotes internal efficiencies, such as improved processes, consistent management practices, and cost savings through better planning. It also drives continual improvement and enhances employee commitment, fostering a culture of quality and reliability. In the long run, ISO 17025 not only safeguards your market position but also opens doors to new opportunities and increased business growth.",
             "page-link": "/compliance/ISO17025",
             "image": "https://picsum.photos/200",
-            "year": "2017"
+            "year": "2017",
+            "facts":{
+                "Category": "Competence of Testing & Calibration Laboratories",
+                "Technologies Used": "Laboratory management software, calibration tools, data analysis systems, quality control tools, compliance management platforms",
+                "Tags": "Testing Accuracy, ISO 17025, Calibration, Quality Assurance, Laboratory Standards",
+                "Year": "2017"
+            }
+            
         },
         {
             "name": "ISO 13485",
@@ -95,7 +129,13 @@
             "description":"ISO 13485 certification is essential for medical device manufacturers aiming to demonstrate their commitment to maintaining high-quality products and meeting regulatory requirements across different regions. This standard provides a structured framework that ensures all aspects of manufacturing, from planning to product delivery, meet stringent quality controls and safety standards. Implementing ISO 13485 improves operational efficiency by promoting better planning, reduced non-conformances, and continuous improvement of processes. It also helps companies foster trust with customers and regulatory bodies, as many markets require ISO 13485 certification for market entry.\n\nFor businesses looking to expand internationally, the certification simplifies regulatory approval processes, opening doors to new markets. Beyond compliance, ISO 13485 can reduce marketing costs, as the certification itself serves as a powerful tool to attract customers. Ultimately, ISO 13485 enhances your company’s reputation, boosts customer loyalty, and improves supplier relationships, positioning you for sustained growth and success in the competitive medical device industry.",
             "page-link": "/compliance/ISO13485",
             "image": "https://picsum.photos/200",
-            "year": "2016"
+            "year": "2016",
+            "facts":{
+                "Category": "Medical Devices Quality Management Systems (MDQMS)",
+                "Technologies Used": "Quality management software, regulatory compliance tools, risk management platforms, supplier quality systems, document control systems",
+                "Tags": "Medical Devices, ISO 13485, Quality Assurance, Regulatory Compliance, Customer Satisfaction",
+                "Year": "2016"
+            }
         },
         {
             "name": "ISO 20000",
@@ -105,7 +145,13 @@
             "description":"ISO 20000 certification offers IT service providers a clear advantage by demonstrating their commitment to delivering consistent, high-quality services that align with global standards. By adopting this standard, companies ensure that their IT service management systems are structured, efficient, and fully aligned with industry best practices. It fosters better control over service delivery, helping businesses improve processes and achieve higher levels of customer satisfaction. For customers, ISO 20000 certification reassures them that their service provider adheres to internationally recognized quality standards, leading to more trust and confidence in the services offered.\n\nAdditionally, the certification helps organizations manage external service providers more effectively, reduce supplier audits, and streamline operations, ultimately driving greater business efficiency and long-term growth.",
             "page-link": "/compliance/ISO20000",
             "image": "https://picsum.photos/200",
-            "year": "2019"
+            "year": "2019",
+            "facts":{
+                "Category": "IT Service Management Systems (SMS)",
+                "Technologies Used": "IT service management tools, incident tracking systems, change management platforms, service desk software, performance monitoring tools",
+                "Tags": "ITSM, ISO 20000, Service Quality, ITIL, Customer Satisfaction",
+                "Year": "2019"
+            }
         },
         {
             "name": "ISO 31000",
@@ -115,7 +161,14 @@
             "description": "ISO 31000 is essential for organizations looking to strengthen their risk management practices in a proactive and systematic way. By following the guidelines set out in the standard, businesses can identify risks early and take steps to mitigate their impact, preventing financial losses, reputational damage, and other negative consequences.\n\nThe standard emphasizes a comprehensive, inclusive approach to risk management, involving stakeholders at all levels, which fosters a culture of shared responsibility and decision-making. Although ISO 31000 does not offer certification, implementing its principles helps organizations build resilience, improve stakeholder confidence, and better navigate uncertainties. Integrating effective risk management practices allows businesses to not only avoid significant losses but also enhance their ability to seize opportunities with greater confidence.",
             "page-link": "/compliance/ISO31000",
             "image": "https://picsum.photos/200",
-            "year": "2019"
+            "year": "2019",
+            "facts":{
+                "Category": "Risk Management",
+                "Technologies Used": "Risk assessment tools, data analytics platforms, decision support systems, compliance management software, incident tracking systems",
+                "Tags": "Risk Management, ISO 31000, Resilience, Risk Mitigation, Stakeholder Confidence",
+                "Year": "2019"
+            }
+            
         }
     ],
     "Office / Other Services":{

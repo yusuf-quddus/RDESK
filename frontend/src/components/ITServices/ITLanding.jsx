@@ -5,10 +5,15 @@ import ITServiceBox from './ITServiceBox';
 import servicesData from '../../data/services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons';
+import Footer from '../assets/Footer';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
-import Footer from '../assets/Footer';
 
+/**
+ * Component for IT Services Landing page.   
+ * 
+ * @return {JSX.Element} - The ITLanding component.
+ */
 const ITLanding = () => {
   const navigate = useNavigate();
   
@@ -16,6 +21,7 @@ const ITLanding = () => {
     window.scrollTo(0, 0); 
   }, []);
 
+  /* Determine Icon based on service */
   const icon = (service) => {
     switch(service) {
       case "faServer":
@@ -36,7 +42,6 @@ const ITLanding = () => {
   return (
     <div>
       <Header />
-      
       {/* Page Header Section */}
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
@@ -61,9 +66,8 @@ const ITLanding = () => {
                   key={service.name}
                   service={service} 
                   icon={icon(service.icon)} 
-                  style={{ width: '100px' }} 
-                />
-              ))}
+                  style={{ width: '100px' }} />
+                ))}
             </div>
           </div>
         </div> 

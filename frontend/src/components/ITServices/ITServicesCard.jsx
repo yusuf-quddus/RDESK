@@ -2,9 +2,16 @@ import { useNavigate } from 'react-router-dom';
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
-
+/**
+ * Component for specific IT Service information on main page. 
+ * 
+ * @param {Object} props - The properties object.
+ * @param {Object} props.service - Service contains data on specific IT Service.
+ * @return {JSX.Element} - The ITService card.
+ */
 const ITServicesCard = ({ITService}) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+
   return (
     <div className="tab-content-main">
         <div className="container">
@@ -26,7 +33,7 @@ const ITServicesCard = ({ITService}) => {
                                         Request Service
                                     </a>
                                 </div>
-                        </div>
+                            </div>
                         </div>  
                         <div className="col-md-6">
                             <div className="devices-image">

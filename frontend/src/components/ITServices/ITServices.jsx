@@ -1,8 +1,12 @@
 import ITServicesPanel from './ITServicesPanel'
-
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
 
+/**
+ * Component for IT Services section on home page. 
+ * 
+ * @return {JSX.Element} - The ITService component.
+ */
 const ITServices = () => {
     return (
         <section id="services" className="section">

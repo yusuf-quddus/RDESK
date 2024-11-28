@@ -5,6 +5,11 @@ import servicesData from '../../data/services.json';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
+/**
+ * Component for compliance section in home page.   
+ * 
+ * @return {JSX.Element} - The ComplianceInfo component.
+ */
 const CompliancyInfo = () => {
     return (
         <section id="compliance" className="section">

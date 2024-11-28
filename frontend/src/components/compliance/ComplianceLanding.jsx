@@ -6,10 +6,15 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import ComplianceCard from './Compliance-Card';
 import servicesData from '../../data/services.json';
 import data from '../../data/data.json';
+import Footer from '../assets/Footer';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
-import Footer from '../assets/Footer';
 
+/**
+ * Component for compliance service landing page.   
+ * 
+ * @return {JSX.Element} - The ComplianceLanding component.
+ */
 const ComplianceLanding = () => {
   const navigate = useNavigate();
 
@@ -20,7 +25,6 @@ const ComplianceLanding = () => {
   return (
     <div>
       <Header />
-      
       {/* Header section with navigation */}
       <section id="page-header" className="parallax">
         <div className="overlay"></div>

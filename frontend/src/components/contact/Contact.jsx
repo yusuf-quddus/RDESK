@@ -10,6 +10,11 @@ import axios from 'axios'
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
+/**
+ * Component for contact page.   
+ * 
+ * @return {JSX.Element} - The Contact component.
+ */
 const Contact = () => {
     const [name, setName] = useState("Your Name");
     const [email, setEmail] = useState("Your Email");

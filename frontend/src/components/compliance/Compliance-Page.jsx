@@ -3,9 +3,17 @@ import Header from '../assets/Header';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons'; 
+import Footer from '../assets/Footer';
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
-import Footer from '../assets/Footer';
+
+/**
+ * Component for list of expandable compliance info.   
+ * 
+ * @param {Object} props - The properties object.
+ * @param {Object} props.iso - Object containing info on ISO compliance standard.
+ * @return {JSX.Element} - The ComplianceCard component.
+ */
 const CompliancePage = ({ iso }) => {
   const navigate = useNavigate()
 
@@ -30,32 +38,31 @@ const CompliancePage = ({ iso }) => {
 				        </div>
 			        </div>
 		    </section>
-            <section id="single-work" className="section">
-			<div className="container">
-				<div className="row">					
-        <div className="col-md-6">
-    <h1 style={{ marginBottom: "20px" }}>Why {iso.name}?</h1>
-      <p style={{ whiteSpace: "pre-line" }}>{iso.description}</p>
-    
-</div>
-					<div className="col-md-6 work-detail">
-          <h3 className="margin-bottom-15">Summary </h3>	
-                            <p>{iso.summary}</p>						 
-						<ul className="work-detail-list">
-                <li><span>Category :</span> {iso.facts.Category}</li>
-                <li><span>Technologies used :</span> {iso.facts["Technologies Used"]}</li>
-                <li><span>Tags :</span> {iso.facts.Tags}</li>
-                <li><span>Year :</span> {iso.facts.Year}</li>
-						</ul>
-                        
-                        <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">Request Service</a>
-                        
-					</div>
-				</div> 
-			</div> 		
-		</section>
-    <div className="footer"></div>
-    <Footer />
+        <section id="single-work" className="section">
+          <div className="container">
+            <div className="row">					
+              <div className="col-md-6">
+                <h1 style={{ marginBottom: "20px" }}>Why {iso.name}?</h1>
+                <p style={{ whiteSpace: "pre-line" }}>{iso.description}</p>
+              </div>
+              <div className="col-md-6 work-detail">
+                <h3 className="margin-bottom-15">Summary </h3>	
+                <p>{iso.summary}</p>						 
+                <ul className="work-detail-list">
+                    <li><span>Category :</span> {iso.facts.Category}</li>
+                    <li><span>Technologies used :</span> {iso.facts["Technologies Used"]}</li>
+                    <li><span>Tags :</span> {iso.facts.Tags}</li>
+                    <li><span>Year :</span> {iso.facts.Year}</li>
+                </ul>
+                <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">
+                  Request Service
+                </a>             
+              </div>
+            </div> 
+			    </div> 		
+		    </section>
+        <div className="footer"></div>
+        <Footer />
       </div>
     )
 };

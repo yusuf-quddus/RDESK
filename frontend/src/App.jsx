@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import MainPage from './components/MainPage';
 import CompliancePage from './components/compliance/Compliance-Page';
 import ComplianceLanding from './components/compliance/ComplianceLanding';
@@ -10,7 +9,7 @@ import servicesData from './data/services.json';
 
 import {
   BrowserRouter as Router,
-  Routes, Route, Link
+  Routes, Route
 } from 'react-router-dom';
 
 import './css/style.css';

@@ -1,11 +1,17 @@
-import '../../css/style.css';
 import { useNavigate } from 'react-router-dom';
 import data from '../../data/data.json';
 
+import '../../css/style.css';
+
+/**
+ * Component for site footer  
+ * 
+ * @return {JSX.Element} - The footer component.
+ */
 const Footer = () => {
     const navigate = useNavigate();
 
-    // Define links in an array for flexibility and future additions
+    /* Footer links */
     const callToActionLinks = [
         { name: "Request Service", pageLink: data.contact_purpose.find(item => item.name === "Request Service")?.['page-link'] },
         { name: "General Inquiry", pageLink: data.contact_purpose.find(item => item.name === "General Inquiry")?.['page-link'] }
@@ -35,10 +41,7 @@ const Footer = () => {
                     <ul className="call-action-links">
                         {callToActionLinks.map((link, index) => (
                             <li key={index} className="call-action-link-item btn">
-                                <a 
-                                    onClick={() => handleNavigation(link.pageLink)} 
-                                    className="call-action-link"
-                                >
+                                <a onClick={() => handleNavigation(link.pageLink)} className="call-action-link">
                                     {link.name}
                                 </a>
                             </li>

@@ -7,6 +7,11 @@ import Footer from '../assets/Footer'
 import data from '../../data/services.json'
 import '../../css/style.css'; 
 
+/**
+ * Component for Other Services Landing page.   
+ * 
+ * @return {JSX.Element} - The OtherLanding component.
+ */
 const OtherLanding = () => {
   const navigate = useNavigate();
   const [index, setIndex] = useState(0);
@@ -43,20 +48,17 @@ const OtherLanding = () => {
         <div className="container">
           <div className="row">
             <div className="col-md-7" style={{ marginTop: '20px' }}>
-            
-            <div className="slideshow-container">
-              {/* {images.map((src, i) => (
-                <img
-                  key={i}
-                  src={src}
-                  alt=""
-                  className={`slideshow-image ${i === index ? 'active' : ''}`}
-                />
-              ))} */}
-               <img src={`../../public/images/${other.images[0]}`} alt=""/>
-            </div>
-
-
+              <div className="slideshow-container">
+                {/* {images.map((src, i) => (
+                  <img
+                    key={i}
+                    src={src}
+                    alt=""
+                    className={`slideshow-image ${i === index ? 'active' : ''}`}
+                  />
+                ))} */}
+                <img src={`../../public/images/${other.images[0]}`} alt=""/>
+              </div>
             </div>
 
             <div className="col-md-5 work-detail">

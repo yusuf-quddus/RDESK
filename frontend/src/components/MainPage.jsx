@@ -1,5 +1,3 @@
-import { useState, useEffect, useRef } from 'react'
-import { useLocation } from 'react-router-dom';
 import Header from './assets/Header'
 import Home from './Home'
 import About from './About'
@@ -9,13 +7,12 @@ import Footer from './assets/Footer'
 import OtherServices from './other-services/OtherServices'
 import Divider from './assets/Divider'
 
-import '../css/style.css'
-import '../css/bootstrap.min.css'
-
-
-
+/**
+ * Component for site landing page. 
+ * 
+ * @return {JSX.Element} - The MainPage component.
+ */
 const MainPage = () => {
-  const location = useLocation();
 
   return (
       <div>

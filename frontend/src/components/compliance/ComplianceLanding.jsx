@@ -53,7 +53,7 @@ const ComplianceLanding = () => {
           <div className="row content-spacing">
             {/* Left side: Overview image */}
             <div className="col-md-6">
-              <img src={`../public/images/${data["compliance-images"][0]}`} alt="Compliance Overview" className="img-fluid rounded shadow" />
+              <img src={`images/${data["compliance-images"][0]}`} alt="Compliance Overview" className="img-fluid rounded shadow" />
             </div>
 
             {/* Right side: List of Services */}

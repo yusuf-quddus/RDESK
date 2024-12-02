@@ -58,7 +58,7 @@ const Header = () => {
     setMobileMenuOpen(false); // Close the mobile menu when an item is clicked
     switch(item) {
       case 'home':
-        navigate('/');
+        navigate('/', { state: { targetId: item } });
         break;
       case 'about':
         navigate('/', { state: { targetId: item } });
@@ -89,14 +89,10 @@ const Header = () => {
           <div className="col-sm-12">
             <div className="logo-nav">
               <a onClick={() => menuClick('home')}>
-                <img className="btn" src="../public/images/rdesklogo.png" alt="Company logo" />
+                <img className="btn" src="../images/rdesklogo.png" alt="Company logo" />
               </a>
             </div>
-            <button
-              type="button"
-              className="navbar-toggle collapsed"
-              onClick={toggleMobileMenu}
-            >
+            <button type="button" className="navbar-toggle collapsed" onClick={toggleMobileMenu}>
               <span className="sr-only">Toggle navigation</span>
               <span className="icon-bar"></span>
               <span className="icon-bar"></span>

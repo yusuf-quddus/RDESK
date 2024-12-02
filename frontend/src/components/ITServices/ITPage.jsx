@@ -37,7 +37,7 @@ const ITPage = ({service}) => {
                 <div className="container">
                     <div className="row">					
                         <div className="col-md-7" style={{marginTop: '20px'}}>	
-                                <div className="item"><img src={`../../public/images/${service.images[0]}`} alt=""/></div>					 
+                                <div className="item"><img src={`../../images/${service.images[0]}`} alt=""/></div>					 
                         </div>
                         <div className="col-md-5 work-detail">
                             <h3 className="margin-bottom-15">{service.name} </h3>	

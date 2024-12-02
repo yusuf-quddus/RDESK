@@ -32,7 +32,7 @@ const Footer = () => {
                 {/* Left side logo */}
                 <div className="logo-nav">
                     <a onClick={() => handleNavigation('/home')}>
-                        <img src="../public/images/rdesklogo.png" alt="Company logo" className="logo-image" />
+                        <img src="../images/rdesklogo.png" alt="Company logo" className="logo-image" />
                     </a>
                 </div>
 

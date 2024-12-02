@@ -31,7 +31,7 @@ const Home = () => {
                 <a onClick={() => navigate('/contact#get-quote')} 
                     className="middle btn btn-white hover-btn-blue">GET A FREE QUOTE</a>
             </div>
-            <img src="../public/images/1.jpg" />
+            <img src="images/1.jpg" />
         </section>
     )
 }

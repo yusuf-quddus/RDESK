@@ -57,7 +57,7 @@ const OtherLanding = () => {
                     className={`slideshow-image ${i === index ? 'active' : ''}`}
                   />
                 ))} */}
-                <img src={`../../public/images/${other.images[0]}`} alt=""/>
+                <img src={`images/${other.images[0]}`} alt=""/>
               </div>
             </div>
 

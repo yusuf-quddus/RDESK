@@ -1,6 +1,7 @@
 const express = require('express')
 const bodyparser = require('body-parser')
 const cors = require('cors')
+const path = require('path');
 const { Client } = require('pg')
 require('dotenv').config()
 
@@ -115,6 +116,9 @@ app.post('/api/request', async (req, res) => {
     }
 });
 
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
+});
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {

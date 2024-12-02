@@ -6,6 +6,12 @@ import Dropdown from './Dropdown';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
+
+/**
+ * Header component for website.  
+ * 
+ * @return {JSX.Element} - The Header component.
+ */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActive] = useState('home');

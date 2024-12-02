@@ -6,16 +6,12 @@ import Dropdown from './Dropdown';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
-/**
- * Component for Header.   
- * 
- * @return {JSX.Element} - The Header component.
- */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActive] = useState('home');
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -51,13 +47,12 @@ const Header = () => {
     return () => sections.forEach((section) => observer.unobserve(section));
   }, []);
 
-  /* Navigating site with header links */
   const menuClick = (item) => {
     setActive(item);
-    setMobileMenuOpen(false);
+    setMobileMenuOpen(false); // Close the mobile menu when an item is clicked
     switch(item) {
       case 'home':
-        navigate('/', { state: { targetId: item } });
+        navigate('/');
         break;
       case 'about':
         navigate('/', { state: { targetId: item } });
@@ -96,6 +91,10 @@ const Header = () => {
               className="navbar-toggle collapsed"
               onClick={toggleMobileMenu}
             >
+              <span className="sr-only">Toggle navigation</span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
+              <span className="icon-bar"></span>
             </button>
             <div id="main-menu" className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
               <ul className="nav">

@@ -99,8 +99,7 @@ const Contact = () => {
                     message: message
                 }
                 console.log('test')
-                const res = await axios.post("http://localhost:3000/api/request", formData)
-                console.log('test2')
+                const res = await axios.post("/api/request", formData)
                 setNotifMessage("Thank you, we recieved your request")
                 setSuccess(true)
             } catch (err) {

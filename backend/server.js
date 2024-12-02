@@ -8,6 +8,7 @@ const app = express()
 
 app.use(cors())
 app.use(bodyparser.json())
+app.use(express.static('dist'))
 
 
 const db = new Client({

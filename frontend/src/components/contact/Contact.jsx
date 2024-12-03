@@ -98,7 +98,6 @@ const Contact = () => {
                     it_service: ITService,
                     message: message
                 }
-                console.log('test')
                 const res = await axios.post("/api/request", formData)
                 setNotifMessage("Thank you, we recieved your request")
                 setSuccess(true)

@@ -102,14 +102,14 @@ createTableIfNotExists();
 
 app.post('/api/request', async (req, res) => {
     const { name, email, subject, service, compliance, it_service, message } = req.body;
-  
     try {
       const insertQuery = 
        `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
       
       const values = [name, email, subject, service, compliance, it_service, message];
-      const result = await db.query(insertQuery, values);
+      const result = await db.query(insertQuery, values)
       res.status(201).json(result.rows[0]);
+      printAllRows();
     } catch (err) {
       console.error('Error inserting data:', err);
       res.status(500).json({ error: 'Failed to insert request' });

@@ -9,7 +9,7 @@ const app = express()
 
 app.use(cors())
 app.use(bodyparser.json())
-app.use(express.static('dist'))
+app.use(express.static(path.join(__dirname, 'dist')));
 
 
 const db = new Client({
@@ -100,7 +100,7 @@ printAllRows();
 createTableIfNotExists();
 
 
-app.post('https://main.dmr03fvylap18.amplifyapp.com/api/request', async (req, res) => {
+app.post('/api/request', async (req, res) => {
     const { name, email, subject, service, compliance, it_service, message } = req.body;
     try {
       const insertQuery = 

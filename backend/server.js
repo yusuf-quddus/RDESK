@@ -100,7 +100,7 @@ printAllRows();
 createTableIfNotExists();
 
 
-app.post('/api/request', async (req, res) => {
+app.post('https://main.dmr03fvylap18.amplifyapp.com/api/request', async (req, res) => {
     const { name, email, subject, service, compliance, it_service, message } = req.body;
     try {
       const insertQuery = 

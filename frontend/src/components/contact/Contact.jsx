@@ -98,7 +98,7 @@ const Contact = () => {
                     it_service: ITService,
                     message: message
                 }
-                const res = await axios.post("https://main.dmr03fvylap18.amplifyapp.com/api/request", formData)
+                const res = await axios.post("/api/request", formData)
                 setNotifMessage("Thank you, we recieved your request")
                 setSuccess(true)
             } catch (err) {

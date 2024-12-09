@@ -99,6 +99,10 @@ const Contact = () => {
                     message: message
                 }
                 const res = await axios.post("/api/request", formData)
+                setSubject("")
+                setITService("Desired IT Service")
+                setCompliance("Select Compliance")
+                setMessage("")
                 setNotifMessage("Thank you, we recieved your request")
                 setSuccess(true)
             } catch (err) {

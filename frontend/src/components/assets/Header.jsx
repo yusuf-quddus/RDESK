@@ -89,7 +89,7 @@ const Header = () => {
           <div className="col-sm-12">
             <div className="logo-nav">
               <a onClick={() => menuClick('home')}>
-                <img className="btn" src="../images/rdesklogo.png" alt="Company logo" />
+                <img className="btn" src="../images/rdesklogo-full.png" alt="Company logo" />
               </a>
             </div>
             <button type="button" className="navbar-toggle collapsed" onClick={toggleMobileMenu}>

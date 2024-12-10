@@ -81,6 +81,14 @@ const Contact = () => {
         setTimeout(() => setHighlighted(prev => ({ ...prev, [key]: false })), 500);
     };
 
+    const resetState = () => {
+        setSubject("")
+        setITService("Desired IT Service")
+        setService("Select Service")
+        setCompliance("Select Compliance")
+        setMessage("")
+    }
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         window.scrollTo({top: 0})
@@ -99,10 +107,7 @@ const Contact = () => {
                     message: message
                 }
                 const res = await axios.post("/api/request", formData)
-                setSubject("")
-                setITService("Desired IT Service")
-                setCompliance("Select Compliance")
-                setMessage("")
+                resetState();
                 setNotifMessage("Thank you, we recieved your request")
                 setSuccess(true)
             } catch (err) {
@@ -214,7 +219,7 @@ const Contact = () => {
                                 )}
 
                                 <div className="col-md-12">
-                                    <textarea className="form-control" id="message" rows="7" placeholder={message} onChange={(event) => setMessage(event.target.value)} />
+                                    <textarea value={message} className="form-control" id="message" rows="7" placeholder={message} onChange={(event) => setMessage(event.target.value)} />
                                 </div>
                                 <div className="col-md-12 text-right">
                                     <button type="submit" className="btn btn-blue">SEND MESSAGE</button>

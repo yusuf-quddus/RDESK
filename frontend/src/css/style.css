@@ -1477,8 +1477,10 @@ section {
 	color: white
   }
 
+  
+
   .landing-links p:hover {
-	color: #3fa1c1;                 /* Color when hovering */
+	color: #3fa1c1;                 
   }
 
 .breadcrumb ul {

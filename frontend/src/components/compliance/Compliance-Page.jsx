@@ -26,45 +26,49 @@ const CompliancePage = ({ iso }) => {
     <div>
       <Header />
       <section id="page-header" className="parallax">
-             <div className="overlay"></div>
-              <div className="container">
-                <h1>{`${iso.name}:${iso.facts.Year}`}</h1>
-                  <div className='landing-links'>
-                      <p className="btn" onClick={()=>navigate('/')}>Home</p>
-                      <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
-                      <p className="btn" onClick={()=>navigate('/compliance')}>Compliance</p>
-                      <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
-                      <p className="btn" onClick={()=>navigate(iso["page-link"])}><strong>{iso.name}</strong></p>
-				        </div>
-			        </div>
-		    </section>
-        <section id="single-work" className="section">
-          <div className="container">
-            <div className="row">					
-              <div className="col-md-6">
-                <h1 style={{ marginBottom: "20px" }}>Why {iso.name}?</h1>
-                <p style={{ whiteSpace: "pre-line" }}>{iso.description}</p>
-              </div>
-              <div className="col-md-6 work-detail">
-                <h3 className="margin-bottom-15">Summary </h3>	
-                <p>{iso.summary}</p>						 
-                <ul className="work-detail-list">
-                    <li><span>Category :</span> {iso.facts.Category}</li>
-                    <li><span>Technologies used :</span> {iso.facts["Technologies Used"]}</li>
-                    <li><span>Tags :</span> {iso.facts.Tags}</li>
-                    <li><span>Year :</span> {iso.facts.Year}</li>
-                </ul>
-                <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">
-                  Request Service
-                </a>             
-              </div>
-            </div> 
-			    </div> 		
-		    </section>
-        <div className="footer"></div>
-        <Footer />
-      </div>
-    )
+        <div className="overlay"></div>
+        <div className="container">
+          <h1>{`${iso.name} : ${iso.year}`}</h1>
+          <div className='landing-links'>
+            <p className="btn" onClick={()=>navigate('/')}>Home</p>
+            <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
+            <p className="btn" onClick={()=>navigate('/compliance')}>Compliance</p>
+            <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>
+            <p className="btn" onClick={()=>navigate(iso["page-link"])}><strong>{iso.name}</strong></p>  
+				  </div>
+			  </div>
+		  </section>
+      <section id="single-work" className="section">
+        <div className="container">
+          <div className="row">			
+            <div>
+              {iso.headers.map((header, index) => (
+                <div key={index}>
+                  <h2>{header}</h2>
+                  <p style={{ whiteSpace: "pre-wrap" }}>{iso.content[index]}</p>
+                </div>
+              ))}
+            </div>
+              <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">
+                Get ISO Consultation
+              </a>             
+          </div>
+		    </div> 	
+	    </section>
+      <div className="footer"></div>
+      <Footer />
+    </div>
+  )
 };
 
 export default CompliancePage;
+
+
+ {/* <h3 className="margin-bottom-15">Summary </h3>	
+              <p style={{ marginBottom: '20px' }}>{iso.summary}</p>						 
+              <ul className="work-detail-list">
+                  <li><span>Category :</span> {iso.facts.Category}</li>
+                  <li><span>Tags :</span> {iso.facts.Tags}</li>
+                  <li><span>Year :</span> {iso.facts.Year}</li>
+              </ul> 
+  */}

@@ -24,7 +24,7 @@ const ITServicesCard = ({ITService}) => {
                             </div>
                             <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                    <a onClick={() => navigate("/IT_Services")} className="middle btn-gray-border hover-btn-blue">
+                                    <a onClick={() => navigate(`${ITService['page-link']}`)} className="middle btn-gray-border hover-btn-blue">
                                         Learn More
                                     </a>
                                 </div>

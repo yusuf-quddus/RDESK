@@ -8,5 +8,31 @@
 
         { "name": "General Inquiry", "page-link": "/contact#general-inquiry" }
     ],
-    "compliance-images": ["iso_logo.jpg"]
+    "compliance-images": ["iso_logo.jpg"],
+    "Core Services": [
+        {
+            "name": "Proactive IT Support and Monitoring",
+            "description": "We ensure your systems run smoothly by proactively monitoring and managing your IT infrastructure 24/7. This minimizes downtime, identifies potential issues before they arise, and keeps your business operational at all times."
+        },
+        {
+            "name": "Network Management and Optimization",
+            "description": "From designing robust network solutions to maintaining secure and reliable connections, we manage every aspect of your network to ensure seamless communication and collaboration."
+        },
+        {
+            "name": "Cloud Solutions",
+            "description": "We help businesses transition to the cloud with secure and scalable solutions. Our team provides support for cloud-based storage, collaboration tools, and applications that improve efficiency and flexibility."
+        },
+        {
+            "name": "Cybersecurity Services",
+            "description": "Protect your business from evolving cyber threats with our comprehensive security solutions, including firewalls, endpoint protection, email security, and data backup strategies."
+        },
+        {
+            "name": "Help Desk Support",
+            "description": "Our dedicated support team is always ready to assist with technical issues, offering friendly and professional service that ensures your employees can stay productive and stress-free."
+        },
+        {
+            "name": "IT Strategy and Consulting",
+            "description": "We work as your trusted partner to align IT strategies with your business goals. Our expertise ensures you make informed decisions that drive growth and innovation."
+        }
+    ]
 }

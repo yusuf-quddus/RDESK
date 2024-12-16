@@ -788,7 +788,7 @@ section {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    padding: 10px;
+    padding: 1px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
@@ -799,7 +799,7 @@ section {
 #main-menu .dropdown-menu ul {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    grid-gap: 10px;
+    grid-gap: 5px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -892,10 +892,10 @@ section {
 	height: 0;
 	border-left: 5px solid transparent;
 	border-right: 5px solid transparent;
-	border-top: 5px solid #000;  /* Default color of the arrow */
+	border-top: 5px solid #000; 
 	transition: transform 0.3s ease-in-out;
   }
-  
+
 
   .open .arrow:hover {
 	transform: rotate(180deg);
@@ -903,6 +903,12 @@ section {
   
   .up-arrow {
 	transform: rotate(180deg);
+  }
+
+  .symbol {
+	font-size: 24px;
+  	color: black;
+  	font-weight: bold;
   }
   
   @media (max-width: 992px) {
@@ -990,7 +996,6 @@ section {
     font-weight: 200;
     color: #FFF;
     margin: 30px 0px 0px;
-    text-transform: uppercase;
 	font-weight: 600;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3), 4px 4px 6px rgba(0, 0, 0, 0.2);
 }
@@ -1025,9 +1030,10 @@ section {
 	position: absolute;
 	width: 100%;
 	height: 250px;
+	bottom: 1%;
 	top: 50%;
 	left: 0;
-	margin-top: -125px;
+	margin-top: -25px;
 	text-align: center;
 	z-index:999;
 }
@@ -1144,7 +1150,7 @@ section {
 	float: none;
 	display: inline-block;
 	border: 2px solid #B1AEAE;
-	padding: 3px 5px;
+	padding: 1px 1px;
 	box-shadow: 0px 0px 2px #F2F2F2;
 	margin-bottom: 5px;
 }
@@ -1168,7 +1174,7 @@ section {
 .content-tab-1 > .nav > li > a > h4 {
 	display: block;
 	color: #4D3F3F;
-	font-size: 16px;
+	font-size: 13px;
 	margin-bottom: 0px;
 }
 
@@ -1277,6 +1283,13 @@ section {
 	border: 1px solid #EAE7E7;
 	padding: 29px 10px 20px;
 	background:#ffffff;
+	display: flex; 
+    flex-direction: column; 
+    justify-content: space-between;
+    height: 100%; 
+    box-sizing: border-box;
+	height: 480px;
+	overflow: hidden; 
 }
 
 .services-box .services-icon {
@@ -1293,11 +1306,21 @@ section {
 
 .services-box .services-desc {
 	margin-top: 25px;
+	flex-grow: 1
 }
 
 .services-box .services-desc h4 {
 	margin: 31px 0px 20px;
 }
+
+#service-content {
+	display: flex;
+	flex-wrap: wrap; 
+	list-style-type: none; 
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+  }
 
 
 /*-----------------------------------------------------------------*/
@@ -1477,7 +1500,7 @@ section {
 	color: white
   }
 
-  
+
 
   .landing-links p:hover {
 	color: #3fa1c1;                 

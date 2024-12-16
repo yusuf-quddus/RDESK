@@ -67,7 +67,7 @@ const Header = () => {
         navigate('/compliance');
         break;
       case 'services':
-        navigate('/IT_Services');
+        navigate('/solutions');
         break;
       case 'other':
         navigate('/home_services');

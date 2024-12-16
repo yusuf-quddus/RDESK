@@ -38,7 +38,6 @@ const ComplianceLanding = () => {
         </div>
       </section>
 
-      {/* Main content section */}
       <section className="section">
         <div className="container">
           <div className="text-center">
@@ -49,18 +48,14 @@ const ComplianceLanding = () => {
             </strong>
           </div>
 
-          {/* Image and Service Overview */}
           <div className="row content-spacing">
-            {/* Left side: Overview image */}
             <div className="col-md-6">
               <img src={`images/${data["compliance-images"][0]}`} alt="Compliance Overview" className="img-fluid rounded shadow" />
             </div>
 
-            {/* Right side: List of Services */}
             <div className="col-md-6">
               <h3>Our Compliance Services</h3>
               <div className="scrollable-accordion fixed-height">
-                {/* Access compliance data from services.json */}
                 {servicesData["Compliance Services"].map((iso) => (
                   <div className="card" key={iso.name}>
                     <ComplianceCard info={iso} />

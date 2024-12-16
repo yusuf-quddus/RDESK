@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
 import ITServiceBox from './ITServiceBox';
-import servicesData from '../../data/services.json';  
+import ServiceMenu from './ServiceMenu';
+import data from '../../data/services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../assets/Footer';
@@ -55,12 +56,28 @@ const ITLanding = () => {
         </div>
       </section>
 
-      {/* Services Section */}
-      <section id="services" className="section">
+      <section className="section container">
+      <div className="row content-spacing">
+            <div className="col-md-6">
+              <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow" />
+            </div>
+            <div className="col-md-6">
+              <h3>Our Solutions Services</h3>
+              <div className="scrollable-accordion fixed-height">
+                {data["IT Solutions"].map((solution) => (
+                  <div className="card" key={solution.name}>
+                    <ServiceMenu info={solution} />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+      </section>
+
+      {/* <section id="services" className="section">
         <div className="container">
           <div className="row">
             <div>
-              {/* Map over IT Solutions data from services.json */}
               {servicesData["IT Solutions"].map((service) => (
                 <ITServiceBox 
                   key={service.name}
@@ -71,7 +88,7 @@ const ITLanding = () => {
             </div>
           </div>
         </div> 
-      </section> 
+      </section>  */}
       <div className="footer"></div>
       <Footer />
     </div>

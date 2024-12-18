@@ -107,7 +107,6 @@ select.form-control {
     transition: all 200ms ease-in 0s;
 }
 
-/* Style for dropdown options */
 select.form-control option {
     color: #000; 
     background-color: rgba(255, 255, 255, 0.8); 

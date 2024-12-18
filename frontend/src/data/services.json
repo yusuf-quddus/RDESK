@@ -198,9 +198,91 @@
             "title-long": "Virtualization for your office or your servers",
             "description": "Our virtualization solutions are designed to optimize your IT infrastructure by reducing hardware dependency, improving scalability, and enhancing resource efficiency. Whether it’s virtualizing office environments or server infrastructure, we help you streamline operations, cut costs, and boost performance. Let us transform your IT landscape with flexible and reliable virtualization tailored to your needs.",
             "id": "virtualization",
-            "headers": [],
-            "content": [],
+            "headers": ["Virtualization Services", "Infrastructure Optimization", "Scalability and Cost Efficiency", "Deployment and Management", "Cloud Integration", "Security and Compliance", "Performance and Monitoring", "Training and Support"],
+            "content": [["Server Virtualization: Consolidate multiple physical servers into virtual machines (VMs) to maximize hardware utilization.",
+            "Desktop Virtualization: Enable employees to access virtual desktops remotely with Virtual Desktop Infrastructure (VDI).",
+            "Application Virtualization: Isolate applications from underlying hardware for seamless deployment and management.",
+            "Network Virtualization: Create virtualized network environments to enhance flexibility and efficiency."], 
+            ["Resource Allocation: Dynamically allocate CPU, memory, and storage resources to improve performance.",
+            "Hardware Independence: Reduce dependency on specific hardware by virtualizing entire IT environments.",
+            "High Availability (HA): Ensure systems remain operational through virtualization failover mechanisms.",
+            "Disaster Recovery: Implement virtualization-based disaster recovery solutions to minimize downtime."], 
+            ["Scalable Infrastructure: Easily scale resources up or down based on demand without additional hardware investment.",
+            "Cost Savings: Reduce IT costs by decreasing hardware requirements and energy consumption.",
+            "Load Balancing: Distribute workloads across virtual machines to optimize performance."], 
+            ["Hypervisor Deployment: Set up and manage leading hypervisors like VMware ESXi, Microsoft Hyper-V, or KVM.",
+            "Virtual Machine Management: Create, deploy, and manage virtual machines tailored to business needs.",
+            "Integration Services: Integrate virtualized environments with existing IT infrastructure for seamless operation."], 
+            ["Hybrid Cloud Virtualization: Combine on-premises virtual machines with cloud-based resources for a hybrid setup.",
+            "Cloud Migration: Migrate physical servers or on-premises VMs to the cloud (AWS, Azure, or Google Cloud).",
+            "Virtualized Backup Solutions: Implement cloud-based backups for virtual machines."], 
+            ["Hybrid Cloud Virtualization: Combine on-premises virtual machines with cloud-based resources for a hybrid setup.",
+            "Cloud Migration: Migrate physical servers or on-premises VMs to the cloud (AWS, Azure, or Google Cloud).",
+            "Virtualized Backup Solutions: Implement cloud-based backups for virtual machines."], 
+            ["Isolated Environments: Create isolated virtual environments to enhance security.",
+            "Access Control: Implement role-based access to virtual resources for better security management.",
+            "Compliance Support: Ensure virtualized environments meet regulatory standards like HIPAA, GDPR, or PCI-DSS."], 
+            ["Performance Tuning: Optimize virtual machine configurations for maximum efficiency.",
+            "Proactive Monitoring: Continuously monitor virtual environments for potential issues and resource utilization.",
+            "Capacity Planning: Forecast resource needs to prevent performance bottlenecks."],
+            ["Employee Training: Educate teams on using virtualized environments effectively.",
+            "24/7 Support: Provide ongoing maintenance, updates, and troubleshooting for virtualized systems.",
+            "Documentation and Resources: Deliver guides and documentation for managing virtual environments."]],
             "page-link": "/solutions/virtualization",
+            "icon": "faWifi",
+            "images": [
+                "it-solutions.jpg"
+            ]
+        },
+        {
+            "name": "Data Infrastructure",
+            "title-long": "Storage design and installation",
+            "description": "Our storage design and installation services ensure your business has a reliable, scalable, and secure data storage infrastructure. From planning and configuring storage solutions to seamless installation, we provide tailored systems that meet your organization’s needs. Let us help you optimize data management and ensure your critical information is always accessible and protected.",
+            "id": "storage",
+            "headers": ["Storage Design", "Storage Installation", "Data Management Optimization", "Security and Protection", "Monitoring and Maintenance", "Migration Services", "Support and Training", "Strategic Consulting"],
+            "content": [["Needs Assessment: Evaluate current and future storage requirements based on business needs.",
+            "Custom Storage Architecture: Design tailored storage solutions, including SAN (Storage Area Network), NAS (Network Attached Storage), and cloud storage systems.",
+            "Scalability Planning: Ensure the design accommodates future data growth and technology advancements.",
+            "High-Performance Solutions: Optimize storage systems for speed and reliability."], 
+            ["Hardware Deployment: Set up physical storage devices, including servers, SANs, NAS devices, and RAID configurations.",
+            "Software Integration: Install and configure storage management software for seamless operation.",
+            "Cloud Storage Setup: Implement cloud-based storage solutions (e.g., AWS S3, Azure Blob Storage, or Google Cloud Storage).",
+            "Hybrid Storage Solutions: Combine on-premises and cloud storage for a flexible, hybrid approach."], 
+            ["Data Tiering: Organize data based on usage frequency to optimize storage efficiency.",
+            "Deduplication and Compression: Reduce storage requirements through advanced data optimization techniques.",
+            "Backup and Recovery: Set up automated backup solutions to protect critical data.",
+            "Disaster Recovery: Design and implement disaster recovery solutions to minimize downtime and data loss."], 
+            ["Data Encryption: Secure sensitive data at rest and in transit with encryption solutions.",
+            "Access Control: Implement role-based access policies to protect against unauthorized data access.",
+            "Redundant Systems: Create redundant storage setups to prevent data loss in case of hardware failure.",
+            "Compliance Assurance: Ensure storage systems meet regulatory standards like GDPR, HIPAA, and PCI-DSS."], 
+            ["Proactive Monitoring: Track storage performance and capacity usage to identify potential issues.",
+            "Capacity Planning: Forecast storage needs and upgrade systems as necessary.",
+            "Patch Management: Regularly update storage software and firmware for security and functionality.",
+            "System Health Checks: Conduct periodic audits of the storage environment to ensure reliability."], 
+            ["Data Migration: Seamlessly transfer data from legacy systems to modern storage solutions.",
+            "Cloud Migration: Move on-premises data to cloud-based storage platforms.",
+            "Downtime Minimization: Use advanced techniques to reduce disruption during data migration."], 
+            ["End-User Training: Educate staff on using storage systems effectively.",
+            "24/7 Support: Provide continuous support for storage-related issues.",
+            "Documentation: Deliver comprehensive guides and documentation for storage systems."], 
+            ["Long-Term Storage Planning: Develop a roadmap for future storage infrastructure upgrades.",
+            "Cost Optimization: Analyze storage usage and recommend solutions to reduce costs.",
+            "Integration Consulting: Ensure compatibility with existing IT systems and workflows."]],
+            "page-link": "/solutions/data-storage",
+            "icon": "faWifi",
+            "images": [
+                "it-solutions.jpg"
+            ]
+        },
+        {
+            "name": "Disaster Recovery",
+            "title-long": "Disaster Recovery and Backup solutions",
+            "description": "Our Disaster Recovery and Backup Solutions are designed to safeguard your business from data loss and downtime. We provide comprehensive plans to ensure quick recovery and seamless continuity in the event of unexpected disruptions. From secure backups to robust recovery strategies, we help protect your critical data and maintain your business operations without compromise.",
+            "id": "recovery",
+            "headers": ["Structured Cabling", "Customized Wiring Solutions", "Electrical Infrastructure", "Testing and Certification", "Installation and Integration", "Compliance and Safety", "Consulting and Planning"],
+            "content": [],
+            "page-link": "/solutions/data-recovery",
             "icon": "faWifi",
             "images": [
                 "it-solutions.jpg"
@@ -214,28 +296,6 @@
             "icon": "faNetworkWired",
             "images": [
                 "wiring.avif"
-            ]
-        },
-        {
-            "name": "Data Infrastructure",
-            "title-long": "Storage design and installation",
-            "description": "Our storage design and installation services ensure your business has a reliable, scalable, and secure data storage infrastructure. From planning and configuring storage solutions to seamless installation, we provide tailored systems that meet your organization’s needs. Let us help you optimize data management and ensure your critical information is always accessible and protected.",
-            "id": "storage",
-            "page-link": "/solutions/data-storage",
-            "icon": "faWifi",
-            "images": [
-                "it-solutions.jpg"
-            ]
-        },
-        {
-            "name": "Disaster Recovery",
-            "title-long": "Disaster Recovery and Backup solutions",
-            "description": "Our Disaster Recovery and Backup Solutions are designed to safeguard your business from data loss and downtime. We provide comprehensive plans to ensure quick recovery and seamless continuity in the event of unexpected disruptions. From secure backups to robust recovery strategies, we help protect your critical data and maintain your business operations without compromise.",
-            "id": "recovery",
-            "page-link": "/solutions/data-recovery",
-            "icon": "faWifi",
-            "images": [
-                "it-solutions.jpg"
             ]
         }
     ],

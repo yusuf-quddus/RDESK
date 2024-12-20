@@ -1,7 +1,7 @@
 import '../css/style.css'
 import '../css/bootstrap.min.css'
 
-import { useState, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import data from '../data/data.json';
@@ -14,9 +14,6 @@ import CoreCard from './CoreCard.jsx'
  */
 const About = () => {
     const location = useLocation();
-    const [expanded, setExpanded] = useState(false);
-
-    const toggleCard = () => setExpanded(!expanded);
 
     /* scroll to about section when clicked in header */
     useEffect(() => {
@@ -58,30 +55,23 @@ const About = () => {
                     </div>
                 </div>
             </div>
+            <div className='container'>
+                <div className="title-box text-center">
+                    <h2 className="title" style={{ textAlign: "center", marginTop: "2em", marginBottom: "1em" }}>Our IT Services</h2>
+                </div>
+                <div className='row'>
+                    <div className='col-md-6'>
+                        <h4>Fixed Fee Managed IT Services</h4>
+                        <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
+                    </div>
+                    <div className='col-md-6'>
+                        <h4>Hourly IT Support Services</h4>
+                        <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
+                    </div>
+                </div>
+            </div>
         </section> 
     )
 }
 
-export default About
-
-            {/* <div className="container">
-                <div className="title-box text-center">
-                    <h2 className="title">about us</h2>
-                </div>
-                <div className="row">
-                    <div className="col-md-4">
-                        <h4>Who we are</h4>
-                        <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                    </div>
-                    
-                    <div className="col-md-4">
-                        <h4>What we do</h4>
-                        <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                    </div>
-    
-                    <div className="col-md-4">
-                        <h4>Our background</h4>
-                        <p>Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
-                    </div>  
-                </div> 
-            </div> */}
+export default About;

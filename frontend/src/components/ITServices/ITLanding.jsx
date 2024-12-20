@@ -1,17 +1,16 @@
 import React, { useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
-import ITServiceBox from './ITServiceBox';
 import ServiceMenu from './ServiceMenu';
 import data from '../../data/services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faNetworkWired, faCloud, faDiagramProject, faServer, faWifi } from '@fortawesome/free-solid-svg-icons';
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../assets/Footer';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
 
 /**
- * Component for IT Services Landing page.   
+ * Component for Solutions Landing page.   
  * 
  * @return {JSX.Element} - The ITLanding component.
  */
@@ -22,32 +21,14 @@ const ITLanding = () => {
     window.scrollTo(0, 0); 
   }, []);
 
-  /* Determine Icon based on service */
-  const icon = (service) => {
-    switch(service) {
-      case "faServer":
-        return faServer;
-      case "faDiagramProject":
-        return faDiagramProject;
-      case "faNetworkWired":
-        return faNetworkWired;
-      case "faCloud":
-        return faCloud;
-      case "faWifi":
-        return faWifi;
-      default:
-        return null;
-    }
-  };
-
   return (
     <div>
       <Header />
-      {/* Page Header Section */}
+
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
         <div className="container">
-          <h1>IT Services</h1>
+          <h1>IT Solutions</h1>
           <div className='landing-links'>
             <p className="btn" onClick={() => navigate('/')}>Home</p>
             <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg' /></p>
@@ -57,38 +38,35 @@ const ITLanding = () => {
       </section>
 
       <section className="section container">
-      <div className="row content-spacing">
-            <div className="col-md-6">
-              <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow" />
+        <div className="row content-spacing">
+          <div className='row'> 
+            <div className='col-md-6'>
+              <h4>Fixed Fee Managed IT Services</h4>
+                <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
+              </div>
+              <div className='col-md-6'>
+                <h4>Hourly IT Support Services</h4>
+                <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
+              </div>
             </div>
-            <div className="col-md-6">
-              <h3>Our Solutions Services</h3>
-              <div className="scrollable-accordion fixed-height">
-                {data["IT Solutions"].map((solution) => (
-                  <div className="card" key={solution.name}>
-                    <ServiceMenu info={solution} />
-                  </div>
-                ))}
+            <div style={{ marginTop: "4em", marginBottom: "1em" }}>
+              <div className="col-md-6">
+                <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow" />
+              </div>
+              <div className="col-md-6">
+                <h2>Our Solutions Services</h2>
+                <div className="scrollable-accordion fixed-height">
+                  {data["IT Solutions"].map((solution) => (
+                    <div className="card" key={solution.name}>
+                      <ServiceMenu info={solution} />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
       </section>
 
-      {/* <section id="services" className="section">
-        <div className="container">
-          <div className="row">
-            <div>
-              {servicesData["IT Solutions"].map((service) => (
-                <ITServiceBox 
-                  key={service.name}
-                  service={service} 
-                  icon={icon(service.icon)} 
-                  style={{ width: '100px' }} />
-                ))}
-            </div>
-          </div>
-        </div> 
-      </section>  */}
       <div className="footer"></div>
       <Footer />
     </div>

@@ -66,7 +66,7 @@ const Header = () => {
       case 'compliance':
         navigate('/compliance');
         break;
-      case 'services':
+      case 'solutions':
         navigate('/solutions');
         break;
       case 'other':
@@ -106,8 +106,8 @@ const Header = () => {
                 <li className={activeMenu === 'about' ? 'active' : ''}>
                   <a onClick={() => menuClick('about')}>About</a>
                 </li>
-                <li className={activeMenu === 'services' ? 'dropdown active' : 'dropdown'}>
-                  <Dropdown name="IT Services" data={services['IT Solutions']} onClick={() => menuClick('services')} />
+                <li className={activeMenu === 'solutions' ? 'dropdown active' : 'dropdown'}>
+                  <Dropdown name="solutions" data={services['IT Solutions']} onClick={() => menuClick('solutions')} />
                 </li>
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="ISO/Compliance" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />

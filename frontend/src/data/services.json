@@ -397,6 +397,7 @@
                     ],
             "page-link": "/compliance/ISO27001",
             "image": "https://picsum.photos/200",
+            "year": "2022",
             "facts":
                 {
                     "Category": "Information Security Management System (ISMS)",

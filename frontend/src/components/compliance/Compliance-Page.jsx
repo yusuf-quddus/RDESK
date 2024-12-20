@@ -62,13 +62,3 @@ const CompliancePage = ({ iso }) => {
 };
 
 export default CompliancePage;
-
-
- {/* <h3 className="margin-bottom-15">Summary </h3>	
-              <p style={{ marginBottom: '20px' }}>{iso.summary}</p>						 
-              <ul className="work-detail-list">
-                  <li><span>Category :</span> {iso.facts.Category}</li>
-                  <li><span>Tags :</span> {iso.facts.Tags}</li>
-                  <li><span>Year :</span> {iso.facts.Year}</li>
-              </ul> 
-  */}

@@ -109,7 +109,6 @@ app.post('/api/request', async (req, res) => {
       const values = [name, email, subject, service, compliance, it_service, message];
       const result = await db.query(insertQuery, values)
       res.status(201).json(result.rows[0]);
-      //printAllRows();
     } catch (err) {
       console.error('Error inserting data:', err);
       res.status(500).json({ error: 'Failed to insert request' });

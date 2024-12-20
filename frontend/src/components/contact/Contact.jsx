@@ -101,9 +101,9 @@ const Contact = () => {
                     name: name,
                     email: email,
                     subject: subject,
-                    service: serv,
-                    compliance: compliance,
-                    it_service: ITService,
+                    service: serv == "Select Service" ? "" : serv,
+                    compliance: compliance == "Select Compliance" || serv != "Compliance Services" ? "" : compliance,
+                    it_service: ITService == "Desired IT Service" || serv != "IT Services" ? "" : ITService,
                     message: message
                 }
                 const res = await axios.post("/api/request", formData)
@@ -196,7 +196,6 @@ const Contact = () => {
                                             {services["IT Solutions"].map(service => 
                                                 <option key={service.name} value={service.name}>{service.name}</option>
                                             )}
-                                            <option value="option3">Other</option>
                                         </select>
                                     </div>
                                 )}

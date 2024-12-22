@@ -26,7 +26,7 @@ const OtherServices = () => {
                         </div>
                         <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
                             <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                <a onClick={() => navigate("/home_services")} className="middle btn-gray-border hover-btn-blue">
+                                <a onClick={() => navigate("/other_services")} className="middle btn-gray-border hover-btn-blue">
                                     Learn More
                                 </a>
                         </div>

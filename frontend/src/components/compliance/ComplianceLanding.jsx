@@ -54,7 +54,7 @@ const ComplianceLanding = () => {
             </div>
 
             <div className="col-md-6">
-              <h3>Our Compliance Services</h3>
+              <h3>Our Compliance Services Include: </h3>
               <div className="scrollable-accordion fixed-height">
                 {servicesData["Compliance Services"].map((iso) => (
                   <div className="card" key={iso.name}>

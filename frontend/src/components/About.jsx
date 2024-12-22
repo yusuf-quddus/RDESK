@@ -39,11 +39,11 @@ const About = () => {
                             cybersecurity, and data center operations, ensuring your business stays secure, efficient, and 
                             ahead in an ever-changing tech landscape. Let RDesk be your trusted partner in achieving success 
                             through technology.<br></br><br></br></p>
-                        <h4>Why choose us?</h4>
+                        <h3>Why choose us?</h3>
                         <p>By combining technical expertise with these operational services, we deliver integrated solutions that save you time, reduce costs, and ensure a seamless experience. Whether you’re upgrading your office, maintaining critical systems, or planning new construction, RDesk is your trusted partner for comprehensive business solutions. Let us handle your infrastructure needs so you can focus on growing your business with confidence</p>
                     </div>
                     <div className='col-md-6'>
-                        <h2>Our core services:</h2>
+                        <h3>Our core services:</h3>
                         {data['Core Services'].map((core_services) => (
                             <CoreCard key={core_services.name} info={core_services} />
                         ))}

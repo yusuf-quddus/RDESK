@@ -38,33 +38,31 @@ const ITLanding = () => {
       </section>
 
       <section className="section container">
-        <div className="row content-spacing">
-          <div className='row'> 
-            <div className='col-md-6'>
-              <h4>Fixed Fee Managed IT Services</h4>
-                <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
-              </div>
-              <div className='col-md-6'>
-                <h4>Hourly IT Support Services</h4>
-                <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
-              </div>
-            </div>
-            <div style={{ marginTop: "4em", marginBottom: "1em" }}>
-              <div className="col-md-6">
-                <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow" />
-              </div>
-              <div className="col-md-6">
-                <h2>Our Solutions Services</h2>
-                <div className="scrollable-accordion fixed-height">
-                  {data["IT Solutions"].map((solution) => (
+        <div className="row">
+          <div style={{ marginTop: "2em"}}>
+            <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow col-md-6" />
+            <div className="col-md-6">
+              <h2>Our Solutions Services Include:</h2>
+              <div className="scrollable-accordion fixed-height">
+                {data["IT Solutions"].map((solution) => (
                     <div className="card" key={solution.name}>
                       <ServiceMenu info={solution} />
                     </div>
                   ))}
-                </div>
               </div>
             </div>
           </div>
+          <div>
+            <div className='col-md-6' style={{ marginTop: "3em" }}>
+              <h4>Fixed Fee Managed IT Services</h4>
+              <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
+            </div>
+            <div className='col-md-6' style={{ marginTop: "3em" }}>
+              <h4>Hourly IT Support Services</h4>
+              <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
+            </div>
+          </div>
+        </div> 
       </section>
 
       <div className="footer"></div>

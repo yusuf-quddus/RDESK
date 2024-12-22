@@ -24,11 +24,8 @@ const CoreCard = ({info}) => {
                 <div className="panel-body">
                     {info.description}
                     <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                        <a onClick={() => handleItemClick('#')} className="middle btn-gray-border hover-btn-blue" style={{ marginRight: '10px' }}>
+                        <a onClick={() => handleItemClick('/solutions')} className="middle btn-gray-border hover-btn-blue" style={{ marginRight: '10px' }}>
                             Learn More
-                        </a>
-                        <a onClick={() => navigate(`/contact#request-service#compliance-services#${'#'}`)} className="middle btn-gray-border hover-btn-blue">
-                            Request Service
                         </a>
                     </div>
                 </div>

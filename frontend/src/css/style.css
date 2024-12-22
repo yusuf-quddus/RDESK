@@ -12,37 +12,40 @@ html, body {
 	line-height: 1;
 	font-weight: 400;
 	border: none;
-	color: #444;
+	color: #414445;
 	position: relative;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-weight: 500;
-	margin: 0px 0px 10px;
-	color: #272727;
-	font-family: "Open Sans", sans-serif;
-	text-transform: uppercase;
+h1, h2, h3 {
+	color: #414445;
+    margin: 30px 0px 10px;
+	font-weight: bold !important;
+	letter-spacing: .05em;
 }
 
 h4 {
 	font-size: 16px;
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
-	line-height: 22px;
+	line-height: 20px;
 }
 
-h3 {
-	font-size: 26px;
-}
+
 
 p {
-	margin-bottom: 22px;
+	margin-bottom: 2em;
 	font-family: "Open Sans", sans-serif;
-	font-size:14px;
-	line-height: 25px;
+	font-size: 15px;
+	line-height: 28px;
 	color: #727272;
-	font-weight: 400;
+	font-weight: 500;
+	text-rendering: optimizelegibility !important;
+  	letter-spacing: .03em;
+	-moz-osx-font-smoothing: grayscale;
+  	-webkit-font-smoothing: antialiased !important;
+  	-moz-font-smoothing: antialiased !important;
 }
+
 a {
 	color:#3fa1c1;
 	background:none;
@@ -228,7 +231,7 @@ textarea:focus, select:focus, option:focus, input[type="text"]:focus, input[type
 	margin: -22px auto;
 	position: absolute;
 	width: 40px;
-	background: #1d191a;
+	background: #414445;
 }
 
 .sub-title-box.text-center h2:before {
@@ -1452,7 +1455,7 @@ section {
 }
 
 .content-spacing {
-    margin-top: 40px; 
+    margin-bottom: 40px; 
 }
 
 

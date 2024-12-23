@@ -2,7 +2,7 @@ import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import data from '../data/data.json';
 import CoreCard from './CoreCard.jsx'
@@ -14,6 +14,7 @@ import CoreCard from './CoreCard.jsx'
  */
 const About = () => {
     const location = useLocation();
+    const navigate = useNavigate();
 
     /* scroll to about section when clicked in header */
     useEffect(() => {
@@ -49,8 +50,13 @@ const About = () => {
                         ))}
                         <br></br>
                         <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <a onClick={() => navigate('/solutions')} className="middle btn btn-blue" style={{ marginRight: '10px' }}>
+                            Learn More
+                        </a>
                         <a onClick={() => navigate('/contact#get-quote')} 
-                            className="middle btn btn-blue">GET A FREE QUOTE</a>
+                            className="middle btn btn-blue">Get a Free Quote</a>
+                        </div>
                         </div>
                     </div>
                 </div>

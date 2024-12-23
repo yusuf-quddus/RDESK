@@ -70,7 +70,7 @@ const Header = () => {
         navigate('/solutions');
         break;
       case 'other':
-        navigate('/home_services');
+        navigate('/other_services');
         break;
       case 'contact':
         navigate('/contact');

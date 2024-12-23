@@ -36,7 +36,7 @@ const OtherServices = () => {
                                 </a>
                             </div>
                         </div>  
-                </div>
+                    </div>
                 <div className="col-md-6">
                         <div className="devices-image">
                             <img src={`images/${other.images[0]}`} alt=""/>

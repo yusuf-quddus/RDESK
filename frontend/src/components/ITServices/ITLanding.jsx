@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from '../assets/Header'; 
 import { useNavigate } from 'react-router-dom';
 import ServiceMenu from './ServiceMenu';
@@ -8,6 +8,26 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../assets/Footer';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
+
+const Slideshow = ({ images }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 5000); 
+    return () => clearInterval(interval); 
+  }, [images.length]);
+
+  return (
+    <div className="slideshow-container col-md-6 center">
+      {images.map((src, index) => (
+        <img key={index} src={src} alt={`Slide ${index}`} 
+             className={`slide ${currentIndex === index ? "active" : ""}`} />
+      ))}
+    </div>
+  );
+}
 
 /**
  * Component for Solutions Landing page.   
@@ -24,7 +44,6 @@ const ITLanding = () => {
   return (
     <div>
       <Header />
-
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
         <div className="container">
@@ -40,7 +59,7 @@ const ITLanding = () => {
       <section className="section container">
         <div className="row">
           <div style={{ marginTop: "2em"}}>
-            <img src='./images/cloud_solutions.jpg' alt="IT Solutions" className="img-fluid rounded shadow col-md-6" />
+            <Slideshow images={['./images/cloud_solutions.jpg', './images/recovery.jpg','./images/fix-router.jpg', './images/it-solutions.jpg']} />
             <div className="col-md-6">
               <h2>Our Solutions Services Include:</h2>
               <div className="scrollable-accordion fixed-height">
@@ -53,11 +72,11 @@ const ITLanding = () => {
             </div>
           </div>
           <div>
-            <div className='col-md-6' style={{ marginTop: "3em" }}>
+            <div className='col-md-6' style={{ marginTop: "4em" }}>
               <h4>Fixed Fee Managed IT Services</h4>
               <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
             </div>
-            <div className='col-md-6' style={{ marginTop: "3em" }}>
+            <div className='col-md-6' style={{ marginTop: "4em" }}>
               <h4>Hourly IT Support Services</h4>
               <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
             </div>

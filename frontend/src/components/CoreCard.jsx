@@ -11,6 +11,15 @@ import { useState } from 'react';
 const CoreCard = ({info}) => {
     const [expanded, setExpanded] = useState(false);
     const toggleCard = () => setExpanded(!expanded);
+
+    const handleItemClick = (pageLink) => {
+        if (pageLink) {
+            navigate(pageLink);
+        } else {
+            console.log('No page-link found for this item.');
+        }
+    };
+
     return (
         <div className="panel-default">
             <div className="panel-heading" onClick={toggleCard} 
@@ -23,11 +32,6 @@ const CoreCard = ({info}) => {
             <div style={{ maxHeight: expanded ? '1000px' : '0', overflow: 'hidden',transition: 'max-height 0.25s ease'}} className={`${expanded ? 'show' : ''}`}>
                 <div className="panel-body">
                     {info.description}
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-                        <a onClick={() => handleItemClick('/solutions')} className="middle btn-gray-border hover-btn-blue" style={{ marginRight: '10px' }}>
-                            Learn More
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

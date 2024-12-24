@@ -2,7 +2,7 @@ import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 import { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import data from '../data/data.json';
 import CoreCard from './CoreCard.jsx'
@@ -14,6 +14,7 @@ import CoreCard from './CoreCard.jsx'
  */
 const About = () => {
     const location = useLocation();
+    const navigate = useNavigate();
 
     /* scroll to about section when clicked in header */
     useEffect(() => {
@@ -39,18 +40,23 @@ const About = () => {
                             cybersecurity, and data center operations, ensuring your business stays secure, efficient, and 
                             ahead in an ever-changing tech landscape. Let RDesk be your trusted partner in achieving success 
                             through technology.<br></br><br></br></p>
-                        <h4>Why choose us?</h4>
+                        <h3>Why choose us?</h3>
                         <p>By combining technical expertise with these operational services, we deliver integrated solutions that save you time, reduce costs, and ensure a seamless experience. Whether you’re upgrading your office, maintaining critical systems, or planning new construction, RDesk is your trusted partner for comprehensive business solutions. Let us handle your infrastructure needs so you can focus on growing your business with confidence</p>
                     </div>
                     <div className='col-md-6'>
-                        <h2>Our core services:</h2>
+                        <h3>Our core services:</h3>
                         {data['Core Services'].map((core_services) => (
                             <CoreCard key={core_services.name} info={core_services} />
                         ))}
                         <br></br>
                         <div>
+                        <div style={{ display: 'flex', justifyContent: 'center' }}>
+                        <a onClick={() => navigate('/solutions')} className="middle btn btn-blue" style={{ marginRight: '10px' }}>
+                            Learn More
+                        </a>
                         <a onClick={() => navigate('/contact#get-quote')} 
-                            className="middle btn btn-blue">GET A FREE QUOTE</a>
+                            className="middle btn btn-blue">Get a Free Quote</a>
+                        </div>
                         </div>
                     </div>
                 </div>

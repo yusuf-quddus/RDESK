@@ -64,7 +64,7 @@
             "page-link": "/solutions/security-scans",
             "icon": "faWifi",
             "images": [
-                "it-solutions.jpg"
+                "pen.webp"
             ]
         },
         {
@@ -231,7 +231,7 @@
             "page-link": "/solutions/virtualization",
             "icon": "faWifi",
             "images": [
-                "it-solutions.jpg"
+                "virtualization.png"
             ]
         },
         {
@@ -272,7 +272,7 @@
             "page-link": "/solutions/data-storage",
             "icon": "faWifi",
             "images": [
-                "it-solutions.jpg"
+                "Cloud+server.jpg"
             ]
         },
         {
@@ -313,7 +313,7 @@
             "page-link": "/solutions/data-recovery",
             "icon": "faWifi",
             "images": [
-                "it-solutions.jpg"
+                "recovery.jpg"
             ]
         },
         {
@@ -364,10 +364,10 @@
                         "Best practices that the ISO 9001 Standard promotes are:", 
                         "How to Get Started with ISO 9001? Our ISO Certification Consultants Can Help!"],
             "content": [
-                "ISO 9001 is the most sought-after and internationally acclaimed management system standard.\n\nInternally, the ISO 9001 Quality Management Standard helps to improve operational and management efficiency and effectiveness.\n\nISO 9001 is not only a Quality Assurance Standard or a degree of excellence; it is a way to ensure that customer requirements are met with consistency.\n\nAttaining the ISO 9001 certification helps to drive the success of your business by boosting customer satisfaction, marketability, and profit potential.\n\nThe certification makes your business more valuable. It lets others know that your organization is committed to continually improving systems to better ensure customer satisfaction. Other organizations are more likely to engage with ISO 9001 certified companies. Moreover, ISO 9001 Quality Assurance Certification demonstrates credibility.", 
-                "More than 1 million organizations have implemented ISO 9001 in more than 75 countries.\n\nWhile there were earlier standards for quality management systems, the International Organization for Standardization, or ISO, released its 9001 standard in 1987 for the first time.\n\nThe standard has been revised several times in 1994, 2000, 2008, and the current version in 2015.\n\nAn internationally and diverse selection committee developed the framework of the ISO 9001 Quality Management System Standard to help all types of organizations (including commercial businesses, governments, non-profit organizations, etc.) adopt “good management practices.”",
+                "ISO 9001 is the most sought-after and internationally acclaimed management system standard. Internally, the ISO 9001 Quality Management Standard helps to improve operational and management efficiency and effectiveness.\n\nISO 9001 is not only a Quality Assurance Standard or a degree of excellence; it is a way to ensure that customer requirements are met with consistency. Attaining the ISO 9001 certification helps to drive the success of your business by boosting customer satisfaction, marketability, and profit potential.\n\nThe certification makes your business more valuable. It lets others know that your organization is committed to continually improving systems to better ensure customer satisfaction. Other organizations are more likely to engage with ISO 9001 certified companies. Moreover, ISO 9001 Quality Assurance Certification demonstrates credibility.", 
+                "More than 1 million organizations have implemented ISO 9001 in more than 75 countries.\n\nWhile there were earlier standards for quality management systems, the International Organization for Standardization, or ISO, released its 9001 standard in 1987 for the first time. The standard has been revised several times in 1994, 2000, 2008, and the current version in 2015.\n\nAn internationally and diverse selection committee developed the framework of the ISO 9001 Quality Management System Standard to help all types of organizations (including commercial businesses, governments, non-profit organizations, etc.) adopt “good management practices.”",
                 "• A policy statement (or mission statement)\n• Objectives and plans\n• Competent human resources\n• A written management system (or policies and procedures) to confirm that the management system is approved, available, and up to date\n• A detailed understanding of customer requirements\n• A way of determining customer satisfaction\n• Effective supplier management\n• Data collection and analysis\n• Management reviews\n• Risk-based thinking\n• Strategic management\n• Management of documents and records\n• Internal auditing\n• Control of non-conformances and consideration of the corrective actions, etc.",
-                "Our role is to assist you and lead your business on the path to successful ISO certification.\n\nOur qualified ISO 9001 Certification Consultants check your Quality Management System (QMS) and help you improve it, strengthening weaknesses through ongoing consultation and support.\n\nThe standard is designed to be flexible and is achievable by any organization regardless of its size, scale, or revenue.\n\nOur consultants will help you transition to the most appropriate QMS for your business, saving both time and resources.\n\nWe minimize the hassles in achieving compliance of your QMS with our services like:\n\t- Gap analysis\n\t- Readiness reviews\n\t- Internal audits\n\nISO compliance does not need to cost a lot to maintain! We minimize the need for internal resources with a lean and compliant ISO quality consulting approach. \n\nWe can help you manage ongoing compliance on your own, or you can team up with us. Our personalized ISO certification services include monitoring and internal audits as well. Our experts can monitor your Quality Management System to ensure consistency, improvement, and compliance. We can also help in making it compliant with future updates to the ISO standard a cinch.\n\n"
+                "Our role is to assist you and lead your business on the path to successful ISO certification. Our qualified ISO 9001 Certification Consultants check your Quality Management System (QMS) and help you improve it, strengthening weaknesses through ongoing consultation and support.\n\nThe standard is designed to be flexible and is achievable by any organization regardless of its size, scale, or revenue. Our consultants will help you transition to the most appropriate QMS for your business, saving both time and resources.\n\nWe minimize the hassles in achieving compliance of your QMS with our services like:\n\t- Gap analysis\n\t- Readiness reviews\n\t- Internal audits\n\nISO compliance does not need to cost a lot to maintain! We minimize the need for internal resources with a lean and compliant ISO quality consulting approach. \n\nWe can help you manage ongoing compliance on your own, or you can team up with us. Our personalized ISO certification services include monitoring and internal audits as well. Our experts can monitor your Quality Management System to ensure consistency, improvement, and compliance. We can also help in making it compliant with future updates to the ISO standard a cinch.\n\n"
             ],
             "page-link": "/compliance/ISO9001",
             "image": "https://picsum.photos/200",
@@ -640,9 +640,21 @@
         }
     ],
     "Office / Other Services":{
-        "name": "Office / Other Services",
+        "name": "Other Services",
         "page-link": "",
         "description": "At RDesk, we recognize that businesses often require a broad range of services to maintain and enhance their operations. To meet these needs, we’ve expanded our expertise to include comprehensive solutions in Electrical, Plumbing, HVAC, and General Contracting. These additional services allow us to be a one-stop provider for both your technical and operational infrastructure needs.",
+        "headers": ["Electrical Services", "Plumbing Services", "HVAC Services", "General Contracting Services"],
+        "content": [["Wiring and Installations: Expertly designed and implemented electrical systems for offices, data centers, and commercial spaces.",
+        "Troubleshooting and Repairs: Rapid diagnosis and repair of electrical issues to minimize downtime.", "Energy-Efficient Upgrades: Solutions like LED lighting, smart systems, and renewable energy integrations to reduce costs and environmental impact."],
+        ["Installation and Maintenance: Professional setup and upkeep of plumbing systems for commercial and industrial spaces.",
+        "Emergency Repairs: Fast and reliable solutions for leaks, clogs, and other urgent plumbing needs.",
+        "Water Conservation Solutions: Modern systems to help conserve water and lower utility bills."],
+        ["System Design and Installation: Custom HVAC solutions to ensure optimal comfort and efficiency for your business.",
+        "Maintenance and Repairs: Regular servicing to keep your heating, ventilation, and air conditioning systems running smoothly.",
+        "Energy Optimization: Ad"],
+        ["Renovations and Buildouts: Tailored solutions for office expansions, remodels, or new construction projects.",
+        "Project Management: End-to-end management to ensure your project is delivered on time and within budget.",
+        "Facility Maintenance: Ongoing support to maintain the integrity and functionality of your facilities."]],
         "images": [
             "installation.jpg"
         ]

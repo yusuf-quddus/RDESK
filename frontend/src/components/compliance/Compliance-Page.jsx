@@ -41,14 +41,25 @@ const CompliancePage = ({ iso }) => {
       <section id="single-work" className="section">
         <div className="container">
           <div className="row">			
-            <div>
-              {iso.headers.map((header, index) => (
-                <div key={index}>
-                  <h2>{header}</h2>
-                  <p style={{ whiteSpace: "pre-wrap" }}>{iso.content[index]}</p>
-                </div>
+          <div>
+          {iso.headers.map((header, index) => (
+            <div key={index}>
+              <h2>{header}</h2>
+              {iso.content[index].split("\n\n").map((piece, pieceIndex) => (
+                <p key={pieceIndex} style={{ whiteSpace: "pre-wrap" }}>
+                  {piece.includes("|") ? (
+                    <>
+                      <strong>{piece.split("|")[0]}</strong>
+                      {piece.split("|").slice(1).join("")}
+                    </>
+                  ) : (
+                    piece
+                  )}
+                </p>
               ))}
             </div>
+          ))}
+          </div>
               <a onClick={() => navigate(`/contact#request-service#compliance-services#${iso.name}`)} className="btn btn-blue">
                 Get ISO Consultation
               </a>             

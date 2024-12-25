@@ -24,7 +24,7 @@ const App = () => {
           <Route path='/' element={<MainPage />} />
           <Route path='/solutions' element={<ITLanding />} />
           <Route path='/compliance' element={<ComplianceLanding />} />
-          <Route path='/other_services' element={<OtherLanding />} />
+          <Route path='/other_services' element={<OtherLanding otherServices={servicesData['Office / Other Services']}/>} />
           <Route path='/contact' element={<Contact />} />
 
           {/* Compliance routes */}

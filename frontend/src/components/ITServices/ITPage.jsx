@@ -34,26 +34,39 @@ const ITPage = ({service}) => {
                  </div>
 		    </section>
             <section>
+                <p style={{ textAlign: "center", marginTop: "2em"}}><strong>See below for a detailed description of what RDesk is offering</strong></p>
                 <div className="container">
                     <div className="row">					
-                        <div className="col-md-7" style={{marginTop: '20px'}}>	
+                        <div className="col-md-6" style={{marginTop: '20px'}}>	
                                 <div className="item"><img src={`../../images/${service.images[0]}`} alt=""/></div>					 
                         </div>
-                        <div className="col-md-5 work-detail">
-                            <h3 className="margin-bottom-15">{service.name} </h3>	
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. Lorem ipsum dolor sit amet, consectetur adipiscing metus elit. Quisque rutrum pellentesque imperdiet. </p>					
-                            <ul className="work-detail-list">
-                                <li><span>Category :</span>Business</li>
-                                <li><span>Client :</span>Newtheme</li>
-                                <li><span>Technoligies used :</span>HTML 5,CSS 3</li>
-                                <li><span>Tags :</span>Photography, Branding, Wordpress</li>
-                                <li><span>Date released :</span>January 22, 2015</li>
-                            </ul>
-                            <a onClick={() => navigate(`/contact#request-service#it-services#${service.name}`)} className="btn btn-blue">Request Service</a> 
+                        <div className="col-md-6 work-detail">
+                            <h3 className="margin-bottom-15">{service['title-long']} </h3>	
+                            <p>{service.description}</p>					
+                            <a onClick={() => navigate(`/contact#request-service#it-services#${service.name}`)} className="btn btn-blue">Request Consultation for {service.name}</a> 
                         </div>
                     </div> 
                 </div> 	
 		    </section>
+            <section id="single-work" className="section">
+                <div className="container">
+                    <div className="row">			
+                        <div>
+                            {service.headers.map((header, index) => (
+                                <div key={index}>
+                                    <h2>{header}</h2>
+                                    {service.content[index].map((point, subIndex) => {
+                                        const parts = point.split(":");
+                                        return (
+                                            <p key={subIndex} style={{ marginLeft: "4em" }}> <strong> {parts[0]}</strong>: {parts[1]} </p>
+                                        );
+                                     })}
+                                </div>
+                            ))}
+                        </div>
+                    </div>            
+                </div>
+	        </section>
             <div className="footer"></div>
             <Footer />
         </div>

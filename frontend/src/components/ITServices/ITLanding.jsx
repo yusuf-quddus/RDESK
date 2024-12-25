@@ -6,28 +6,9 @@ import data from '../../data/services.json';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../assets/Footer';
+import Slideshow from '../assets/Slideshow';
 import '../../css/style.css';
 import '../../css/bootstrap.min.css';
-
-const Slideshow = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); 
-    return () => clearInterval(interval); 
-  }, [images.length]);
-
-  return (
-    <div className="slideshow-container col-md-6 center">
-      {images.map((src, index) => (
-        <img key={index} src={src} alt={`Slide ${index}`} 
-             className={`slide ${currentIndex === index ? "active" : ""}`} />
-      ))}
-    </div>
-  );
-}
 
 /**
  * Component for Solutions Landing page.   
@@ -59,7 +40,7 @@ const ITLanding = () => {
       <section className="section container">
         <div className="row">
           <div style={{ marginTop: "2em"}}>
-            <Slideshow images={['./images/cloud_solutions.jpg', './images/recovery.jpg','./images/fix-router.jpg', './images/it-solutions.jpg']} />
+            <Slideshow images={['./images/recovery.jpg', './images/fix-router.jpg', './images/cloud_solutions.jpg', './images/it-solutions.jpg']} />
             <div className="col-md-6">
               <h2>Our Solutions Services Include:</h2>
               <div className="scrollable-accordion fixed-height">

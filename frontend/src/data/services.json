@@ -2,11 +2,11 @@
     "IT Solutions":[
         {
             "name": "Helpdesk - Managed Support",
-            "title-long": "Helpdesk - Managed Support ( Managed Services)",
+            "title-long": "Helpdesk - Managed Support (Managed Services)",
             "description": "Our Helpdesk and Managed Support services provide seamless, proactive IT assistance tailored to your business needs. With 24/7 availability, we ensure rapid issue resolution, continuous monitoring, and expert support to keep your operations running smoothly. Let us handle your IT challenges so you can focus on driving your business forward.",
             "id": "helpdesk",
             "headers": ["Helpdesk Support", "Proactive Monitoring", "Managed IT Support", "IT Operations Management", "Cybersecurity Support", "IT Strategy Support"],
-            "contents": [["24/7 IT Assistance: Round-the-clock availability to address IT issues anytime they arise.",
+            "content": [["24/7 IT Assistance: Round-the-clock availability to address IT issues anytime they arise.",
                          "Multi-Channel Support: Assistance via phone, email, chat, or a ticketing system.", 
                          "Issue Resolution: Quick troubleshooting for software, hardware, and network-related problems.", 
                          "Knowledge Base: Access to self-help resources for common IT issues."],
@@ -343,7 +343,10 @@
             "Reorganization: Reorganize and optimize legacy wiring to improve efficiency and reduce clutter."], 
             ["Adherence to Standards: Ensure all wiring installations comply with local electrical and safety codes.",
             "Fire-Resistant Cabling: Use fire-rated cables for enhanced safety in critical areas.",
-            "Secure Installations: Prevent unauthorized access by securing cabling pathways."]],
+            "Secure Installations: Prevent unauthorized access by securing cabling pathways."],
+            ["Site Assessment: Evaluate your facility to determine the best wiring solutions.",
+            "Future-Proof Design: Create wiring layouts that anticipate future growth and technology needs.",
+            "Cost Analysis: Provide detailed cost estimates for wiring projects."]],
             "page-link": "/solutions/professional-wiring",
             "icon": "faNetworkWired",
             "images": [

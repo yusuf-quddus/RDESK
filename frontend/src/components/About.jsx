@@ -32,31 +32,36 @@ const About = () => {
                 <div className='row'>
                     <div className='col-md-6'>
                         <h3>Managed Services Solutions</h3>
-                        <p>At RDesk, we deliver Managed Services Solutions to simplify and optimize business operations. 
+                        <p>
+                            At RDesk, we deliver Managed Services Solutions to simplify and optimize business operations. 
                             Our focus is on providing reliable and innovative IT services that enable organizations to 
                             concentrate on their core goals. <br></br> <br></br>With over 50 years of combined experience, 
                             our team specializes in tailored IT solutions for industries such as legal, biotech, education 
                             (K-12 and college), and energy. We offer expertise in network management, cloud computing, 
                             cybersecurity, and data center operations, ensuring your business stays secure, efficient, and 
                             ahead in an ever-changing tech landscape. Let RDesk be your trusted partner in achieving success 
-                            through technology.<br></br><br></br></p>
+                            through technology.<br></br><br></br>
+                        </p>
                         <h3>Why choose us?</h3>
-                        <p>By combining technical expertise with these operational services, we deliver integrated solutions that save you time, reduce costs, and ensure a seamless experience. Whether you’re upgrading your office, maintaining critical systems, or planning new construction, RDesk is your trusted partner for comprehensive business solutions. Let us handle your infrastructure needs so you can focus on growing your business with confidence</p>
+                        <p>
+                            By combining technical expertise with these operational services, we deliver integrated solutions 
+                            that save you time, reduce costs, and ensure a seamless experience. Whether you’re upgrading 
+                            your office, maintaining critical systems, or planning new construction, RDesk is your trusted 
+                            partner for comprehensive business solutions. Let us handle your infrastructure needs so you can 
+                            focus on growing your business with confidence
+                        </p>
                     </div>
                     <div className='col-md-6'>
                         <h3>Our core services:</h3>
-                        {data['Core Services'].map((core_services) => (
-                            <CoreCard key={core_services.name} info={core_services} />
-                        ))}
+                        {data['Core Services'].map((core_services) => <CoreCard key={core_services.name} info={core_services} />)}
                         <br></br>
                         <div>
-                        <div style={{ display: 'flex', justifyContent: 'center' }}>
-                        <a onClick={() => navigate('/solutions')} className="middle btn btn-blue" style={{ marginRight: '10px' }}>
-                            Learn More
-                        </a>
-                        <a onClick={() => navigate('/contact#get-quote')} 
-                            className="middle btn btn-blue">Get a Free Quote</a>
-                        </div>
+                            <div style={{ display: 'flex', justifyContent: 'center' }}>
+                                <a onClick={() => navigate('/solutions')} className="middle btn btn-blue" style={{ marginRight: '10px' }}>
+                                    Learn More
+                                </a>
+                                <a onClick={() => navigate('/contact#get-quote')} className="middle btn btn-blue">Get a Free Quote</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,11 +73,22 @@ const About = () => {
                 <div className='row'>
                     <div className='col-md-6'>
                         <h4>Fixed Fee Managed IT Services</h4>
-                        <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
+                        <p>
+                            Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support 
+                            tailored to your business needs. For a single, flat monthly fee, we provide 
+                            proactive monitoring, maintenance, and expert assistance to ensure your technology
+                            runs smoothly. Simplify your IT budgeting and focus on growing your business while 
+                            we handle the rest.
+                        </p>
                     </div>
                     <div className='col-md-6'>
                         <h4>Hourly IT Support Services</h4>
-                        <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
+                        <p>
+                            Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate 
+                            IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you 
+                            pay only for the time you use. Get expert support when you need it, without long-term 
+                            commitments.
+                        </p>
                     </div>
                 </div>
             </div>

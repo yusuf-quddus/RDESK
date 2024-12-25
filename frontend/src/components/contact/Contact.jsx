@@ -134,7 +134,7 @@ const Contact = () => {
             <Header />
             <section id="contact" className="section parallax full-screen-image">
                 <div className="overlay"></div>
-                <div className="container">
+                <div className="container" style={{marginTop: "6em"}}>
                     <div className="row">
                         <div className="title-box text-center white">
                             {show && <Notification message={notifMessage} success={success}/>}

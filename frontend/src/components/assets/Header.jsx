@@ -100,28 +100,17 @@ const Header = () => {
             </button>
             <div id="main-menu" className={`navbar-right ${isMobileMenuOpen ? 'open' : ''}`}>
               <ul className="nav">
-                <li className={activeMenu === 'home' ? 'active' : ''}>
-                  <a onClick={() => menuClick('home')}>Home</a>
-                </li>
-                <li className={activeMenu === 'about' ? 'active' : ''}>
-                  <a onClick={() => menuClick('about')}>About</a>
-                </li>
+                <li className={activeMenu === 'home' ? 'active' : ''}> <a onClick={() => menuClick('home')}>Home</a> </li>
+                <li className={activeMenu === 'about' ? 'active' : ''}> <a onClick={() => menuClick('about')}>About</a> </li>
                 <li className={activeMenu === 'solutions' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="solutions" data={services['IT Solutions']} onClick={() => menuClick('solutions')} />
                 </li>
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="ISO/Compliance" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
                 </li>
-                <li className={activeMenu === 'other' ? 'active' : ''}>
-                  <a onClick={() => menuClick('other')}>Other Services</a>
-                </li>
+                <li className={activeMenu === 'other' ? 'active' : ''}> <a onClick={() => menuClick('other')}>Other Services</a> </li>
                 <li className={activeMenu === 'contact' ? 'active' : ''}>
-                  <Dropdown 
-                    name="Contact Us" 
-                    data={data.contact_purpose} 
-                    scrollToSection={scrollToSection} 
-                    onClick={() => menuClick('contact')} 
-                  />
+                  <Dropdown name="Contact Us" data={data.contact_purpose} scrollToSection={scrollToSection} onClick={() => menuClick('contact')} />
                 </li>
               </ul>
             </div>

@@ -32,7 +32,7 @@ const ITLanding = () => {
           <div className='landing-links'>
             <p className="btn" onClick={() => navigate('/')}>Home</p>
             <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg' /></p>
-            <p className="btn" onClick={() => navigate('/IT_Services')}><strong>IT Services</strong></p>
+            <p className="btn" onClick={() => navigate('/solutions')}><strong>IT Solutions</strong></p>
           </div>
         </div>
       </section>
@@ -44,22 +44,28 @@ const ITLanding = () => {
             <div className="col-md-6">
               <h2>Our Solutions Services Include:</h2>
               <div className="scrollable-accordion fixed-height">
-                {data["IT Solutions"].map((solution) => (
-                    <div className="card" key={solution.name}>
-                      <ServiceMenu info={solution} />
-                    </div>
-                  ))}
+                { data["IT Solutions"].map((solution) => 
+                    <div className="card" key={solution.name}> <ServiceMenu info={solution} /> </div> )}
               </div>
             </div>
           </div>
           <div>
             <div className='col-md-6' style={{ marginTop: "4em" }}>
               <h4>Fixed Fee Managed IT Services</h4>
-              <p>Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to your business needs. For a single, flat monthly fee, we provide proactive monitoring, maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your IT budgeting and focus on growing your business while we handle the rest.</p>
+              <p>
+                Our Fixed Fee Managed IT Services offer predictable, all-inclusive IT support tailored to 
+                your business needs. For a single, flat monthly fee, we provide proactive monitoring, 
+                maintenance, and expert assistance to ensure your technology runs smoothly. Simplify your 
+                IT budgeting and focus on growing your business while we handle the rest.
+              </p>
             </div>
             <div className='col-md-6' style={{ marginTop: "4em" }}>
               <h4>Hourly IT Support Services</h4>
-              <p>Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay only for the time you use. Get expert support when you need it, without long-term commitments.</p>
+              <p>
+                Our Hourly IT Support Services provide flexible, on-demand assistance for your immediate 
+                IT needs. Whether it’s troubleshooting, system updates, or technical consulting, you pay 
+                only for the time you use. Get expert support when you need it, without long-term commitments.
+              </p>
             </div>
           </div>
         </div> 

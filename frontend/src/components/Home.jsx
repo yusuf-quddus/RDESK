@@ -2,7 +2,7 @@ import '../css/style.css'
 import '../css/bootstrap.min.css'
 
 import { useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 /**
  * Component for title section.  
@@ -10,7 +10,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
  * @return {JSX.Element} - The home component.
  */
 const Home = () => {
-    const navigate = useNavigate()
     const location = useLocation();
 
     /* scroll to home section when clicked in header */
@@ -29,7 +28,8 @@ const Home = () => {
                 <div className="big">Help Desk Solutions </div>          
                 <div className="medium">Making I.T. Easy and Affordable</div>
             </div>
-            <img src="images/1.jpg" alt="RDesk Help Desk Solutions" style={{ width: '100%', height: '400px', objectFit: 'cover' }} />
+            <img src="images/it_consulting.jpg" alt="RDesk Help Desk Solutions" 
+                 style={{ width: '100%', height: '400px', objectFit: 'cover', filter: "brightness(0.7)",}} />
         </section>
     )
 }

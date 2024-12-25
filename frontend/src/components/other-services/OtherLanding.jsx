@@ -26,7 +26,7 @@ const OtherLanding = ({otherServices}) => {
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
         <div className="container">
-          <h1>Home Services</h1>
+          <h1>Home, Office and Other Services</h1>
           <div className='landing-links'>
             <p className="btn" onClick={() => navigate('/')}>Home</p>
             <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg' /></p>

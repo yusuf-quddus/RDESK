@@ -19,7 +19,6 @@ const App = () => {
 
   return (
     <Router>
-      <div> 
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/solutions' element={<ITLanding />} />
@@ -44,8 +43,8 @@ const App = () => {
               element={<ITPage service={service} />} 
             />
           ))}
+
         </Routes>
-      </div>
     </Router>
   );
 };

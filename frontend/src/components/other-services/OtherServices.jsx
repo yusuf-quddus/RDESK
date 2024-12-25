@@ -31,16 +31,15 @@ const OtherServices = () => {
                                 </a>
                         </div>
                         <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                <a onClick={() => navigate(`/contact#request-service#it-services#${ITService.id}`)} className="middle btn-gray-border hover-btn-blue">
+                                <a onClick={() => navigate(`/contact#request-service#it-services#${ITService.id}`)} 
+                                   className="middle btn-gray-border hover-btn-blue">
                                     Request Service
                                 </a>
                             </div>
                         </div>  
                     </div>
-                <div className="col-md-6">
-                        <div className="devices-image">
-                            <img src={`images/${other.images[0]}`} alt=""/>
-                        </div>
+                    <div className="col-md-6">
+                        <div className="devices-image"> <img src={`images/${other.images[0]}`} alt="IT Professional in action"/> </div>
                     </div>
                 </div> 
             </div>

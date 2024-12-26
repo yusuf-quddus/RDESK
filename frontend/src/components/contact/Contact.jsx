@@ -206,13 +206,11 @@ const Contact = () => {
                                             name="Compliance"
                                             value={compliance}
                                             className={`form-control ${highlighted.compliance ? 'highlight' : ''}`}
-                                            onChange={(event) => setCompliance(event.target.value)}
-                                        >
+                                            onChange={(event) => setCompliance(event.target.value)} >
                                             <option value="Select Compliance" disabled>Select Compliance</option>
                                             {services["Compliance Services"].map(service => 
                                                 <option key={service.name} value={service.name}>{service.name}</option>
                                             )}
-                                            <option value="option3">Other / More than one</option>
                                         </select>
                                     </div>
                                 )}

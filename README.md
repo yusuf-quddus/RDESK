@@ -2,7 +2,7 @@
 Website for RDesk IT Services. 
 
 ## Live Demo
-To see demo, go to [https://rdesk.onrender.com/](https://rdesk.onrender.com/)
+To see demo, go to [https://rdesk-u0r6.onrender.com/](https://rdesk-u0r6.onrender.com/)
 
 ``` Note: Demo is deployed on free service and may load slowly. ```
 

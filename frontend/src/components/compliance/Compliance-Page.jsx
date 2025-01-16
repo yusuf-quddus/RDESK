@@ -28,7 +28,7 @@ const CompliancePage = ({ iso }) => {
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
         <div className="container">
-          <h1>{`${iso.name} : ${iso.year}`}</h1>
+          <h1>{`${iso.name}`}</h1>
           <div className='landing-links'>
             <p className="btn" onClick={()=>navigate('/')}>Home</p>
             <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg'/></p>

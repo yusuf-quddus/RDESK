@@ -31,7 +31,7 @@ const Footer = () => {
             <div className="call-action-container">
                 {/* Left side logo */}
                 <div className="logo-nav">
-                    <a onClick={() => handleNavigation('/home')}>
+                    <a onClick={() => handleNavigation('/')}>
                         <img src="../images/rdesklogo-full.png" alt="Company logo" className="logo-image btn" />
                     </a>
                 </div>

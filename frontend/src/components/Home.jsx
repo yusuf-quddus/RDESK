@@ -25,10 +25,10 @@ const Home = () => {
     return (
         <section id="home" className="home">
             <div className="text-wrapper">  
-                <div className="big">Help Desk Solutions </div>          
+                <div className="big">RDesk Office Solutions & IT Services</div>          
                 <div className="medium">Making I.T. Easy and Affordable</div>
             </div>
-            <img src="images/it_consulting.jpg" alt="RDesk Help Desk Solutions" 
+            <img src="images/it_consulting.jpg" alt="RDesk Solutions"  
                  style={{ width: '100%', height: '400px', objectFit: 'cover', filter: "brightness(0.7)",}} />
         </section>
     )

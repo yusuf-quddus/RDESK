@@ -356,7 +356,7 @@
     ],
     "Compliance Services": [
         {
-            "name": "ISO 9001",
+            "name": "ISO 9001 : 2015",
             "subtitle": "Quality Management System",
             "headline": "The ultimate benchmark for your Quality Management System",
             "acronym": "QMS",
@@ -384,7 +384,7 @@
                 }
         },
         {
-            "name": "ISO 27001",
+            "name": "ISO 27001 : 2022",
             "subtitle": "Information Security Management System",
             "acronym": "ISMS",
             "summary": "ISO 27001 is a globally recognized standard for establishing, implementing, and improving an Information Security Management System (ISMS). Certification demonstrates a commitment to protecting sensitive information, such as client data and intellectual property, while effectively managing security risks. Unlike ISO 9001, it specifically focuses on information security.",
@@ -410,7 +410,7 @@
                 }  
         },
         {
-            "name": "ISO 14001",
+            "name": "ISO 14001 : 2015",
             "subtitle": "Environmental Management Systems",
             "acronym": "",
             "summary": "ISO 14001 is a globally recognized standard for establishing an effective Environmental Management System (EMS), helping organizations reduce their environmental impact and improve sustainability. Applicable to any industry, it provides a structured framework to minimize pollution and ensure environmentally responsible practices without compromising quality or performance.",
@@ -436,7 +436,7 @@
             }
         },
         {
-            "name": "ISO 45001",
+            "name": "ISO 45001 : 2018",
             "subtitle": "Occupation Health & Management Systems",
             "acronym": "OHSMS",
             "summary": "ISO 45001 is an internationally recognized standard for establishing a health and safety management system, applicable to any workplace regardless of industry. Achieving certification demonstrates an organization’s commitment to preventing workplace injuries and illnesses, enhancing the well-being of employees and building credibility with clients and stakeholders.",
@@ -457,7 +457,7 @@
             }
         },
         {
-            "name": "ISO 17025",
+            "name": "ISO 17025 : 2017",
             "subtitle": "Competence of Testing & Calibration Labs",
             "acronym": "",
             "summary": "ISO 17025 is a standard for testing and calibration laboratories, ensuring accurate, reliable, and repeatable results. By aligning with ISO 9001 principles, ISO 17025 accreditation builds trust with clients, enhances credibility, and is increasingly becoming mandatory for laboratories to remain competitive in many industries.",
@@ -479,7 +479,7 @@
             
         },
         {
-            "name": "AS 9100",
+            "name": "AS 9100 : 2016",
             "subtitle": "The Benchmark for Aerospace Quality",
             "acronym": "",
             "summary": "Safety is the highest priority for airplane manufacturers, and quality is the key to assure safety in aerospace products. AS9100 certification sets the benchmark for quality and safety in the aerospace industry. It is a specifically designed standard for the aerospace industry and underpins the requirements for establishing a QMS (Quality Management System) that helps manufacturers or suppliers to meet the safety and quality regulations.",
@@ -501,7 +501,7 @@
             
         },
         {
-            "name": "ISO 13485",
+            "name": "ISO 13485 : 2016",
             "subtitle": "Medical Devices Quality Management Systems",
             "acronym": "MDQMS",
             "summary": "ISO 13485 is the ISO standard recognized for quality management systems in the medical device industry, ensuring consistent product quality, regulatory compliance, and customer satisfaction. By meeting these standards, manufacturers gain the credibility needed to expand their market access and stay competitive in the global marketplace.",
@@ -517,7 +517,7 @@
             }
         },
         {
-            "name": "ISO 20000",
+            "name": "ISO 20000 : 2019",
             "subtitle": "I.T. Service Management Systems",
             "acronym": "",
             "summary": "ISO 20000 is an internationally recognized standard for IT service management systems (SMS), designed to help IT service providers plan, implement, and continuously improve their service delivery. The standard is based on ITIL principles and provides organizations with a structured approach to ensure efficient and high-quality IT services that meet customer expectations.",
@@ -537,7 +537,7 @@
             }
         },
         {
-            "name": "CMMI",
+            "name": "CMMI : 2018",
             "subtitle": "Capability Maturity Model Integration",
             "acronym": "CMMI",
             "summary": "The Capability Maturity Model Integration (CMMI) is a procedure and behavioral model that helps associations smooth out procedure improvement and improve positive and effective practices that decrease dangers in programming, item, and administration advancement.",
@@ -559,7 +559,7 @@
             }
         },
         {
-            "name": "TL 9000",
+            "name": "TL 9000 : 2018",
             "subtitle": "Telecommunications Quality Management Systems",
             "acronym": "TQMS",
             "summary": "TL 9000 was developed for the telecommunications industry including carriers and all other product and service providers to this industry. The submission of performance data helps to push and promote continual improvement for the whole of the telecommunications industry.",
@@ -574,7 +574,7 @@
             }
         },
         {
-            "name": "CMMC",
+            "name": "CMMC : 2018",
             "subtitle": "Cybersecurity Maturity Model Certification",
             "acronym": "CMMC",
             "summary": "The Cybersecurity Maturity Model Certification, or CMMC, is a distinct model meant for Department of Defense (DoD) contractors. It specifies the controls for protecting sensitive data for organizations that work with Federal Contract Information (FCI) and Controlled User Information (CUI), or are a part of the DoD supply chain...",
@@ -593,7 +593,7 @@
             }
         },
         {
-            "name": "R2",
+            "name": "R2 : 2018",
             "subtitle": "Responsible Recycling",
             "acronym": "CMMC",
             "summary": "The Cybersecurity Maturity Model Certification, or CMMC, is a distinct model meant for Department of Defense (DoD) contractors. It specifies the controls for protecting sensitive data for organizations that work with Federal Contract Information (FCI) and Controlled User Information (CUI), or are a part of the DoD supply chain...",
@@ -609,7 +609,7 @@
             }
         },
         {
-            "name": "ISO 31000",
+            "name": "ISO 31000 : 2019",
             "subtitle": "Risk Management",
             "acronym": "",
             "summary":"ISO 31000 offers a structured approach to identifying, assessing, and managing various types of risks within an organization, including financial, safety, security, and environmental risks. While not an auditable standard, it provides valuable guidance for organizations to integrate risk management into their processes and ensure resilience in the face of potential threats.",

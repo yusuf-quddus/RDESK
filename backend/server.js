@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyparser = require('body-parser')
+const nodemailer = require('nodemailer');
 const cors = require('cors')
 const path = require('path');
 const { Client } = require('pg')
@@ -68,50 +69,47 @@ const createTableIfNotExists = async () => {
     }
 };
 
-const deleteTable = async () => {
-    const deleteTableQuery = `DROP TABLE IF EXISTS requests;`;
-  
-    try {
-      await db.query(deleteTableQuery);
-      console.log('Table "requests" deleted successfully!');
-    } catch (err) {
-      console.error('Error deleting table:', err);
-    }
-};
-
-const printAllRows = async () => {
-    const selectQuery = 'SELECT * FROM requests;'; 
-  
-    try {
-      const result = await db.query(selectQuery);
-      console.log('All rows in the "requests" table:');
-      result.rows.forEach(row => {
-        console.log(row);
-      });
-    } catch (err) {
-      console.error('Error fetching rows:', err);
-    }
-};
-
-// printAllRows();
-
-// deleteTable();
-
 createTableIfNotExists();
 
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL, 
+    pass: process.env.EMAIL_PASSWORD,
+  },
+});
 
 app.post('/api/request', async (req, res) => {
     const { name, email, subject, service, compliance, it_service, message } = req.body;
+
+    const mailOptions = {
+      from: process.env.EMAIL,
+      to: process.env.EMAIL,
+      subject: `RDesk Inquiry from ${name} - ${subject}`,
+      text: `From: ${name}\nEmail: ${email}\n
+             ${subject}: ${service} => ${it_service}${compliance}\nmessage: ${message}`
+    };
+
     try {
       const insertQuery = 
-       `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
+       `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) 
+        VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
       
       const values = [name, email, subject, service, compliance, it_service, message];
       const result = await db.query(insertQuery, values)
-      res.status(201).json(result.rows[0]);
+
+      await transporter.sendMail(mailOptions);
+
+      res.status(201).json({
+        message: 'Request inserted and email sent successfully!',
+        data: result.rows[0],
+      });
     } catch (err) {
-      console.error('Error inserting data:', err);
-      res.status(500).json({ error: 'Failed to insert request' });
+      console.error('Error:', error);
+      res.status(500).json({
+        error: 'An error occurred while processing the request.',
+        details: error.message,
+      });
     }
 });
 
@@ -123,3 +121,35 @@ const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`)
 })
+
+
+// For testing database //
+
+const deleteTable = async () => {
+  const deleteTableQuery = `DROP TABLE IF EXISTS requests;`;
+
+  try {
+    await db.query(deleteTableQuery);
+    console.log('Table "requests" deleted successfully!');
+  } catch (err) {
+    console.error('Error deleting table:', err);
+  }
+};
+
+const printAllRows = async () => {
+  const selectQuery = 'SELECT * FROM requests;'; 
+
+  try {
+    const result = await db.query(selectQuery);
+    console.log('All rows in the "requests" table:');
+    result.rows.forEach(row => {
+      console.log(row);
+    });
+  } catch (err) {
+    console.error('Error fetching rows:', err);
+  }
+};
+
+// printAllRows();
+
+// deleteTable();

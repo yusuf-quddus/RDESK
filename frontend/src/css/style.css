@@ -1179,19 +1179,53 @@ section {
 /* Tab
 /*-----------------------------------------------------------------*/
 
-
 .content-tab-1 .nav {
-	text-align: center;
-	text-transform: uppercase;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .content-tab-1 > .nav > li {
-	float: none;
-	display: inline-block;
-	border: 2px solid #B1AEAE;
-	padding: 1px 1px;
-	box-shadow: 0px 0px 2px #F2F2F2;
-	margin-bottom: 5px;
+    float: none;
+    display: inline-block;
+    border: 2px solid #B1AEAE;
+    padding: 1px 1px;
+    box-shadow: 0px 0px 2px #F2F2F2;
+    margin-bottom: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.content-tab-1 > .nav > li:not(.active):hover {
+    background-color: #f5f5f5;
+}
+
+.content-tab-1 > .nav > li.active {
+    background: #3fa1c1;
+}
+
+.content-tab-1 > .nav > li > a {
+    color: #4D3F3F;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.content-tab-1 > .nav > li > a > h4 {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+.content-tab-1 > .nav > li.active > a > h4,
+.content-tab-1 > .nav > li.active > a > i {
+    color: #FFF;
+}
+
+.tab-content-main {
+    padding: 70px 0 0;
+}
+
+.tab-content-main img {
+    float: left;
+    margin-right: 75px;
 }
 
 .services-tab {
@@ -1208,6 +1242,10 @@ section {
 	background-color: transparent;
 	transition: all 0.2s ease 0s;
 }
+.content-tab-1 > .nav > li.active > a:hover {
+    background-color: transparent; /* Disable background hover for active tab */
+}
+
 
 .content-tab-1 > .nav li > a > i {
 	color: #474846;
@@ -1227,7 +1265,6 @@ section {
 }
 
 .content-tab-1 > .nav > li.active {
-    border: 2px solid #3fa1c1;
     background: #3fa1c1;
 }
 

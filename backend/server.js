@@ -107,8 +107,8 @@ app.post('/api/request', async (req, res) => {
     } catch (err) {
       console.error('Error:', err);
       res.status(500).json({
-        error: 'An error occurred while processing the request.',
-        details: error.message,
+        err: 'An error occurred while processing the request.',
+        details: err.message,
       });
     }
 });

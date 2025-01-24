@@ -1,6 +1,6 @@
 import '../../css/style.css'
 import '../../css/bootstrap.min.css'
-
+import { FaHeadset, FaNetworkWired, FaShieldAlt, FaCloud, FaServer, FaDatabase, FaHistory, FaWrench, FaClipboardCheck } from 'react-icons/fa';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,6 +14,32 @@ const ServiceMenu = ({info}) => {
     const toggleCard = () => setExpanded(!expanded);
     const navigate = useNavigate();
 
+    const getIcon = (name) => {
+        const iconStyle = { marginRight: '10px', color: '#333333' };
+        switch (name) {
+            case 'Helpdesk - Managed Support':
+                return <FaHeadset style={iconStyle} />;
+            case 'Network Services':
+                return <FaNetworkWired style={iconStyle} />;
+            case 'Cyber Security':
+                return <FaShieldAlt style={iconStyle} />;
+            case 'Cloud Engineering \\ DevOps':
+                return <FaCloud style={iconStyle} />;
+            case 'Virtualization':
+                return <FaServer style={iconStyle} />;
+            case 'Data Infrastructure':
+                return <FaDatabase style={iconStyle} />;
+            case 'Disaster Recovery':
+                return <FaHistory style={iconStyle} />;
+            case 'Professional Wiring':
+                return <FaWrench style={iconStyle} />;
+            case 'Security/IT Assessment':
+                return <FaClipboardCheck style={iconStyle} />;
+            default:
+                return null;
+        }
+    };
+
     const handleItemClick = (pageLink) => {
         if (pageLink) {
             navigate(pageLink);
@@ -26,7 +52,8 @@ const ServiceMenu = ({info}) => {
         <div className="panel-default">
             <div className="panel-heading" onClick={toggleCard} 
                   style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center'}} >
-                <h4 className="panel-title" style={{textAlign: 'center'}}>
+                <h4 className="panel-title" style={{textAlign: 'center', display: 'flex', alignItems: 'center'}}>
+                    {getIcon(info.name)}
                     {info.name}
                 </h4>
                 <span className={'symbol'}>{expanded ? '-' : '+'}</span>

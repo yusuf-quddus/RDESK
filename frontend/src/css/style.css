@@ -324,7 +324,7 @@ textarea:focus, select:focus, option:focus, input[type="text"]:focus, input[type
 	margin: -25px 0 0 -25px;
 	top:50%;
 	left:50%;
-	text-align:center;
+	text-align: center;
 }
 
 .overlay {
@@ -990,7 +990,7 @@ section {
 	height: 100%;
 	object-fit: cover;
 	opacity: 0; 
-	transition: opacity 1s ease-in-out; 
+	transition: opacity 1s ease-in-out; /* Smooth fade transition */
 }
   
 .slide.active {
@@ -2177,4 +2177,80 @@ li.comment ol.comment-sub {
     .medium {
         font-size: 16px;
     }
+}
+
+/* CoreCard Styles */
+.panel-default {
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.panel-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.panel-heading.expanded {
+    background-color: #f8f9fa;
+}
+
+.panel-title {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #2c3e50;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.panel-icon {
+    margin-right: 12px;
+    color: #333333;
+    font-size: 1.2em;
+}
+
+.panel-toggle {
+    color: #6c757d;
+    transition: transform 0.3s ease;
+}
+
+.panel-toggle.expanded {
+    transform: rotate(180deg);
+}
+
+.panel-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+.panel-content.expanded {
+    max-height: 1000px;
+}
+
+.panel-body {
+    padding: 0 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 28px;
+    color: #505050;
+    font-weight: 500;
+    text-rendering: optimizelegibility !important;
+    letter-spacing: .03em;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-font-smoothing: antialiased !important;
+}
+
+.panel-body.expanded {
+    padding: 20px;
 }

@@ -1182,6 +1182,9 @@ section {
 .content-tab-1 .nav {
     text-align: center;
     text-transform: uppercase;
+	display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically center the items */
+    justify-content: center;
 }
 
 .content-tab-1 > .nav > li {
@@ -1190,8 +1193,8 @@ section {
     border: 2px solid #B1AEAE;
     padding: 1px 1px;
     box-shadow: 0px 0px 2px #F2F2F2;
-    margin-bottom: 5px;
     transition: background-color 0.2s ease;
+	vertical-align: middle;
 }
 
 .content-tab-1 > .nav > li:not(.active):hover {
@@ -1232,7 +1235,8 @@ section {
 	background-color: white;
 	color: black;
 	cursor: pointer; /* Add pointer cursor to indicate clickable element */
-	min-width: 200px
+	min-width: 300px
+	
   }
 
 
@@ -1257,7 +1261,7 @@ section {
 	display: block;
 	color: #4D3F3F;
 	font-size: 13px;
-	margin-bottom: 0px;
+	margin: 0;
 }
 
 .content-tab-1 > .nav > li.active > a > h4, .content-tab-1 > .nav > li.active > a > i {

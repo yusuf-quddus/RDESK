@@ -84,7 +84,7 @@ app.post('/api/request', async (req, res) => {
 
     const mailOptions = {
       from: process.env.EMAIL,
-      to: process.env.EMAIL,
+      to: process.env.DEST_EMAIL,
       subject: `RDesk Inquiry from ${name} - ${subject}`,
       text: `From: ${name}\nEmail: ${email}\n
              ${subject}: ${service} => ${it_service}${compliance}\nmessage: ${message}`

@@ -32,9 +32,9 @@ const CompliancyInfo = () => {
 
                     <div className="col-md-6">
                         <div className="scrollable-accordion fixed-height">
-                            <div className="panel-group" id="accordion">
+                            <div>
                                 {servicesData["Compliance Services"].map(iso => 
-                                    <div className="card" key={iso.name}> 
+                                    <div key={iso.name}> 
                                         <ComplianceCard info={iso} />
                                     </div>
                                 )}

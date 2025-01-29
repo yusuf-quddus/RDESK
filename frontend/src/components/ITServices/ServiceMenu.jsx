@@ -3,6 +3,7 @@ import '../../css/bootstrap.min.css'
 import { FaHeadset, FaNetworkWired, FaShieldAlt, FaCloud, FaServer, FaDatabase, FaHistory, FaWrench, FaClipboardCheck } from 'react-icons/fa';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FaChevronDown } from 'react-icons/fa';
 
 /**
  * Component for expandable core services section.  
@@ -56,7 +57,9 @@ const ServiceMenu = ({info}) => {
                     {getIcon(info.name)}
                     {info.name}
                 </h4>
-                <span className={'symbol'}>{expanded ? '-' : '+'}</span>
+                <span className={`panel-toggle ${expanded ? 'expanded' : ''}`}>
+                    { <FaChevronDown />}
+                </span>
             </div>
             <div style={{ maxHeight: expanded ? '1000px' : '0', overflow: 'hidden',transition: 'max-height 0.25s ease'}} className={`${expanded ? 'show' : ''}`}>
                 <div className="panel-body">

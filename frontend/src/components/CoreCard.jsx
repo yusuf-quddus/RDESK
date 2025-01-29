@@ -33,7 +33,7 @@ const CoreCard = ({info}) => {
     };
 
     return (
-        <div className="panel-default">
+        <div className="panel-default"style={{ cursor: 'pointer'}} >
             <div 
                 className={`panel-heading ${expanded ? 'expanded' : ''}`}
                 onClick={toggleCard}

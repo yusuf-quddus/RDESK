@@ -27,7 +27,7 @@ const ComplianceCard = ({ info }) => {
     };
 
     return (
-        <div className="panel-default">
+        <div className="panel-default" style={{ cursor: 'pointer'}}>
 
             {/* <div className="panel-heading" onClick={toggleCard} 
                 style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }} >

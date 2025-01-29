@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../assets/Header'; 
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import ServiceMenu from './ServiceMenu';
 import data from '../../data/services.json';  
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -17,10 +17,11 @@ import '../../css/bootstrap.min.css';
  */
 const ITLanding = () => {
   const navigate = useNavigate();
-  
+  const location = useLocation();
+
   useEffect(() => {
     window.scrollTo(0, 0); 
-  }, []);
+  }, [location.pathname]);
 
   return (
     <div>
@@ -39,10 +40,10 @@ const ITLanding = () => {
 
       <section className="section container">
         <div className="row">
-          <div style={{ marginTop: "2em"}}>
+          <div style={{ marginTop: "1em"}}>
             <Slideshow images={['./images/recovery.jpg', './images/fix-router.jpg', './images/cloud_solutions.jpg', './images/it-solutions.jpg']} />
             <div className="col-md-6">
-              <h2>Our Solutions Services Include:</h2>
+              <h3 style={{ marginTop: "0" }}>Our Solutions Services Include:</h3>
               <div className="scrollable-accordion fixed-height">
                 { data["IT Solutions"].map((solution) => 
                     <div className="card" key={solution.name}> <ServiceMenu info={solution} /> </div> )}

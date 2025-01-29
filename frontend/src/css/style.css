@@ -1517,7 +1517,7 @@ section {
 
 
 .scrollable-accordion {
-    max-height: 300px;  
+    max-height: 400px;  
     overflow-y: auto;  
     padding: 10px;
     border: 1px solid #ddd;
@@ -2240,9 +2240,9 @@ li.comment ol.comment-sub {
 .panel-body {
     padding: 0 20px;
     font-family: "Open Sans", sans-serif;
-    font-size: 15px;
-    line-height: 28px;
-    color: #505050;
+    font-size: 14px;
+    line-height: 22px;
+    color: #333333;
     font-weight: 500;
     text-rendering: optimizelegibility !important;
     letter-spacing: .03em;

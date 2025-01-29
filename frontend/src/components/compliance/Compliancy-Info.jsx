@@ -20,8 +20,8 @@ const CompliancyInfo = () => {
                 
                 <div className="row content-spacing">
                     <div className="col-md-6">
-                        <div className="description-box longer-description">
-                            <h2 className="subtitle">Compliance Services Overview</h2>
+                        <div>
+                            <h4>Overview</h4>
                             <p>
                                 Our compliance services cover a wide range of standards and regulations to help your business stay compliant. 
                                 We offer expert advice and certified services in various compliance domains such as ISO standards, data protection, 
@@ -31,6 +31,7 @@ const CompliancyInfo = () => {
                     </div>
 
                     <div className="col-md-6">
+                        <h4>Compliancy Options</h4>
                         <div className="scrollable-accordion fixed-height">
                             <div>
                                 {servicesData["Compliance Services"].map(iso => 

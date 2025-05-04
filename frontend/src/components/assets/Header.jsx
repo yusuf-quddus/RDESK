@@ -63,6 +63,9 @@ const Header = () => {
       case 'about':
         navigate('/', { state: { targetId: item } });
         break;
+      case 'education':
+        navigate('/education-technology-solutions');
+        break;
       case 'compliance':
         navigate('/compliance');
         break;
@@ -105,6 +108,7 @@ const Header = () => {
                 <li className={activeMenu === 'solutions' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="solutions" data={services['IT Solutions']} onClick={() => menuClick('solutions')} />
                 </li>
+                <li className={activeMenu === 'education' ? 'active' : ''}> <a onClick={() => menuClick('education')}>Education Solutions</a> </li>
                 <li className={activeMenu === 'compliance' ? 'dropdown active' : 'dropdown'}>
                   <Dropdown name="ISO/Compliance" data={services['Compliance Services']} onClick={() => menuClick('compliance')} />
                 </li>

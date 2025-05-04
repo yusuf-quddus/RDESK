@@ -661,5 +661,20 @@
         "images": [
             "installation.jpg"
         ]
+    },
+    "Education Technology Solutions": {
+        "name": "Education Solutions",
+        "page-link": "",
+        "description": "We bring enterprise-grade IT solutions to K–12 schools and colleges—tailored for the classroom, built for the future. We understand school environments—tight budgets, limited staff, and growing tech needs. RDesk delivers enterprise-level service with an educator-friendly mindset",
+        "headers": ["School Cybersecurity & Data Protection", "Classroom Technology Setup & Management", "Cloud & Hybrid Learning Support", "Teacher & Staff Support", "Campus-wide Infrastructure Upgrades"],
+        "subheader": ["We safeguard your students, staff, and systems with industry-leading protection", "Tech should empower learning—not complicate it", "We help you build flexible, scalable infrastructure for digital education", "We simplify daily tech use for educators", "For schools planning ahead, we provide full-service upgrades"],
+        "content": [["\t• Next-gen firewalls (Fortinet, SonicWall, etc.)\n\t• Email filtering & anti-phishing protection (Office 365 Defender, Proofpoint)\n\t• Endpoint protection & monitoring (Microsoft Defender ATP)\n\t• Network security audits and vulnerability testing\n\t• FERPA & data privacy compliance support"],
+                    ["\t• Smartboards, classroom PCs, and tablets \n\t• Student/staff device provisioning (1:1 programs)\n\t• Printer, projector, and AV system support\n\t• Ongoing maintenance and IT helpdesk services"], 
+                    ["\t• Microsoft 365 Education, Google Workspace for Education setup & management\n\t• Hybrid AD integration for secure user login\n\t• Cloud backups and data archiving to Azure or AWS\n\t• Virtual desktop environments for remote learning"], 
+                    ["\t• On-demand IT helpdesk support\n\t• Training for apps, email, and remote learning tools\n\t• Classroom tech troubleshooting\n\t• Role-based access and secure login configuration"], 
+                    ["\t• Network cabling & Wi-Fi coverage across buildings\n\t• Server and switch replacements\n\t• Surveillance and access control systems\n\t• Energy-efficient tech and UPS power backups"]],
+        "images": [
+            "frontend/public/images/edtechsolutions1.png"
+        ]
     }
 }

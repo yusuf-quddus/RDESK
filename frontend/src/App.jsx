@@ -5,6 +5,7 @@ import ITLanding from './components/ITServices/ITLanding';
 import OtherLanding from './components/other-services/OtherLanding';
 import Contact from './components/contact/Contact';
 import ITPage from './components/ITServices/ITPage';
+import EdSolutions from './components/EducationServices/EdSolutionsPage';
 import servicesData from './data/services.json';  
 
 import {
@@ -22,6 +23,7 @@ const App = () => {
         <Routes>
           <Route path='/' element={<MainPage />} />
           <Route path='/solutions' element={<ITLanding />} />
+          <Route path='/education-technology-solutions' element={<EdSolutions edsolutions={servicesData["Education Technology Solutions"]}/>} />
           <Route path='/compliance' element={<ComplianceLanding />} />
           <Route path='/other_services' element={<OtherLanding otherServices={servicesData['Office / Other Services']}/>} />
           <Route path='/contact' element={<Contact />} />

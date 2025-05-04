@@ -1201,7 +1201,14 @@ section {
 	min-width: 200px
   }
 
-
+  .slogan {
+	display: flex;
+	justify-content: space-between;
+	font-size: 1.25rem;
+	font-weight: 600;
+	max-width: 800px;
+	margin: 0 auto;
+  }
 
 .content-tab-1 > .nav li > a {
 	color: #CFD9E6;

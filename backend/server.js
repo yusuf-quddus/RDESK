@@ -3,7 +3,8 @@ const bodyparser = require('body-parser')
 const nodemailer = require('nodemailer');
 const cors = require('cors')
 const path = require('path');
-const { Client } = require('pg')
+const rateLimit = require('express-rate-limit');
+const { Client } = require('pg');
 require('dotenv').config()
 
 const app = express()
@@ -79,7 +80,17 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-app.post('/api/request', async (req, res) => {
+const requestLimiter = rateLimit({
+  windowMs: 1 * 60 * 1000,
+  max: 5,
+  message: {
+    error: 'Too many requests, please try again later.'
+  },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.post('/api/request', requestLimiter, async (req, res) => {
     const { name, email, subject, service, compliance, it_service, message } = req.body;
 
     const mailOptions = {

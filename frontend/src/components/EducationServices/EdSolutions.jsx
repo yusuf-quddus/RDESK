@@ -40,7 +40,7 @@ const EdSolutions = () => {
                                             </div>
                                             <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
                                                 <div style={{display: 'flex', justifyContent: 'center', marginTop: '20px' }}> 
-                                                    <a onClick={() => navigate()} className="middle btn-gray-border hover-btn-blue">
+                                                    <a onClick={() => navigate(`/education-technology-solutions`)} className="middle btn-gray-border hover-btn-blue">
                                                         Learn More
                                                     </a>
                                                 </div>

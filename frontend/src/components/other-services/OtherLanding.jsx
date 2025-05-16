@@ -18,6 +18,7 @@ import '../../css/style.css';
 const OtherLanding = ({otherServices}) => {
   const navigate = useNavigate();
   const other = data["Office / Other Services"]
+  
 
   return (
     <div>

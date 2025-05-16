@@ -18,17 +18,21 @@ import '../../css/style.css';
 const EdSolutions = ({edsolutions}) => {
   const navigate = useNavigate();
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div>
       <Header />
       <section id="page-header" className="parallax">
         <div className="overlay"></div>
         <div className="container">
-          <h1>Home, Office and Other Services</h1>
+          <h1>Education Technology, Cyber Security, and Classroom Setup</h1>
           <div className='landing-links'>
             <p className="btn" onClick={() => navigate('/')}>Home</p>
             <p><FontAwesomeIcon icon={faAngleRight} color='white' size='lg' /></p>
-            <p className="btn" onClick={() => navigate('/home_services')}><strong>Other Services</strong></p>
+            <p className="btn" onClick={() => navigate(`/education-technology-solutions`)}><strong>Education Solutions</strong></p>
           </div>
         </div>
       </section>

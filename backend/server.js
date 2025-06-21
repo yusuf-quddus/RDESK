@@ -97,8 +97,24 @@ app.post('/api/request', requestLimiter, async (req, res) => {
       from: process.env.EMAIL,
       to: process.env.DEST_EMAIL,
       subject: `RDesk Inquiry from ${name} - ${subject}`,
-      text: `From: ${name}\nEmail: ${email}\n
-             ${subject}: ${service} => ${it_service}${compliance}\nmessage: ${message}`
+      text: `
+        New RDesk Inquiry
+        
+        ------------------------------
+        Name:       ${name}
+        Email:      ${email}
+        Subject:    ${subject}
+        Service:    ${service}
+        IT Service: ${it_service}
+        Compliance: ${compliance}
+        ------------------------------
+        
+        Message:
+        ${message}
+        
+        ------------------------------
+        This message was automatically sent from the RDesk submission form.
+      `.trim()
     };
 
     try {

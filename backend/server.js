@@ -3,16 +3,17 @@ const bodyparser = require('body-parser')
 const nodemailer = require('nodemailer');
 const cors = require('cors')
 const path = require('path');
-const rateLimit = require('express-rate-limit');
 const { Client } = require('pg');
+const jwt = require('jsonwebtoken');
 require('dotenv').config()
 
 const app = express()
+const requestRouter = require('./routes/request');
+const adminRouter = require('./routes/admin');
 
 app.use(cors())
 app.use(bodyparser.json())
 app.use(express.static(path.join(__dirname, 'dist')));
-
 
 const db = new Client({
     user: process.env.RDS_USERNAME,
@@ -56,6 +57,7 @@ const createTableIfNotExists = async () => {
             compliance VARCHAR(100),
             it_service VARCHAR(100),
             message TEXT,
+            resolved BOOLEAN DEFAULT FALSE,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
           );
         `;
@@ -80,65 +82,19 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-const requestLimiter = rateLimit({
-  windowMs: 1 * 60 * 1000,
-  max: 5,
-  message: {
-    error: 'Too many requests, please try again later.'
-  },
-  standardHeaders: true,
-  legacyHeaders: false,
+app.post('/api/login', (req, res) => {
+  const { username, password } = req.body;
+
+  if (username === process.env.ADMIN_USER && password === process.env.ADMIN_PASS) {
+    const token = jwt.sign({ username }, process.env.JWT_SECRET, { expiresIn: '2h' });
+    return res.json({ token });
+  }
+
+  res.status(401).json({ error: 'Invalid credentials' });
 });
 
-app.post('/api/request', requestLimiter, async (req, res) => {
-    const { name, email, subject, service, compliance, it_service, message } = req.body;
-
-    const mailOptions = {
-      from: process.env.EMAIL,
-      to: process.env.DEST_EMAIL,
-      subject: `RDesk Inquiry from ${name} - ${subject}`,
-      text: `
-        New RDesk Inquiry
-        
-        ------------------------------
-        Name:       ${name}
-        Email:      ${email}
-        Subject:    ${subject}
-        Service:    ${service}
-        IT Service: ${it_service}
-        Compliance: ${compliance}
-        ------------------------------
-        
-        Message:
-        ${message}
-        
-        ------------------------------
-        This message was automatically sent from the RDesk submission form.
-      `.trim()
-    };
-
-    try {
-      const insertQuery = 
-       `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) 
-        VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
-      
-      const values = [name, email, subject, service, compliance, it_service, message];
-      const result = await db.query(insertQuery, values)
-
-      await transporter.sendMail(mailOptions);
-
-      res.status(201).json({
-        message: 'Request inserted and email sent successfully!',
-        data: result.rows[0],
-      });
-    } catch (err) {
-      console.error('Error:', err);
-      res.status(500).json({
-        err: 'An error occurred while processing the request.',
-        details: err.message,
-      });
-    }
-});
+app.use('/api/request', requestRouter({ dbClient: db, emailTransporter: transporter }));
+app.use('/admin/requests',  adminRouter({ dbClient: db }));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));
@@ -150,7 +106,11 @@ app.listen(PORT, () => {
 })
 
 
-// For testing database //
+
+
+
+//////////////////////////////////////////////////
+///////////// For testing database ///////////////
 
 const deleteTable = async () => {
   const deleteTableQuery = `DROP TABLE IF EXISTS requests;`;

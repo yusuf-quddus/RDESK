@@ -7,6 +7,8 @@ import Contact from './components/contact/Contact';
 import ITPage from './components/ITServices/ITPage';
 import EdSolutions from './components/EducationServices/EdSolutionsPage';
 import servicesData from './data/services.json';  
+import AdminLogin from './components/AdminLogin';
+import AdminPage from './components/AdminPage';
 
 import {
   BrowserRouter as Router,
@@ -46,6 +48,8 @@ const App = () => {
             />
           ))}
 
+          <Route path='/admin/login' element={<AdminLogin />}/>
+          <Route path='/admin/view/requests' element={<AdminPage />}/>
         </Routes>
     </Router>
   );

@@ -93,8 +93,8 @@ app.post('/api/login', (req, res) => {
   res.status(401).json({ error: 'Invalid credentials' });
 });
 
-app.use('/api/request', requestRouter({ dbClient: db, emailTransporter: transporter }));
-app.use('/admin/requests',  adminRouter({ dbClient: db }));
+app.use('/api/request', requestRouter({ db, transporter }));
+app.use('/admin/request',  adminRouter({ db }));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));

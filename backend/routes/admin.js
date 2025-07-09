@@ -2,26 +2,28 @@ const express = require('express');
 const router = express.Router();
 const authenticateToken = require('../middleware/authMiddleware')
 
-const requestsAPI = (db) => {
+const requestsAPI = ({ db }) => {
 
     router.use(authenticateToken);
 
-    router.get('/', async(req, res) => {
+    router.get('/', async (req, res) => {
         try {
-            const getAllQuery = `SELECT * from requests`;
-            const requests = await db.query(getAllQuery);
-            return requests.rows;
+          const result = await db.query(
+            'SELECT * FROM requests ORDER BY created_at DESC;'
+          );
+          return res.json(result.rows);
         } catch (err) {
-            console.error('Error getting data', err);
-            throw err;
-        } 
-    })
+          console.error('Error getting data', err);
+          return res
+            .status(500)
+            .json({ error: 'Failed to fetch requests', details: err.message });
+        }
+      });
 
     router.delete('/:id', async (req, res) => {
-        const { id } = req.params.id;
+        const { id } = req.params;
         try {
-            deleteQuery = `DELETE FROM requests WHERE id = ${id} RETURNING *`;
-            const result = await db.query(deleteQuery);
+            const result = await db.query( 'DELETE FROM requests WHERE id = $1 RETURNING *;', [id]);
 
             if (result.rowCount === 0) {
                 return res.status(404).json({ error: 'Request not found' });
@@ -35,11 +37,11 @@ const requestsAPI = (db) => {
     })
 
     router.put('/:id', async (req, res) => {
-        const { id } = req.params.id;
+        const { id } = req.params;
         const { resolved } = req.body;
 
         try {
-            const updateQuery = `UPDATE requests SET resolved = ${resolved} WHERE id = ${id} RETURNING *;`
+            const result = await db.query('UPDATE requests SET resolved = $1 WHERE id = $2 RETURNING *;', [resolved, id] );
 
             if (result.rowCount === 0) {
                 return res.status(404).json({ error: 'Request not found' });

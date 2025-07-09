@@ -13,7 +13,7 @@ const requestLimiter = rateLimit({
     legacyHeaders: false,
 });
 
-const init = ( { db, transporter } ) => {
+const init = ({ db, transporter }) => {
     router.post('/', requestLimiter, async (req, res) => {
         const { name, email, subject, service, compliance, it_service, message } = req.body;
     

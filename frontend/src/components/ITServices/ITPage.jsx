@@ -58,11 +58,16 @@ const ITPage = ({service}) => {
                         {service.headers.map((header, index) => (
                             <div key={index}>
                                 <h2>{header}</h2>
-                                {service.content[index].map((point, subIndex) => {
-                                    const parts = point.split(":");
-                                    return (
-                                        <p key={subIndex} style={{ marginLeft: "4em" }}> <strong> {parts[0]}</strong>: {parts[1]} </p>
-                                    );
+                                {
+                                service.content[index].map((point, subIndex) => {
+                                    if (point.includes(':')) {
+                                        const parts = point.split(":");
+                                        return (
+                                            <p key={subIndex} style={{ marginLeft: "4em" }}> <strong> {parts[0]}</strong>: {parts[1]} </p>
+                                        );
+                                    } else {
+                                        return (<p key={subIndex} style={{ marginLeft: "4em" }}>{point}</p>)
+                                    }
                                  })}
                             </div>
                         ))}

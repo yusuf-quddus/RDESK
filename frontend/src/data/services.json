@@ -352,6 +352,21 @@
             "images": [
                 "wiring.avif"
             ]
+        },
+        {
+            "name": "Ipad/Tablet Repairs",
+            "title-long": "Ipad and Tablet Repairs",
+            "description": "We now provide professional iPad and tablet repair services, along with full-service deployment solutions for education and business environments. We repair devices from Apple, Samsung, Lenovo, and more. Whether you’re managing a student 1:1 program or field devices for your team, we’ve got you covered. Whether you need to repair 1 device or manage 1,000, our team can help build a custom solution that fits your budget and timeline.",
+            "id": "tablet-repairs",
+            "headers": ["Fast & Reliable Repair Services", "Education Solutions", "Business Solutions"],
+            "content": [["Our services include: ", "\t• Cracked screen and LCD replacement.", "\t• Battery and charging repairs.", "\t• Water damage diagnostics.", "\t• Button, camera, and port repairs.", "\t• Bulk repair options with pick-up and drop-off.", "\t• Mail-in and on-site repair options available.", "\t• Loaner devices available upon request."], 
+                ["We help schools deploy and maintain iPads and tablets for students and staff, including:", "\t• Classroom management setup (MDM, Apple School Manager)", "\t• Google Workspace for Education integration", "\t• Charging carts, protective cases, and online testing compatibility"], 
+                ["We support your mobile workforce with secure, scalable tablet setups:", "\t• Device provisioning and mobile app management", "\t• Kiosk setups for front desks, sales, and events", "\t• Role-based access, encryption, and mobile security"]],
+            "page-link": "/solutions/tablet-repairs",
+            "icon": "faWifi",
+            "images": [
+                "tablet-repair.jpg"
+            ]
         }
     ],
     "Compliance Services": [

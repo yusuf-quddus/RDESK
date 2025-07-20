@@ -16,30 +16,27 @@ const requestLimiter = rateLimit({
 const init = ({ db, transporter }) => {
     router.post('/', requestLimiter, async (req, res) => {
         const { name, email, subject, service, compliance, it_service, message } = req.body;
-    
-        const mailOptions = {
-          from: process.env.EMAIL,
-          to: process.env.DEST_EMAIL,
-          subject: `RDesk Inquiry from ${name} - ${subject}`,
-          text: `
-            New RDesk Inquiry
-            
-            ------------------------------
-            Name:       ${name}
-            Email:      ${email}
-            Subject:    ${subject}
-            Service:    ${service}
-            IT Service: ${it_service}
-            Compliance: ${compliance}
-            ------------------------------
-            
-            Message:
-            ${message}
-            
-            ------------------------------
-            This message was automatically sent from the RDesk submission form.
-          `.trim()
-        };
+
+        const dest_emails = [process.env.DEST_EMAIL, process.env.DEST_EMAIL_2];
+        const email_subject = `RDesk Inquiry from ${name} - ${subject}`
+        const email_body =  `
+          New RDesk Inquiry
+          
+          ------------------------------
+          Name:       ${name}
+          Email:      ${email}
+          Subject:    ${subject}
+          Service:    ${service}
+          IT Service: ${it_service}
+          Compliance: ${compliance}
+          ------------------------------
+          
+          Message:
+          ${message}
+          
+          ------------------------------
+          This message was automatically sent from the RDesk submission form.
+        `.trim()
     
         try {
           const insertQuery = 
@@ -48,8 +45,15 @@ const init = ({ db, transporter }) => {
           
           const values = [name, email, subject, service, compliance, it_service, message];
           const result = await db.query(insertQuery, values)
-    
-          await transporter.sendMail(mailOptions);
+          
+          for (let mail of dest_emails) {
+            await transporter.sendMail({
+              from: process.env.EMAIL,
+              to: mail,
+              subject: email_subject,
+              text: email_body
+            });
+          }
     
           res.status(201).json({
             message: 'Request inserted and email sent successfully!',

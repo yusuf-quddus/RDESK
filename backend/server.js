@@ -15,64 +15,64 @@ app.use(cors())
 app.use(bodyparser.json())
 app.use(express.static(path.join(__dirname, 'dist')));
 
-const db = new Client({
-    user: process.env.RDS_USERNAME,
-    host: process.env.RDS_HOSTNAME,
-    password: process.env.RDS_PASSWORD,
-    port: process.env.RDS_PORT,
-    ssl: { rejectUnauthorized: false }
-});
+// const db = new Client({
+//     user: process.env.RDS_USERNAME,
+//     host: process.env.RDS_HOSTNAME,
+//     password: process.env.RDS_PASSWORD,
+//     port: process.env.RDS_PORT,
+//     ssl: { rejectUnauthorized: false }
+// });
 
 
-db.connect().then(() => { 
-    console.log('Connected to PostgreSQL database!'); 
-}).catch((err) => { 
-    console.error('Error connecting to the database:', err); 
-});
+// db.connect().then(() => { 
+//     console.log('Connected to PostgreSQL database!'); 
+// }).catch((err) => { 
+//     console.error('Error connecting to the database:', err); 
+// });
 
 
-const createTableIfNotExists = async () => {
-    const checkTableQuery = `
-      SELECT EXISTS (
-        SELECT 1
-        FROM pg_catalog.pg_tables
-        WHERE schemaname = 'public' AND tablename = 'requests'
-      );
-    `;
+// const createTableIfNotExists = async () => {
+//     const checkTableQuery = `
+//       SELECT EXISTS (
+//         SELECT 1
+//         FROM pg_catalog.pg_tables
+//         WHERE schemaname = 'public' AND tablename = 'requests'
+//       );
+//     `;
   
-    try {
-      const res = await db.query(checkTableQuery);
-      const tableExists = res.rows[0].exists;
+//     try {
+//       const res = await db.query(checkTableQuery);
+//       const tableExists = res.rows[0].exists;
   
-      if (!tableExists) {
-        console.log('Table "requests" does not exist. Creating table...');
+//       if (!tableExists) {
+//         console.log('Table "requests" does not exist. Creating table...');
         
-        const createTableQuery = `
-          CREATE TABLE requests (
-            id SERIAL PRIMARY KEY,
-            name VARCHAR(100) NOT NULL,
-            email VARCHAR(100) NOT NULL,
-            subject VARCHAR(200),
-            service VARCHAR(100),
-            compliance VARCHAR(100),
-            it_service VARCHAR(100),
-            message TEXT,
-            resolved BOOLEAN DEFAULT FALSE,
-            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-          );
-        `;
+//         const createTableQuery = `
+//           CREATE TABLE requests (
+//             id SERIAL PRIMARY KEY,
+//             name VARCHAR(100) NOT NULL,
+//             email VARCHAR(100) NOT NULL,
+//             subject VARCHAR(200),
+//             service VARCHAR(100),
+//             compliance VARCHAR(100),
+//             it_service VARCHAR(100),
+//             message TEXT,
+//             resolved BOOLEAN DEFAULT FALSE,
+//             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+//           );
+//         `;
         
-        await db.query(createTableQuery);
-        console.log('Table "requests" created successfully!');
-      } else {
-        console.log('Table "requests" already exists.');
-      }
-    } catch (err) {
-      console.error('Error checking or creating table:', err);
-    }
-};
+//         await db.query(createTableQuery);
+//         console.log('Table "requests" created successfully!');
+//       } else {
+//         console.log('Table "requests" already exists.');
+//       }
+//     } catch (err) {
+//       console.error('Error checking or creating table:', err);
+//     }
+// };
 
-createTableIfNotExists();
+// createTableIfNotExists();
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -93,8 +93,9 @@ app.post('/api/login', (req, res) => {
   res.status(401).json({ error: 'Invalid credentials' });
 });
 
-app.use('/api/request', requestRouter({ db, transporter }));
-app.use('/admin/request',  adminRouter({ db }));
+app.use('/api/request', requestRouter({ transporter }));
+// app.use('/api/request', requestRouter({ db, transporter }));
+// app.use('/admin/request',  adminRouter({ db }));
 
 app.get('*', (req, res) => {
   res.sendFile(path.resolve(__dirname, 'dist', 'index.html'));

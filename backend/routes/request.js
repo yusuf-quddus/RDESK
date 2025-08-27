@@ -13,7 +13,7 @@ const requestLimiter = rateLimit({
     legacyHeaders: false,
 });
 
-const init = ({ db, transporter }) => {
+const init = ({ transporter }) => {
     router.post('/', requestLimiter, async (req, res) => {
         const { name, email, subject, service, compliance, it_service, message } = req.body;
 
@@ -39,12 +39,12 @@ const init = ({ db, transporter }) => {
         `.trim()
     
         try {
-          const insertQuery = 
-           `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) 
-            VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
+          // const insertQuery = 
+          //  `INSERT INTO requests (name, email, subject, service, compliance, it_service, message) 
+          //   VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING *;`;
           
-          const values = [name, email, subject, service, compliance, it_service, message];
-          const result = await db.query(insertQuery, values)
+          // const values = [name, email, subject, service, compliance, it_service, message];
+          // const result = await db.query(insertQuery, values)
           
           for (let mail of dest_emails) {
             await transporter.sendMail({
@@ -57,7 +57,7 @@ const init = ({ db, transporter }) => {
     
           res.status(201).json({
             message: 'Request inserted and email sent successfully!',
-            data: result.rows[0],
+            // data: result.rows[0],
           });
         } catch (err) {
           console.error('Error:', err);
